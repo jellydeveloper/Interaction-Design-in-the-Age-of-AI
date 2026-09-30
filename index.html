@@ -18,7 +18,7 @@
   * { box-sizing:border-box; }
   body{
     background:var(--paper); color:var(--ink);
-    font-family:'Geist', 'Public Sans', -apple-system, 'Noto Sans KR', sans-serif;
+    font-family:'Public Sans', -apple-system, 'Noto Sans KR', sans-serif;
     line-height:1.5; font-size:15px;
     padding-inline:24px; padding-block:48px;
   }
@@ -27,13 +27,13 @@
   h1,h2,h3,h4{ font-family:'Newsreader', Georgia, serif; font-weight:400; text-wrap:balance; color:var(--ink); margin:0; }
   a{ color:var(--accent); }
   .label{
-    font-family:'Geist Mono', 'IBM Plex Mono', ui-monospace, monospace;
+    font-family:'IBM Plex Mono', ui-monospace, monospace;
     font-size:14px; text-transform:uppercase; color:var(--ink-faint); font-weight:400;
   }
 
   /* ---- masthead ---- */
   .masthead h1{ font-size:3rem; line-height:1.1; letter-spacing:-.02em; margin:0 0 18px; max-width:16ch; }
-  .masthead .dek{ font-family:'Geist','Public Sans',sans-serif; color:var(--ink-faint); font-size:17px; line-height:1.55; max-width:54ch; margin:0 0 28px; }
+  .masthead .dek{ font-family:'Public Sans',sans-serif; color:var(--ink-faint); font-size:17px; line-height:1.55; max-width:54ch; margin:0 0 28px; }
 
   .facts{
     display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
@@ -45,7 +45,7 @@
 
   .hero-fig{ margin:0 0 30px; color:var(--ink); }
   .hero-fig svg{ display:block; width:100%; height:auto; }
-  .hero-cap{ font-family:'Geist','Public Sans',sans-serif; font-size:13.5px; color:var(--ink-faint); margin-top:12px; max-width:60ch; }
+  .hero-cap{ font-family:'Public Sans',sans-serif; font-size:13.5px; color:var(--ink-faint); margin-top:12px; max-width:60ch; }
 
   .aside{
     font-family:'Newsreader',serif; font-style:italic; color:var(--ink-faint); font-size:17px;
@@ -56,7 +56,7 @@
   .layout{ display:flex; gap:64px; align-items:flex-start; margin-top:44px; }
   .side{ position:sticky; top:32px; width:172px; flex:0 0 172px; display:flex; flex-direction:column; gap:8px; }
   .side a{
-    font-family:'Geist','Public Sans',sans-serif; font-size:15px; color:var(--ink);
+    font-family:'Public Sans',sans-serif; font-size:15px; color:var(--ink);
     text-decoration:none; opacity:.75; transition:opacity .15s;
   }
   .side a:hover, .side a.on{ opacity:1; }
@@ -66,9 +66,9 @@
   section.doc{ margin-bottom:96px; scroll-margin-top:24px; }
   section.doc .eyebrow{ margin-bottom:14px; }
   section.doc h2{ font-size:2rem; line-height:1.25; letter-spacing:-.015em; margin:0 0 12px; max-width:22ch; }
-  section.doc .doc-sub{ color:var(--ink-faint); font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:13px; margin-bottom:28px; }
+  section.doc .doc-sub{ color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; font-size:13px; margin-bottom:28px; }
 
-  h3{ font-family:'Geist','Public Sans',sans-serif; font-weight:600; font-size:1rem; margin:40px 0 14px; color:var(--ink); }
+  h3{ font-family:'Public Sans',sans-serif; font-weight:600; font-size:1rem; margin:40px 0 14px; color:var(--ink); }
   p{ margin:0 0 15px; }
   .measure{ max-width:64ch; color:var(--ink-faint); }
   .measure strong{ color:var(--ink); font-weight:600; }
@@ -82,16 +82,16 @@
 
   /* ---- response table ---- */
   table.resp{ width:100%; border-collapse:collapse; margin:20px 0; font-size:14px; }
-  .resp-cap{ font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:13px; color:var(--ink-faint); margin-bottom:10px; }
+  .resp-cap{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ink-faint); margin-bottom:10px; }
   table.resp th, table.resp td{ text-align:left; padding:12px 12px; border-bottom:1px solid var(--line); vertical-align:top; line-height:1.5; color:var(--ink-faint); }
-  table.resp th{ font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.02em; text-transform:uppercase; color:var(--ink-faint); font-weight:400; }
+  table.resp th{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.02em; text-transform:uppercase; color:var(--ink-faint); font-weight:400; }
   table.resp td:first-child{ color:var(--ink); font-weight:600; }
   .wrap-table{ overflow-x:auto; }
   .yes{ color:var(--ok-ink); font-weight:600; }
   .no{ color:var(--no-ink); font-weight:600; }
 
   .qa{ margin:18px 0; }
-  .qa .q{ font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:5px; }
+  .qa .q{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:5px; }
   .qa .a{ font-family:'Newsreader',serif; font-style:italic; font-size:16px; color:var(--ink); margin:0 0 4px; }
 
   /* ---- persona blocks (flat, no card chrome) ---- */
@@ -99,14 +99,14 @@
   .avatar{
     flex:0 0 36px; width:36px; height:36px;
     display:flex; align-items:center; justify-content:center;
-    font-family:'Geist Mono',monospace; font-weight:500; font-size:14px; color:var(--paper); background:var(--ink);
+    font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:14px; color:var(--paper); background:var(--ink);
   }
   .persona-body{ flex:1; min-width:0; }
   .persona-head{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
   .persona h4{ font-size:1.3rem; letter-spacing:-.01em; }
   .persona .tag{ font-size:13px; }
   .persona .desc{ color:var(--ink-faint); font-size:15px; margin:6px 0 18px; max-width:60ch; }
-  .persona .evidence{ font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin-top:16px; }
+  .persona .evidence{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin-top:16px; }
 
 
 
@@ -114,7 +114,7 @@
   .shot{ margin:26px 0 8px; }
   .shot img{ display:block; width:100%; height:auto; border:1px solid var(--line); background:#fff; }
 
-  footer{ margin-top:70px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-faint); font-family:'Geist Mono','IBM Plex Mono',monospace; font-size:12.5px; }
+  footer{ margin-top:70px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; font-size:12.5px; }
 
   @media (max-width:860px){
     .layout{ display:block; }
@@ -143,7 +143,7 @@
   }
 </style>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 
 </head>
 <body>
