@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>D2–D4 Research Packet</title>
+<title>Interaction Design in the Age of AI</title>
 <meta name="description" content="Screener analysis, interviews, and synthesis for the AI career/skill goal-breakdown app, COMM 4940 Independent Study.">
 <style>
   :root{ color-scheme:light;
@@ -13,22 +13,6 @@
     --card:#FFFFFF;
     --accent-rgb:52,102,166; --accent:rgb(var(--accent-rgb)); --accent-tint:rgba(122,174,233,.28);
     --ok-ink:#3E6B4F; --ok-bg:#EDF2EC; --no-ink:#9A4A3A; --no-bg:#F5EAE8;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --paper:#1B1D1F; --ink-rgb:225,228,231; --card:#232527;
-      --ink-soft:rgba(var(--ink-rgb),.72); --ink-faint:rgba(var(--ink-rgb),.584);
-      --fill:rgba(var(--ink-rgb),.07); --line:rgba(var(--ink-rgb),.16);
-      --accent-rgb:143,178,214; --accent-tint:rgba(122,174,233,.16);
-      --ok-ink:#8FC29F; --ok-bg:#22322A; --no-ink:#D69488; --no-bg:#332420;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper:#1B1D1F; --ink-rgb:225,228,231; --card:#232527;
-    --ink-soft:rgba(var(--ink-rgb),.72); --ink-faint:rgba(var(--ink-rgb),.584);
-    --fill:rgba(var(--ink-rgb),.07); --line:rgba(var(--ink-rgb),.16);
-    --accent-rgb:143,178,214; --accent-tint:rgba(122,174,233,.16);
-    --ok-ink:#8FC29F; --ok-bg:#22322A; --no-ink:#D69488; --no-bg:#332420;
   }
 
   * { box-sizing:border-box; }
@@ -142,6 +126,8 @@
     .facts{ grid-template-columns:repeat(2,1fr); }
   }
   @media (max-width:520px){
+    .shot{ overflow-x:auto; }
+    .shot img{ width:760px; max-width:none; }
     .masthead h1{ font-size:2.1rem; max-width:none; }
     section.doc h2{ font-size:1.6rem; }
     .persona{ flex-direction:column; }
@@ -354,13 +340,13 @@
       <section class="doc" id="d4">
         <p class="eyebrow label">D4 · Synthesis</p>
         <h2>Putting it together</h2>
-        <p class="doc-sub">Due Sep 30 · built from D2 and D3</p>
+        <p class="doc-sub">Sep 30, 2026</p>
 
         <p class="lede measure" style="color:var(--ink);">I put all three personas against the same journey, stage by stage. The same stage broke all three: what happens after someone misses a stretch.</p>
 
         <figure class="shot">
           <img src="journey-map.png" width="914" height="590" alt="Journey map: Delegator, Resistant Planner, and Juggler across four stages (setting the plan, following it day to day, missing a stretch, coming back). The missing-a-stretch column is highlighted red for all three, and a momentum line drops to its lowest point there, returning only without a reset.">
-          <figcaption class="hero-cap">Missing a stretch breaks all three personas. That column is where the fix belongs. The momentum line is my qualitative read of the interviews.</figcaption>
+          <figcaption class="hero-cap">The red "Missing a stretch" column is where the fix belongs. The momentum line is my qualitative read of the interviews.</figcaption>
         </figure>
 
         <h3>Affinity map</h3>
