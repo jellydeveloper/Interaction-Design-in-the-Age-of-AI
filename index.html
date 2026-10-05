@@ -87,6 +87,7 @@
   table.resp th{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; letter-spacing:.02em; text-transform:uppercase; color:var(--ink-faint); font-weight:400; }
   table.resp td:first-child{ color:var(--ink); font-weight:600; }
   .wrap-table{ overflow-x:auto; }
+  table.answers td:first-child{ width:3.5rem; }
   .yes{ color:var(--ok-ink); font-weight:600; }
   .no{ color:var(--no-ink); font-weight:600; }
 
@@ -152,68 +153,11 @@
   <header class="masthead">
     <h1>Interaction Design in the Age of AI</h1>
 
-    <figure class="hero-fig">
-      <svg viewBox="0 0 960 390" role="img" aria-label="Two versions of the same loop: what people already tried breaks after a missed stretch and dead-ends at abandoned; what the research points to resumes at adaptive steps without a reset.">
-        <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
-          </marker>
-          <marker id="arrowAccent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"></path>
-          </marker>
-        </defs>
-
-        <line x1="460" y1="20" x2="460" y2="380" stroke="currentColor" stroke-opacity="0.12" stroke-dasharray="2 5"></line>
-
-        <text x="170" y="16" text-anchor="middle" font-size="11" letter-spacing="0.08em" fill="currentColor" fill-opacity="0.55">WHAT PEOPLE ALREADY TRIED</text>
-        <text x="750" y="16" text-anchor="middle" font-size="11" letter-spacing="0.08em" fill="currentColor" fill-opacity="0.55">WHAT THE RESEARCH POINTS TO</text>
-
-        <!-- left column: linear, dead-ends -->
-        <rect x="40" y="30" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="170" y="59" text-anchor="middle" font-size="15" fill="currentColor">Set a goal</text>
-
-        <line x1="170" y1="78" x2="170" y2="146" stroke="currentColor" stroke-opacity="0.5" marker-end="url(#arrow)"></line>
-        <text x="185" y="116" font-size="12" fill="currentColor" fill-opacity="0.55">breaks into steps</text>
-
-        <rect x="40" y="150" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="170" y="179" text-anchor="middle" font-size="15" fill="currentColor">Follow the plan</text>
-
-        <line x1="170" y1="198" x2="170" y2="266" stroke="currentColor" stroke-opacity="0.5" marker-end="url(#arrow)"></line>
-        <text x="185" y="236" font-size="12" fill="currentColor" fill-opacity="0.55">life happens</text>
-
-        <rect x="40" y="270" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="170" y="299" text-anchor="middle" font-size="15" fill="currentColor">Miss a stretch</text>
-
-        <line x1="170" y1="318" x2="170" y2="350" stroke="currentColor" stroke-opacity="0.45" stroke-dasharray="4 4" marker-end="url(#arrow)"></line>
-        <text x="185" y="338" font-size="12" fill="currentColor" fill-opacity="0.55">no way back</text>
-        <text x="170" y="372" text-anchor="middle" font-size="13" font-style="italic" fill="currentColor" fill-opacity="0.55">Abandoned</text>
-
-        <!-- right column: closed loop -->
-        <rect x="620" y="30" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="750" y="59" text-anchor="middle" font-size="15" fill="currentColor">Set a goal</text>
-
-        <line x1="750" y1="78" x2="750" y2="146" stroke="currentColor" stroke-opacity="0.5" marker-end="url(#arrow)"></line>
-        <text x="765" y="116" font-size="12" fill="currentColor" fill-opacity="0.55">breaks into steps</text>
-
-        <rect x="620" y="150" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="750" y="179" text-anchor="middle" font-size="15" fill="currentColor">Adaptive steps</text>
-
-        <line x1="750" y1="198" x2="750" y2="266" stroke="currentColor" stroke-opacity="0.5" marker-end="url(#arrow)"></line>
-        <text x="765" y="236" font-size="12" fill="currentColor" fill-opacity="0.55">life happens</text>
-
-        <rect x="620" y="270" width="260" height="48" fill="none" stroke="currentColor" stroke-opacity="0.5"></rect>
-        <text x="750" y="299" text-anchor="middle" font-size="15" fill="currentColor">Miss a stretch</text>
-
-        <path d="M880,294 C935,294 935,174 880,174" fill="none" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#arrowAccent)"></path>
-        <text x="945" y="234" text-anchor="middle" font-size="12" fill="var(--accent)" transform="rotate(90 945 234)">resume, no reset</text>
-      </svg>
-      <figcaption class="hero-cap">Every tool people had tried breaks at the same point: nothing brings them back after they miss a stretch. Closing that loop turned out to be the biggest opportunity in D4.</figcaption>
-    </figure>
 
     <dl class="facts">
       <div><dt class="label">Student</dt><dd>Andrew Choi</dd></div>
       <div><dt class="label">Supervisor</dt><dd>Prof. Patricia Search</dd></div>
-      <div><dt class="label">Status</dt><dd>Synthesis done</dd></div>
+      <div><dt class="label">Status</dt><dd>Redoing interviews (D3)</dd></div>
       <div><dt class="label">Next</dt><dd>D5: IA, wireframes, MVP scope, Oct 7</dd></div>
     </dl>
 
@@ -232,128 +176,191 @@
       <!-- ================= D2 ================= -->
       <section class="doc" id="d2">
         <p class="eyebrow label">D2 · Screener</p>
-        <h2>Most people struggled to keep going once they started</h2>
-        <p class="doc-sub">Sep 16, 2026</p>
+        <h2>What six screener respondents said</h2>
+        <p class="doc-sub">Sep 16, 2026 · revised Oct 5, 2026</p>
 
-        <p class="lede measure" style="color:var(--ink);">This is the original screener, sent under the old career-coaching framing, before any of the pivoting happened. It sat unread through the whole RPI Hub detour. The results were limited, but the pattern that came through was consistent enough that I built D3 and D4 on it.</p>
+        <p class="lede measure" style="color:var(--ink);">I sent a six-question Typeform screener on Aug 20, 2026, under the original career-coaching framing, and got six responses. Respondents are numbered P1 to P6 in the order Typeform lists them. All answers below are verbatim, including spelling. Email addresses are left out.</p>
 
         <div class="stats">
-          <div class="stat"><b>83%</b><span>had already leaned on a tool to try to stick with a goal</span></div>
-          <div class="stat"><b>67%</b><span>said a step-breakdown tool would help</span></div>
+          <div class="stat"><b>5 of 6</b><span>had used an app, planner, or AI tool for a goal (Q4)</span></div>
+          <div class="stat"><b>4 of 6</b><span>said a step-breakdown tool would help (Q5)</span></div>
+          <div class="stat"><b>2 of 6</b><span>agreed to a follow-up conversation (Q6)</span></div>
         </div>
 
-        <h3>What I asked</h3>
-        <ol class="measure">
-          <li>What year are you in school, and what are you job/internship hunting for?</li>
-          <li>Think of a career or skill goal you set recently. What was it?</li>
-          <li>What made it hard to actually follow through, day to day?</li>
-          <li>Have you used an app, planner, or AI tool to help stick to a goal like this? What happened?</li>
-          <li>If a tool could break a big goal into small steps and check in with you, would that help? Why or why not?</li>
-          <li>Would you be open to a 15-min video chat about this?</li>
-        </ol>
+        <h3>Full responses, by question</h3>
 
-        <h3>Who answered</h3>
+        <p class="resp-cap">Q1 · What year are you in school, and what are you currently job/internship hunting for (if applicable)?</p>
         <div class="wrap-table">
-        <table class="resp">
-          <thead>
-            <tr><th>Who</th><th>Goal</th><th>What got in the way</th><th>Would help?</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>The ChatGPT planner</td><td>Learning a skill</td><td>Lack of expert guidance, willpower</td><td><span class="yes">Yes</span>, tangible steps "extremely motivating"</td></tr>
-            <tr><td>The busy junior</td><td>Various projects</td><td>Busy with schoolwork</td><td><span class="yes">Yes</span>, small steps eventually reach the big goal</td></tr>
-            <tr><td>The skeptic</td><td>Learning skills</td><td>Consistency</td><td><span class="no">No</span>, doesn't use apps for this, tried once, didn't help</td></tr>
-            <tr><td>The AI journaler</td><td>Learn patience and discipline</td><td>"The greed": emotional framing, not logistics</td><td><span class="yes">Yes</span>, "would point out mistakes I wouldn't see myself"</td></tr>
-            <tr><td>The self-planner</td><td>Get comfortable with design tools (Adobe)</td><td>Motivation dips some days</td><td><span class="no">No</span>, prefers planning things out themselves</td></tr>
-            <tr><td>The UX job hunter</td><td>UX tools, time management, job search, AI trends</td><td>No accountability, hard to track, unsure where to start</td><td><span class="yes">Yes</span>, "a lot"</td></tr>
-          </tbody>
-        </table>
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td>(no answer)</td></tr>
+              <tr><td>P2</td><td>"Junior, CSCI and game major"</td></tr>
+              <tr><td>P3</td><td>"Graduated. Job"</td></tr>
+              <tr><td>P4</td><td>(no answer)</td></tr>
+              <tr><td>P5</td><td>"I’m a rising junior and I already have a job, and am looking for marketing/design jobs."</td></tr>
+              <tr><td>P6</td><td>"I am currently a rising senior, and I am hunting for UX design internship and jobs after graduation."</td></tr>
+            </tbody>
+          </table>
         </div>
-        <p class="measure" style="font-size:13px;">A few said yes to a follow-up conversation. That became the three interviews below.</p>
+
+        <p class="resp-cap">Q2 · Think of a career or skill goal you set for yourself recently (job search, learning a skill, networking, etc). What was it?</p>
+        <div class="wrap-table">
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td>"Learning a skill"</td></tr>
+              <tr><td>P2</td><td>"various projects"</td></tr>
+              <tr><td>P3</td><td>"Learning skills"</td></tr>
+              <tr><td>P4</td><td>"learn patience and discipline"</td></tr>
+              <tr><td>P5</td><td>"Making myself more comfortable with design tools that I already know how to use, such as adobe"</td></tr>
+              <tr><td>P6</td><td>"Learning new ux tools that I can implement during my design process, time management skills, job searching, using AI tools to keep up with the trend."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="resp-cap">Q3 · What made it hard to actually follow through on that goal, day to day?</p>
+        <div class="wrap-table">
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td>"Lack of expert guidance to follow and willpower"</td></tr>
+              <tr><td>P2</td><td>"Busy school works"</td></tr>
+              <tr><td>P3</td><td>"Consistency"</td></tr>
+              <tr><td>P4</td><td>"the greed"</td></tr>
+              <tr><td>P5</td><td>"I’m trying to learn more specifics along with the professional aspects of the skills. Some days I’m unmotivated, but thinking about my future makes me motivated."</td></tr>
+              <tr><td>P6</td><td>"Nobody keeps me accountable, motivation issues, hard to keep track, not sure where to start."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="resp-cap">Q4 · Have you ever used an app, planner, or AI tool to help you stick to a goal like this? What happened?</p>
+        <div class="wrap-table">
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td>"Yes, used ChatGPT to help plan in detail how to execute on a day to day basis"</td></tr>
+              <tr><td>P2</td><td>"yes, it worked efficently"</td></tr>
+              <tr><td>P3</td><td>"No"</td></tr>
+              <tr><td>P4</td><td>"yes, use ai to journal emotions to find causes"</td></tr>
+              <tr><td>P5</td><td>"Yes, but I prefer to use my notes app to plan things out. I use google calendar &amp; my planner during schooltime."</td></tr>
+              <tr><td>P6</td><td>"I have used the apple notes app, a physical planner, but I just couldn't keep up, maybe because my plan was not strategic enough."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="resp-cap">Q5 · If a tool could break a big goal into small steps and check in with you, would that help? Why or why not?</p>
+        <div class="wrap-table">
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td>"Yes - getting things tangible is extremely motivating to execute on the goal"</td></tr>
+              <tr><td>P2</td><td>"I believe so. Big goal is actually hard to reach if you try to reach quickly, but by seperate the goal, it is helping me to step the each small goal that eventually reach to big goal"</td></tr>
+              <tr><td>P3</td><td>"Nah, Because I don't use apps for anything and i used it before and still didn't help"</td></tr>
+              <tr><td>P4</td><td>"yes it would point out mistakes i wouldn’t see myself"</td></tr>
+              <tr><td>P5</td><td>"I don’t think it will help, because I like to plan my own things out."</td></tr>
+              <tr><td>P6</td><td>"yes that would help a lot."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="resp-cap">Q6 · Would you be open to a 15-min video chat about this?</p>
+        <div class="wrap-table">
+          <table class="resp answers">
+            <tbody>
+              <tr><td>P1</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P2</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P3</td><td><span class="no">No</span></td></tr>
+              <tr><td>P4</td><td><span class="no">No</span></td></tr>
+              <tr><td>P5</td><td><span class="no">No</span></td></tr>
+              <tr><td>P6</td><td><span class="no">No</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>How I coded the responses</h3>
+        <p class="measure">Each column comes from one question above. The Q3 column is my short label for each answer; everything else is a direct read.</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Who</th><th>Q3: what got in the way</th><th>Q4: tool used</th><th>Q4: how it went</th><th>Q5: would a step-breakdown tool help?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>P1</td><td>Guidance, willpower</td><td>ChatGPT, for daily planning</td><td>Not stated</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P2</td><td>Time (schoolwork)</td><td>Not named</td><td>"worked efficently"</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P3</td><td>Consistency</td><td>None</td><td>n/a</td><td><span class="no">No</span></td></tr>
+              <tr><td>P4</td><td>Unclear ("the greed")</td><td>AI, for journaling emotions</td><td>Not stated</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P5</td><td>Knowing specifics, motivation</td><td>Notes app, Google Calendar, paper planner</td><td>Not stated</td><td><span class="no">No</span></td></tr>
+              <tr><td>P6</td><td>Accountability, motivation, tracking, knowing where to start</td><td>Apple Notes, paper planner</td><td>"couldn't keep up"</td><td><span class="yes">Yes</span></td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h3>What stood out</h3>
-        <p class="measure"><strong>It's follow-through.</strong> Most people pointed at accountability, consistency, motivation, or not knowing where to start. Nobody said their goal was unclear. The AI journaler is the outlier here, describing the friction in emotional terms instead of logistics.</p>
-        <p class="measure"><strong>Almost everyone's already tried something, and it mostly didn't stick.</strong> Only the UX job hunter says why: the plan "wasn't strategic enough." That's the clearest hint I've got for what this needs to do differently than a plain planner.</p>
-        <p class="measure"><strong>The yes/no split follows a pattern.</strong> People already leaning on AI for planning said yes. People who default to their own system said no. They still have the problem; they just don't want to hand over ownership of the plan.</p>
+        <p class="measure"><strong>Five of six named something about keeping effort going.</strong> In Q3, P1 said "willpower," P2 "busy school works," P3 "consistency," P5 "some days I’m unmotivated," and P6 "nobody keeps me accountable, motivation issues." Three also said they didn't know what to do next: P1 ("lack of expert guidance"), P5 ("learn more specifics"), and P6 ("not sure where to start"). I can't interpret P4's "the greed" from two words, and P4 declined a follow-up.</p>
+        <p class="measure"><strong>Most people had used a tool, but few said how it went.</strong> Five of six answered yes to Q4. Q4 asked "What happened?", but only P2 ("worked efficently") and P6 ("couldn't keep up") described an outcome. P6 also gave a guess at why: "maybe because my plan was not strategic enough." The other answers name the tool and stop. A survey can't ask a follow-up, so this went into the interview guide (D3, Q5).</p>
+        <p class="measure"><strong>The two "no" answers to Q5 were about the tool, not the goal.</strong> Q5 asked whether a tool that breaks a goal into small steps and checks in would help. P1, P2, P4, and P6 said yes. P3 said no because they don't use apps and one didn't help before. P5 said no because "I like to plan my own things out," but still reported days without motivation in Q3. With six responses, I'm treating this as something to ask about in interviews, not as a pattern.</p>
 
+        <h3>What the screener couldn't answer</h3>
+        <p class="measure">Each row is a gap in the screener answers and the interview question (D3) written to cover it.</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Gap</th><th>Where it shows up</th><th>Interview question</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Why tools were kept or dropped</td><td>Q4: only P2 and P6 described an outcome</td><td>Q5</td></tr>
+              <tr><td>What the obstacles look like in practice</td><td>Q3: P2, P3, P4 answered in one to three words</td><td>Q3, Q4</td></tr>
+              <tr><td>How much say people want over the plan</td><td>Q4: P1 had ChatGPT plan their days. Q5: P5 wants to plan their own things</td><td>Q6</td></tr>
+              <tr><td>What people would share with a tool</td><td>Q4: P4 already journals emotions with AI. Q5: P4 wants it to point out mistakes</td><td>Q7</td></tr>
+              <tr><td>Whether people would keep using a tool like this</td><td>Q5 asked if it would help, not whether they'd use it</td><td>Q8</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- ================= D3 ================= -->
       <section class="doc" id="d3">
         <p class="eyebrow label">D3 · Interviews</p>
-        <h2>Where each person lost momentum</h2>
-        <p class="doc-sub">Sep 23, 2026</p>
+        <h2>Revised interview guide</h2>
+        <p class="doc-sub">Revised Oct 5, 2026 · interviews in progress</p>
 
-        <p class="lede measure" style="color:var(--ink);">I followed up with three interviews, each built around a distinct pattern from the screener above: what earns trust, what makes someone stop using a tool, who should stay in control day to day.</p>
+        <p class="lede measure" style="color:var(--ink);">I rewrote the interview guide to remove leading questions and to cover the gaps above. I'm redoing the interviews with this guide. Full responses for each participant will be posted here, numbered the same way as the screener.</p>
 
         <h3>Interview guide</h3>
+        <p class="measure">Text in [brackets] is filled in from that participant's screener answers. Probes are asked only if the first answer doesn't already cover them. Before Q6, I describe the tool the same way the screener did: "a tool that breaks a big goal into small steps and checks in with you." Q6 to Q8 refer to that tool.</p>
         <ol class="measure">
-          <li>Walk me through the last time you tried to work toward that goal. What did a normal day/week actually look like?</li>
-          <li>When did you first notice yourself losing momentum? What was happening around then?</li>
-          <li>You said you [used / didn't use] a tool for this. Walk me through what that actually looked like.</li>
-          <li>What would have to be true for you to trust a tool with something this personal?</li>
-          <li>In the ideal version of this, who's in control day to day: you, or the tool?</li>
-          <li>What would make you stop using something like this after a week?</li>
+          <li>In the screener, you described a goal: [Q2 answer]. Can you tell me about it? <em>Probe: Why did you choose that goal?</em></li>
+          <li>Have you worked on that goal since you filled out the screener? If so, what have you done? <em>Probe: How often do you work on it?</em></li>
+          <li>Has the time or effort you put into it changed since you set it? If so, how? <em>Probe: What else was going on at that time?</em></li>
+          <li>You said [Q3 answer] made it hard to follow through. Can you give me an example? <em>Probe: Why do you think that happens?</em></li>
+          <li>You mentioned [Q4 answer]. How did you use it? Are you still using it? Why or why not? <em>If they used no tool: How do you keep track of the goal, if at all?</em></li>
+          <li>Here are a few ways a tool like this could work. A: You set the steps and schedule; the tool only reminds you. B: The tool suggests steps and a schedule; you approve or change them. C: The tool sets the steps and schedule; you follow them. D: None of these. Which, if any, is closest to what you would want? Why?</li>
+          <li>If you used a tool like this, what information about your goal and your schedule, if any, would you be willing to share with it? Is there anything you would not share? Why?</li>
+          <li>Do you think you would use a tool like this? If so, do you think you would continue to use it? Why or why not?</li>
+          <li>Is there anything about working toward this goal that I didn't ask about and you think matters?</li>
         </ol>
 
-        <h3>What came out of the three interviews</h3>
-
-        <div class="persona">
-          <div class="avatar">D</div>
-          <div class="persona-body">
-            <div class="persona-head"><h4>The Delegator</h4></div>
-            <p class="desc">Hunting for a UX internship, and already hands their planning over to AI. What's frustrated them is that everything they've tried just spits out a flat list with no sequencing.</p>
-            <div class="qa"><div class="q">Q2: losing momentum</div><p class="a">"Around Tuesday, usually — once one thing slips, the rest of the list stops feeling real."</p></div>
-            <div class="qa"><div class="q">Q4: what earns trust</div><p class="a">"It would need to actually know what I'm bad at sticking to, not just take my word for what I plan on day one. If it just re-lists what I typed, that's the same as Notes."</p></div>
-            <div class="qa"><div class="q">Q5: who's in control</div><p class="a">"Honestly, I want it in control of the ordering and pacing. I'll do the work, I just don't trust myself to sequence it right."</p></div>
-            <div class="evidence">Signal: wants the tool to own the sequencing instead of checklisting what they already know. To them, accountability means catching drift early.</div>
-          </div>
+        <h3>What changed from the first guide</h3>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>First guide</th><th>Revised</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>"Walk me through the last time you tried to work toward that goal. What did a normal day/week actually look like?"</td><td>Q1, Q2</td><td>A goal and a "normal day" may not be connected. The revised questions ask about the goal and what the person has done, without assuming a routine.</td></tr>
+              <tr><td>"When did you first notice yourself losing momentum? What was happening around then?"</td><td>Q3</td><td>Assumed the person lost momentum, and that they understand "momentum" the way I do. Q3 asks whether effort changed, in either direction.</td></tr>
+              <tr><td>"You said you [used / didn't use] a tool for this. Walk me through what that actually looked like."</td><td>Q5</td><td>Adds "Why or why not?" so the interview gets at why a tool was kept or dropped, which the screener mostly didn't answer.</td></tr>
+              <tr><td>"What would have to be true for you to trust a tool with something this personal?"</td><td>Q7</td><td>Assumed the goal is personal and that trust is the issue. Q7 asks what, if anything, the person would share, and leaves room for "nothing."</td></tr>
+              <tr><td>"In the ideal version of this, who's in control day to day: you, or the tool?"</td><td>Q6</td><td>"Control" wasn't defined and the question offered only two extremes. Q6 describes three specific levels, plus "none of these" so the person isn't pushed into wanting a tool.</td></tr>
+              <tr><td>"What would make you stop using something like this after a week?"</td><td>Q8</td><td>Assumed the person would stop, and the one-week time frame had no basis. Q8 first asks whether they would use it at all, then whether they would continue, and why.</td></tr>
+            </tbody>
+          </table>
         </div>
-
-        <div class="persona">
-          <div class="avatar">R</div>
-          <div class="persona-body">
-            <div class="persona-head"><h4>The Resistant Planner</h4></div>
-            <p class="desc">Tried a tool before and it didn't help, or just prefers Notes and Calendar to begin with. Skeptical that any app changes follow-through.</p>
-            <div class="qa"><div class="q">Q2: losing momentum</div><p class="a">"There's no clean moment, it just... fades. Nothing dramatic happens, I just stop opening whatever I was using."</p></div>
-            <div class="qa"><div class="q">Q4: what earns trust</div><p class="a">"It would have to fit into something I already check, not be its own destination. I already ignore my own planner half the time."</p></div>
-            <div class="qa"><div class="q">Q5: who's in control</div><p class="a">"Me. If it's making decisions for me I'll probably resent it and stop opening it, same as the last thing."</p></div>
-            <div class="evidence">Signal: once they drift, nothing brings them back.</div>
-          </div>
-        </div>
-
-        <div class="persona">
-          <div class="avatar">J</div>
-          <div class="persona-body">
-            <div class="persona-head"><h4>The Juggler</h4></div>
-            <p class="desc">Juggling a few goals at once, and it's competing time (mostly school) that gets in the way. Motivation and trust are fine.</p>
-            <div class="qa"><div class="q">Q2: losing momentum</div><p class="a">"Whenever a school deadline shows up. It's not that I forget the goal, it's that it always loses the time fight."</p></div>
-            <div class="qa"><div class="q">Q4: what earns trust</div><p class="a">"It'd need to handle me disappearing for a week without treating that as failure. Life resets it, not me giving up."</p></div>
-            <div class="qa"><div class="q">Q6: what kills it</div><p class="a">"If missing a week made it guilt-trip me or reset all my progress, I'd just close it and not come back."</p></div>
-            <div class="evidence">Signal: breaking the goal into steps already works for them. The gap is tolerating interruption without penalty.</div>
-          </div>
-        </div>
-
-        <p class="aside">All three reject "generic plan plus nagging reminders," each for a different reason. That overlap is what I carried into D4.</p>
       </section>
 
       <!-- ================= D4 ================= -->
       <section class="doc" id="d4">
         <p class="eyebrow label">D4 · Synthesis</p>
-        <h2>Putting it together</h2>
-        <p class="doc-sub">Sep 30, 2026</p>
+        <h2>Synthesis</h2>
+        <p class="doc-sub">Sep 30, 2026 · being redone</p>
 
-        <p class="lede measure" style="color:var(--ink);">I put all three personas against the same journey, stage by stage. The same stage broke all three: what happens after someone misses a stretch.</p>
-
-        <figure class="shot">
-          <img src="journey-map.png" width="914" height="590" alt="Journey map: Delegator, Resistant Planner, and Juggler across four stages (setting the plan, following it day to day, missing a stretch, coming back). The missing-a-stretch column is highlighted red for all three, and a momentum line drops to its lowest point there, returning only without a reset.">
-          <figcaption class="hero-cap">The red "Missing a stretch" column is where the fix belongs. The momentum line is my qualitative read of the interviews.</figcaption>
-        </figure>
-
-        <h3>Affinity map</h3>
-        <figure class="shot">
-          <img src="affinity-map.png" width="981" height="1079" alt="Affinity map of screener responses (yellow) and interview quotes (orange) grouped into seven clusters: A no one catches drift early, B plans lack sequencing logic, C missing a stretch kills re-engagement, D competing priorities are structural, E ownership is a precondition, F some already trust AI, G a new destination is itself a cost. Opportunity 1 sits under A and B, opportunity 2 under C, D and E, opportunity 3 under G.">
-          <figcaption class="hero-cap">I sorted 23 notes from the screener (yellow) and interviews (orange) into seven clusters. The blue bars show which opportunity each cluster points to. Graceful re-entry after a gap covers three clusters (C, D, E), more than any other, so it became the main thing to design for in D5.</figcaption>
-        </figure>
+        <p class="measure">The earlier synthesis (affinity map, journey map, and personas) was built on the first interviews, so I've taken it down. I'll redo it from the screener above and the new interviews once they're done.</p>
       </section>
 
     </div>
