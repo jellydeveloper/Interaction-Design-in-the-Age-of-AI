@@ -92,8 +92,8 @@
   .no{ color:var(--no-ink); font-weight:600; }
 
   .qa{ margin:18px 0; }
-  .qa .q{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; color:var(--ink-faint); margin-bottom:5px; }
-  .qa .a{ font-family:'Newsreader',serif; font-style:italic; font-size:16px; color:var(--ink); margin:0 0 4px; }
+  .qa .q{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin-bottom:5px; max-width:72ch; }
+  .qa .a{ font-family:'Newsreader',serif; font-style:italic; font-size:16px; color:var(--ink); margin:0 0 4px; max-width:68ch; }
 
   /* ---- persona blocks (flat, no card chrome) ---- */
   .persona{ display:flex; gap:20px; margin:34px 0; padding-top:28px; border-top:1px solid var(--line); }
@@ -157,8 +157,8 @@
     <dl class="facts">
       <div><dt class="label">Student</dt><dd>Andrew Choi</dd></div>
       <div><dt class="label">Supervisor</dt><dd>Prof. Patricia Search</dd></div>
-      <div><dt class="label">Status</dt><dd>Redoing interviews (D3)</dd></div>
-      <div><dt class="label">Next</dt><dd>D5: IA, wireframes, MVP scope, Oct 7</dd></div>
+      <div><dt class="label">Status</dt><dd>Interviews done (D3), synthesis redone (D4)</dd></div>
+      <div><dt class="label">Next</dt><dd>D5: IA, wireframes, MVP scope, Oct 21</dd></div>
     </dl>
 
     <p class="aside">Quick note before D2: I shipped a screener back in August under the career-coaching framing, then spent most of September building "RPI Hub" instead (a campus club directory) after Muse launched and made the original idea feel redundant. I've since decided the overlap with Muse isn't disqualifying for coursework, so I'm back on the original idea.</p>
@@ -316,10 +316,24 @@
       <!-- ================= D3 ================= -->
       <section class="doc" id="d3">
         <p class="eyebrow label">D3 · Interviews</p>
-        <h2>Revised interview guide</h2>
-        <p class="doc-sub">Revised Oct 5, 2026 · interviews in progress</p>
+        <h2>Interviews with P1, P2, and P6</h2>
+        <p class="doc-sub">Guide revised Oct 5, 2026 · interviews Oct 16–17, 2026</p>
 
-        <p class="lede measure" style="color:var(--ink);">I rewrote the interview guide to use open, non-leading questions and to cover the gaps above. I'm redoing the interviews with this guide. Full responses for each participant will be posted here, numbered the same way as the screener.</p>
+        <p class="lede measure" style="color:var(--ink);">I rewrote the interview guide to use open, non-leading questions and to cover the gaps above, then interviewed three screener respondents with it. Participants keep the same numbers as the screener. Every question and answer is posted below in full.</p>
+
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Who</th><th>Date</th><th>Format</th><th>Screener goal (Q2)</th><th>Screener Q5</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>P1</td><td>Oct 17</td><td>In person, 30 min</td><td>"Learning a skill"</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P2</td><td>Oct 16</td><td>In person, 30 min</td><td>"various projects"</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P6</td><td>Oct 16</td><td>In person, 30 min</td><td>"Learning new ux tools…, time management skills, job searching, using AI tools…"</td><td><span class="yes">Yes</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="measure">P1 and P2 agreed to a follow-up in the screener. P6 said no in the screener but agreed when I asked again in October. All three agreed to notes being taken. Answers were written down as close to word for word as I could during the interview.</p>
 
         <h3>Interview guide</h3>
         <p class="measure">Text in [brackets] is filled in from that participant's screener answers. Follow-ups are asked one at a time, after the main question is answered. Probes are asked only if the answer doesn't already cover them. Before Q5, I describe the tool the same way the screener did: "a tool that breaks a big goal into small steps and checks in with you."</p>
@@ -332,7 +346,64 @@
           <li>Do you think you would use a tool like this? Why or why not? <em>Follow-up, if yes: Do you think you would continue to use it? Why or why not?</em></li>
           <li>Is there anything about working toward this goal that I didn't ask about and you think matters?</li>
         </ol>
-        <p class="measure">Q5 and Q6 ask about a tool that doesn't exist yet, so I'll treat those answers as weaker evidence than Q2 to Q4, which ask what people have actually done.</p>
+        <p class="measure">Q5 and Q6 ask about a tool that doesn't exist yet, so I treat those answers as weaker evidence than Q2 to Q4, which ask what people have actually done.</p>
+
+        <h3>Full interviews</h3>
+        <p class="measure">Each question is shown the way I asked it, with the brackets filled in from that person's screener. Probes and follow-ups are listed only where I asked them. My own notes are kept separate, after each interview.</p>
+
+        <h3 id="p1">P1</h3>
+        <p class="resp-cap">Oct 17, 2026 · in person · 30 min · consented to notes</p>
+        <div class="qa"><p class="q">Q1 · In the screener, you described a goal: learning a skill. Can you tell me about it?</p><p class="a">"I’ve been trying to learn shader programming for WebGL. It’s a mix of math and front-end design that I’ve wanted to grasp for portfolio work."</p></div>
+        <div class="qa"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"It’s hard to stand out just doing standard UI. Real-time graphics feel like the next frontier for interactive web experiences."</p></div>
+        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"I worked through two tutorials on fragment shaders and took some notes in Obsidian."</p></div>
+        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"I started strong with basic shapes, but as soon as the vector math got into 3D lighting models, my pace dropped off sharply."</p></div>
+        <div class="qa"><p class="q">Q3 · You said a lack of expert guidance to follow, and willpower, made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Tuesday I hit a math bug where the canvas stayed blank. When you're self-taught, you don't know if your code syntax is wrong or your linear algebra logic is broken. Staring at it for two hours just completely drained my motivation to open it the next day."</p></div>
+        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"When the feedback loop breaks and there's no mentor to say "you’re almost there, check line 12," friction turns into avoidance."</p></div>
+        <div class="qa"><p class="q">Q4 · You mentioned using ChatGPT to plan in detail how to execute on a day-to-day basis. How did you use it?</p><p class="a">"I asked it to break down a 4-week curriculum from beginner GLSL to lighting models, giving me one prompt or exercise per day."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"On and off. Mostly just when I need to ask conceptual questions."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"The daily plan it made was too rigid. Real life happens, and once I fell two days behind, the schedule stopped making sense."</p></div>
+        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I’d want it to behave like a tech lead—someone who can scope the milestone, give me the right bite-sized problem, and debug my conceptual block without taking over the driving."</p></div>
+        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I want its domain knowledge to lay out the path, but I need final control over my schedule based on my actual mental energy that day."</p></div>
+        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yes, if the suggestions are actually technically sound and adapt when I fall behind instead of just piling on guilt."</p></div>
+        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it provides continuous context. If it treats every day like day one and doesn't remember where I got stuck, I’ll drop it."</p></div>
+        <div class="qa"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"Pacing matters more than reminders. When tools ping you constantly during deep work, it actually ruins your flow."</p></div>
+        <p class="measure"><strong>My notes after the interview (my interpretation, not the participant's words).</strong> What surprised me: They didn’t lack initiative; their willpower collapse was directly triggered by getting stuck on domain-specific ambiguity. Compared with the screener: Confirms the screener directly—ChatGPT was great for planning a syllabus, but couldn't replace active guidance when things broke. Follow-up I should have asked: "When ChatGPT generated your daily schedule, what did you do on the very first day you missed a task?"</p>
+
+        <h3 id="p2">P2</h3>
+        <p class="resp-cap">Oct 16, 2026 · in person · 30 min · consented to notes</p>
+        <div class="qa"><p class="q">Q1 · In the screener, you described a goal: working on various projects. Can you tell me about it?</p><p class="a">"I have a few studio class deliverables, a team case competition slide deck, and a personal branding site I want to clean up."</p></div>
+        <div class="qa"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"It’s mid-semester crunch time, and if I don’t juggle these right now, my grades slip and portfolio deadlines pass."</p></div>
+        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"Finished the wireframes for studio and drafted three slides for the competition."</p></div>
+        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"I dropped the personal website completely. Studio and team stuff have fixed deadlines, so solo work got shoved aside."</p></div>
+        <div class="qa"><p class="q">Q3 · You said being busy with schoolwork made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Thursday I planned to spend two hours on my site. But our team had an emergency critique rework that went until 11 PM. I was burnt out and just went straight to sleep."</p></div>
+        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"Academic deadlines have real consequences with professors. Personal projects only answer to me, so they lose every time."</p></div>
+        <div class="qa"><p class="q">Q4 · You mentioned you had used an app, planner, or AI tool, and it worked efficiently. Which tool was it, and how did you use it?</p><p class="a">"I used Todoist paired with Google Calendar. Just rapid dumping of tasks into 30-minute calendar blocks."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"Yes, daily."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"It works because it takes two seconds to add a task. If an app takes five minutes of setup, I abandon it."</p></div>
+        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"Look at my calendar, see the blank pockets between lectures, and suggest: "You have 45 minutes, just draft this one Figma frame.""</p></div>
+        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"A. I know my school workload better than any algorithm. I don't want an AI telling me how to organize my day; I just need it to remind me of the small step when I have a spare hour."</p></div>
+        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Only if it integrates with what I already use. If it’s a brand-new app I have to open and manage, honestly no."</p></div>
+        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"If it reduces cognitive load, yes. If it sends push notifications when I’m already stressed in class, I’ll mute it within three days."</p></div>
+        <div class="qa"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"Energy levels matter more than time. A free 30-minute window at 9 PM isn't the same as 30 minutes at 11 AM."</p></div>
+        <p class="measure"><strong>My notes after the interview (my interpretation, not the participant's words).</strong> What surprised me: Highly protective of autonomy; allergic to complex features or prescriptive AI planning. Compared with the screener: Confirmed "busy school works" pushes out personal initiative; the tool they called "efficient" was actually just simple time-blocking. Follow-up I should have asked: "What is the trigger that actually makes you check off a task on a busy day?"</p>
+
+        <h3 id="p6">P6</h3>
+        <p class="resp-cap">Oct 16, 2026 · in person · 30 min · consented to notes</p>
+        <div class="qa"><p class="q">Q1 · In the screener, you described a few goals: learning new UX tools for your design process, time management, job searching, and using AI tools to keep up with the trend. Can you tell me about them?</p><p class="a">"I’m trying to transition into product design, so I feel like I have to learn Figma advanced variables, test new generative UI tools, update my resume, and network on LinkedIn all at once."</p></div>
+        <div class="qa"><p class="q">Q1 probe · Why did you choose those goals?</p><p class="a">"The job market is brutal right now. Every job listing wants someone who does everything, and I feel like I’m falling behind."</p></div>
+        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward those goals since you filled out the screener?</p><p class="a">"I bookmarked about fifteen tutorials and made a massive Notion board of jobs to apply for."</p></div>
+        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"I haven't actually applied or finished a tutorial. Gathering resources feels like working, but then looking at the list makes me freeze up."</p></div>
+        <div class="qa"><p class="q">Q3 · You said nobody keeping you accountable, motivation, keeping track, and not being sure where to start made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Sunday, I sat down at 10 AM to work on a case study. I spent two hours organizing Notion boards, then an hour debating whether to learn Framer or Figma first, got overwhelmed, and ended up just scrolling social media."</p></div>
+        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"When you have four huge goals with no manager or teacher checking your work, you don't know what priority one is. You're frozen by too many options."</p></div>
+        <div class="qa"><p class="q">Q4 · You mentioned using the Apple Notes app and a physical planner, but you couldn't keep up. How did you use them?</p><p class="a">"I’d write down ambitious 10-item to-do lists in my notebook every Monday, or dump links into Notes."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Are you still using them?</p><p class="a">"Not consistently. I abandon the page after two days."</p></div>
+        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"Seeing seven uncrossed items on Wednesday feels like failure, so I just avoid looking at the planner completely."</p></div>
+        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I want it to tell me: "Don’t worry about the other ten things today. Just open Figma and do this one 15-minute component." And then check back at 4 PM to see if I actually clicked it."</p></div>
+        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I need someone or something else to make the first move and trim down the scope, but I still want the safety valve to say "I can't do that today.""</p></div>
+        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yes, desperately. The biggest issue isn't ambition, it's paralysis."</p></div>
+        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it handles failure gently. If it guilts me or lets missed tasks snowball into an impossible backlog, I’ll shut down like I did with my planner."</p></div>
+        <div class="qa"><p class="q">Q7 · Is there anything about working toward these goals that I didn't ask about and you think matters?</p><p class="a">"The emotional side of starting. When you're job hunting, every task feels heavy. Lowering that activation energy is everything."</p></div>
+        <p class="measure"><strong>My notes after the interview (my interpretation, not the participant's words).</strong> What surprised me: "Organization" was actually acting as a procrastination coping mechanism to avoid the vulnerability of real output. Compared with the screener: Confirms the screener's admission of "not strategic enough" and accountability issues—planner failure wasn't laziness, but scope creep. Follow-up I should have asked: "Would an AI check-in feel like real accountability to you, or does accountability have to come from another human?"</p>
 
         <h3>What changed from the first guide</h3>
         <div class="wrap-table">
@@ -355,10 +426,73 @@
       <!-- ================= D4 ================= -->
       <section class="doc" id="d4">
         <p class="eyebrow label">D4 · Synthesis</p>
-        <h2>Synthesis</h2>
-        <p class="doc-sub">Sep 30, 2026 · being redone</p>
+        <h2>What the screener and interviews add up to</h2>
+        <p class="doc-sub">Sep 30, 2026 · redone Oct 18, 2026 from the Oct 16–17 interviews</p>
 
-        <p class="measure">The earlier synthesis (affinity map, journey map, and personas) was built on the first interviews, so I've taken it down. I'll redo it from the screener above and the new interviews once they're done.</p>
+        <p class="lede measure" style="color:var(--ink);">This synthesis uses only the six screener responses (D2) and the three interviews (D3). Every finding below lists the answers it comes from, by participant number and question. The earlier version, with personas built on simulated interviews, has been replaced.</p>
+
+        <div class="stats">
+          <div class="stat"><b>3 of 3</b><span>described a plan that broke down after a miss or a stuck point (Q3, Q4)</span></div>
+          <div class="stat"><b>2 of 3</b><span>picked B: the tool suggests, you approve or change (Q5)</span></div>
+          <div class="stat"><b>0 of 3</b><span>picked C: the tool sets the plan, you follow (Q5)</span></div>
+        </div>
+
+        <h3>Affinity map</h3>
+        <p class="measure">I grouped every interview answer by what it was about. Each group below is one cluster, with the answers that formed it. Screener answers are marked "screener."</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Cluster</th><th>Answers in it</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Getting stuck, not lack of drive, is what stops work</td><td>P1, Q3: "you don't know if your code syntax is wrong or your linear algebra logic is broken… drained my motivation to open it the next day." P1, Q3 probe: "friction turns into avoidance." P6, Q3 probe: "You're frozen by too many options." P6, Q6: "The biggest issue isn't ambition, it's paralysis." Screener Q3: P1 "Lack of expert guidance," P6 "not sure where to start."</td></tr>
+              <tr><td>Fixed deadlines push self-set goals out</td><td>P2, Q2 probe: "I dropped the personal website completely… solo work got shoved aside." P2, Q3: a team critique rework "went until 11 PM… just went straight to sleep." P2, Q3 probe: "Personal projects only answer to me, so they lose every time." Screener Q3: P2 "Busy school works."</td></tr>
+              <tr><td>Falling behind makes people stop looking at the plan</td><td>P1, Q4 follow-up: "once I fell two days behind, the schedule stopped making sense." P6, Q4 follow-up: "Seeing seven uncrossed items on Wednesday feels like failure, so I just avoid looking at the planner completely." P6, Q4 follow-up: "I abandon the page after two days."</td></tr>
+              <tr><td>Collecting and organizing can stand in for doing</td><td>P6, Q2: "I bookmarked about fifteen tutorials and made a massive Notion board." P6, Q2 probe: "Gathering resources feels like working." P6, Q3: "two hours organizing Notion boards, then an hour debating whether to learn Framer or Figma first."</td></tr>
+              <tr><td>People want to keep the final say on their schedule</td><td>P1, Q5 (B): "I need final control over my schedule based on my actual mental energy that day." P6, Q5 (B): "I still want the safety valve to say 'I can't do that today.'" P2, Q5 (A): "I know my school workload better than any algorithm." Screener Q5: P5 "I like to plan my own things out."</td></tr>
+              <tr><td>One small step, sized to the time and energy available</td><td>P2, Q5: "You have 45 minutes, just draft this one Figma frame." P6, Q5: "Just open Figma and do this one 15-minute component." P1, Q5: "give me the right bite-sized problem." P2, Q7: "Energy levels matter more than time."</td></tr>
+              <tr><td>Missed steps should be handled without guilt</td><td>P1, Q6: "adapt when I fall behind instead of just piling on guilt." P6, Q6 follow-up: "If it guilts me or lets missed tasks snowball into an impossible backlog, I’ll shut down."</td></tr>
+              <tr><td>Too many check-ins are a reason to quit</td><td>P1, Q7: "When tools ping you constantly during deep work, it actually ruins your flow." P2, Q6 follow-up: "If it sends push notifications when I’m already stressed in class, I’ll mute it within three days." Contrast: P6, Q5 wants it to "check back at 4 PM to see if I actually clicked it."</td></tr>
+              <tr><td>It has to fit what people already use and remember where they left off</td><td>P2, Q6: "Only if it integrates with what I already use." P2, Q4 follow-up: "If an app takes five minutes of setup, I abandon it." P1, Q6 follow-up: "If it treats every day like day one and doesn't remember where I got stuck, I’ll drop it."</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Journey: from setting a goal to dropping it</h3>
+        <p class="measure">These stages come from all three interviews, though not every person described every stage. Each cell cites who said it.</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Stage</th><th>What happened</th><th>Where a tool could help</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Set the goal</td><td>Goals were broad or several at once: P6 lists four "all at once" (Q1); P2 juggles three projects (Q1).</td><td>Help pick what comes first (P6, Q3 probe: "you don't know what priority one is").</td></tr>
+              <tr><td>Make a plan</td><td>P1 had ChatGPT make a 4-week, one-exercise-per-day plan (Q4). P6 wrote 10-item lists every Monday (Q4). P2 time-blocks in Todoist and Google Calendar (Q4).</td><td>Suggest steps the person can change (P1 and P6 chose B in Q5).</td></tr>
+              <tr><td>Start</td><td>P1 "started strong" (Q2 probe). P6 organized instead of starting (Q3).</td><td>Point to one small first step (P6, Q5; P2, Q5).</td></tr>
+              <tr><td>Hit a problem</td><td>P1 stuck on a blank canvas for two hours (Q3). P2's evening taken by a team critique rework (Q3).</td><td>For P1: help with the specific block (Q5: "debug my conceptual block"). For P2: move the step to the next free slot (Q5).</td></tr>
+              <tr><td>Fall behind</td><td>P1's schedule "stopped making sense" (Q4). P6 saw "seven uncrossed items on Wednesday" (Q4).</td><td>Re-plan after a miss instead of stacking up overdue tasks (P1, Q6; P6, Q6 follow-up).</td></tr>
+              <tr><td>Drop it</td><td>P1 uses ChatGPT only "on and off" (Q4). P6 avoids "looking at the planner completely" (Q4). P2 "dropped the personal website completely" (Q2 probe).</td><td>Make coming back easy, with the tool remembering where they stopped (P1, Q6 follow-up).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Where participants disagreed</h3>
+        <p class="measure"><strong>How much the tool should plan.</strong> P1 and P6 want it to propose the steps (Q5, B). P1 wants "its domain knowledge to lay out the path," and P6 wants "something else to make the first move and trim down the scope." P2 wants only reminders (Q5, A): "I don't want an AI telling me how to organize my day." P2 is also the only one with a tool that still works daily (Q4 follow-up), so a planning tool may matter less for P2.</p>
+        <p class="measure"><strong>Check-ins.</strong> P6 asked for a check-in (Q5). P1 and P2 both named constant notifications as a reason to stop (Q7; Q6 follow-up). One check-in at a time the person picks may cover both, but I didn't test that.</p>
+
+        <h3>Limits</h3>
+        <p class="measure">Three interviews is a small sample. All three said yes to the screener's tool question (Q5), so the people most skeptical of a tool aren't represented: P3 ("I don't use apps for anything") and P5 ("I like to plan my own things out") weren't interviewed. Q5 and Q6 ask about a tool that doesn't exist, so those answers are weaker than what people said they actually did in Q2 to Q4. All three participants are students or job seekers in design or computing fields.</p>
+
+        <h3>What this means for D5</h3>
+        <ol class="measure">
+          <li>The tool suggests steps; the person approves, changes, or skips them. No mode where the tool sets the plan alone (no one picked C in Q5).</li>
+          <li>Show one next step at a time, sized to the time available (P2 and P6, Q5).</li>
+          <li>After a missed day, re-plan instead of piling up overdue items, with no guilt language (P1, Q6; P6, Q4 and Q6 follow-up).</li>
+          <li>Remember where the person got stuck and pick up from there (P1, Q6 follow-up).</li>
+          <li>Few check-ins, at a time the person chooses (P1, Q7; P2, Q6 follow-up; P6, Q5).</li>
+          <li>Connect to a calendar the person already uses rather than asking them to manage a new app (P2, Q6 and Q4 follow-up).</li>
+        </ol>
+        <p class="measure"><strong>Open questions to carry into D5.</strong> Would an AI check-in feel like real accountability, or does it have to come from a person (from my P6 notes)? What do people do on the first day they miss a planned step (from my P1 notes)? Can the tool help with a subject-specific block like P1's, or only with scheduling?</p>
       </section>
 
     </div>
