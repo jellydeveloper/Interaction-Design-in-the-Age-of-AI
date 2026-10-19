@@ -92,6 +92,8 @@
   .yes{ color:var(--ok-ink); font-weight:600; }
   .no{ color:var(--no-ink); font-weight:600; }
 
+  ul.options{ list-style:none; padding-left:16px; margin:8px 0; }
+  ul.options li{ margin:4px 0; }
   .qa{ margin:18px 0; }
   .qa .q{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin-bottom:5px; max-width:72ch; }
   .qa mark{ background:var(--accent-tint); color:inherit; padding:0 2px; }
@@ -369,7 +371,14 @@
           <li>What, if anything, have you done toward that goal since you filled out the screener? <em>Probe: How, if at all, has that changed over time? If they've done nothing: Why not?</em></li>
           <li>You said [Q3 answer] made it hard to follow through. Can you tell me about a time that happened? <em>Probe: Why do you think that happens?</em></li>
           <li>You mentioned [Q4 answer]. How did you use it? <em>Follow-ups: Are you still using it? Why or why not? If they used no tool: How do you keep track of the goal, if at all?</em></li>
-          <li>How, if at all, would you want a tool like this to work for you? <em>Follow-up: Here are a few ways it could work. A: You set the steps and schedule; the tool only reminds you. B: The tool suggests steps and a schedule; you approve or change them. C: The tool sets the steps and schedule; you follow them. D: None of these. Which, if any, is closest to what you would want? Why?</em></li>
+          <li>How, if at all, would you want a tool like this to work for you? <em>Follow-up: Here are a few ways it could work.</em>
+            <ul class="options">
+              <li><strong>A:</strong> You set the steps and schedule; the tool only reminds you.</li>
+              <li><strong>B:</strong> The tool suggests steps and a schedule; you approve or change them.</li>
+              <li><strong>C:</strong> The tool sets the steps and schedule; you follow them.</li>
+              <li><strong>D:</strong> None of these.</li>
+            </ul>
+            <em>Which, if any, is closest to what you would want? Why?</em></li>
           <li>Do you think you would use a tool like this? Why or why not? <em>Follow-up, if yes: Do you think you would continue to use it? Why or why not?</em></li>
           <li>Is there anything about working toward this goal that I didn't ask about and you think matters?</li>
         </ol>
