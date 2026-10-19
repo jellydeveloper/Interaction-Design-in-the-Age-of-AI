@@ -94,6 +94,10 @@
 
   ul.options{ list-style:none; padding-left:16px; margin:8px 0; }
   ul.options li{ margin:4px 0; }
+  a.ref{ color:inherit; text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:2px; }
+  a.ref:hover{ color:var(--accent); }
+  .qa:target, .resp-cap:target, ol.measure li:target{ background:var(--accent-tint); outline:6px solid var(--accent-tint); }
+  .qa, .resp-cap, ol.measure li{ scroll-margin-top:24px; }
   .qa{ margin:18px 0; }
   .qa .q{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin-bottom:5px; max-width:72ch; }
   .qa mark{ background:var(--accent-tint); color:inherit; padding:0 2px; }
@@ -218,7 +222,7 @@
 
         <h3 id="screener-full">Full responses, by question</h3>
 
-        <p class="resp-cap">Q1 · What year are you in school, and what are you currently job/internship hunting for (if applicable)?</p>
+        <p class="resp-cap" id="screener-q1">Q1 · What year are you in school, and what are you currently job/internship hunting for (if applicable)?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -232,7 +236,7 @@
           </table>
         </div>
 
-        <p class="resp-cap">Q2 · Think of a career or skill goal you set for yourself recently (job search, learning a skill, networking, etc). What was it?</p>
+        <p class="resp-cap" id="screener-q2">Q2 · Think of a career or skill goal you set for yourself recently (job search, learning a skill, networking, etc). What was it?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -246,7 +250,7 @@
           </table>
         </div>
 
-        <p class="resp-cap">Q3 · What made it hard to actually follow through on that goal, day to day?</p>
+        <p class="resp-cap" id="screener-q3">Q3 · What made it hard to actually follow through on that goal, day to day?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -260,7 +264,7 @@
           </table>
         </div>
 
-        <p class="resp-cap">Q4 · Have you ever used an app, planner, or AI tool to help you stick to a goal like this? What happened?</p>
+        <p class="resp-cap" id="screener-q4">Q4 · Have you ever used an app, planner, or AI tool to help you stick to a goal like this? What happened?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -274,7 +278,7 @@
           </table>
         </div>
 
-        <p class="resp-cap">Q5 · If a tool could break a big goal into small steps and check in with you, would that help? Why or why not?</p>
+        <p class="resp-cap" id="screener-q5">Q5 · If a tool could break a big goal into small steps and check in with you, would that help? Why or why not?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -288,7 +292,7 @@
           </table>
         </div>
 
-        <p class="resp-cap">Q6 · Would you be open to a 15-min video chat about this?</p>
+        <p class="resp-cap" id="screener-q6">Q6 · Would you be open to a 15-min video chat about this?</p>
         <div class="wrap-table">
           <table class="resp answers">
             <tbody>
@@ -322,7 +326,7 @@
 
         <h3 id="stood-out">What stood out</h3>
         <p class="measure"><strong>Five of six talked about keeping their effort going.</strong> In Q3, P1 said "willpower," P2 "busy school works," P3 "consistency," P5 "some days I’m unmotivated," and P6 "nobody keeps me accountable, motivation issues." Three also didn't know what to do next: P1 ("lack of expert guidance"), P5 ("learn more specifics"), and P6 ("not sure where to start"). I can't really tell what P4 meant by "the greed" from two words, and P4 didn't want a follow-up.</p>
-        <p class="measure"><strong>Most people had used a tool, but few said how it went.</strong> Five of six said yes to Q4. Q4 also asked "What happened?", but only P2 ("worked efficently") and P6 ("couldn't keep up") said how it went. P6 also guessed why: "maybe because my plan was not strategic enough." The others just named the tool. I couldn't ask follow-ups in a survey, so I added this to the interview guide (D3, Q4).</p>
+        <p class="measure"><strong>Most people had used a tool, but few said how it went.</strong> Five of six said yes to Q4. Q4 also asked "What happened?", but only P2 ("worked efficently") and P6 ("couldn't keep up") said how it went. P6 also guessed why: "maybe because my plan was not strategic enough." The others just named the tool. I couldn't ask follow-ups in a survey, so I added this to the interview guide (<a class="ref" href="#guide-q4">D3, Q4</a>).</p>
         <p class="measure"><strong>The two people who said no to Q5 still had trouble with their goals.</strong> Q5 asked if a tool that breaks a goal into small steps and checks in would help. P1, P2, P4, and P6 said yes. P3 said no because they don't use apps and one didn't help before. P5 said no because "I like to plan my own things out," but in Q3 still said some days they're unmotivated. With only six responses I'm not calling this a pattern. I just took it as something to ask about in the interviews.</p>
 
         <h3>What the screener couldn't answer</h3>
@@ -333,10 +337,10 @@
               <tr><th>Gap</th><th>Where it shows up</th><th>Interview question</th></tr>
             </thead>
             <tbody>
-              <tr><td>What the obstacles look like in practice</td><td>Q3: P2, P3, P4 answered in one to three words</td><td>Q2, Q3</td></tr>
-              <tr><td>Why tools were kept or dropped</td><td>Q4: only P2 and P6 described an outcome</td><td>Q4</td></tr>
-              <tr><td>How much say people want over the plan</td><td>Q4: P1 had ChatGPT plan their days. Q5: P5 wants to plan their own things</td><td>Q5</td></tr>
-              <tr><td>Whether people would keep using a tool like this</td><td>Q5 asked if it would help, not whether they'd use it</td><td>Q6</td></tr>
+              <tr><td>What the obstacles look like in practice</td><td><a class="ref" href="#screener-q3">Q3</a>: P2, P3, P4 answered in one to three words</td><td><a class="ref" href="#guide-q2">Q2</a>, <a class="ref" href="#guide-q3">Q3</a></td></tr>
+              <tr><td>Why tools were kept or dropped</td><td><a class="ref" href="#screener-q4">Q4</a>: only P2 and P6 described an outcome</td><td><a class="ref" href="#guide-q4">Q4</a></td></tr>
+              <tr><td>How much say people want over the plan</td><td><a class="ref" href="#screener-q4">Q4</a>: P1 had ChatGPT plan their days. <a class="ref" href="#screener-q5">Q5</a>: P5 wants to plan their own things</td><td><a class="ref" href="#guide-q5">Q5</a></td></tr>
+              <tr><td>Whether people would keep using a tool like this</td><td>Q5 asked if it would help, not whether they'd use it</td><td><a class="ref" href="#guide-q6">Q6</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -353,12 +357,12 @@
         <div class="wrap-table">
           <table class="resp">
             <thead>
-              <tr><th>Who</th><th>Date</th><th>Format</th><th>Screener goal (Q2)</th><th>Screener Q5</th></tr>
+              <tr><th>Who</th><th>Date</th><th>Format</th><th>Screener goal (<a class="ref" href="#screener-q2">Q2</a>)</th><th>Tool would help? (<a class="ref" href="#screener-q5">Q5</a>)</th><th>Open to a follow-up? (<a class="ref" href="#screener-q6">Q6</a>)</th></tr>
             </thead>
             <tbody>
-              <tr><td>P1</td><td>Oct 12</td><td>In person, 30 min</td><td>"Learning a skill"</td><td><span class="yes">Yes</span></td></tr>
-              <tr><td>P2</td><td>Oct 16</td><td>In person, 30 min</td><td>"various projects"</td><td><span class="yes">Yes</span></td></tr>
-              <tr><td>P6</td><td>Oct 17</td><td>In person, 30 min</td><td>"Learning new ux tools…, time management skills, job searching, using AI tools…"</td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P1</td><td>Oct 12</td><td>In person, 30 min</td><td>"Learning a skill"</td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P2</td><td>Oct 16</td><td>In person, 30 min</td><td>"various projects"</td><td><span class="yes">Yes</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><td>P6</td><td>Oct 17</td><td>In person, 30 min</td><td>"Learning new ux tools…, time management skills, job searching, using AI tools…"</td><td><span class="yes">Yes</span></td><td><span class="no">No</span>, then yes in October</td></tr>
             </tbody>
           </table>
         </div>
@@ -367,11 +371,11 @@
         <h3 id="guide">Interview guide</h3>
         <p class="measure">Text in [brackets] comes from that person's screener answers. I asked follow-ups one at a time, after they answered the main question. I only asked probes if the answer didn't already cover them. Before Q5, I described the tool the same way the screener did: "a tool that breaks a big goal into small steps and checks in with you."</p>
         <ol class="measure">
-          <li>In the screener, you described a goal: [Q2 answer]. Can you tell me about it?<br><em>Probe: Why did you choose that goal?</em></li>
-          <li>What, if anything, have you done toward that goal since you filled out the screener?<br><em>Probe: How, if at all, has that changed over time? If they've done nothing: Why not?</em></li>
-          <li>You said [Q3 answer] made it hard to follow through. Can you tell me about a time that happened?<br><em>Probe: Why do you think that happens?</em></li>
-          <li>You mentioned [Q4 answer]. How did you use it?<br><em>Follow-ups: Are you still using it? Why or why not? If they used no tool: How do you keep track of the goal, if at all?</em></li>
-          <li>How, if at all, would you want a tool like this to work for you?<br><em>Follow-up: Here are a few ways it could work.</em>
+          <li id="guide-q1">In the screener, you described a goal: [Q2 answer]. Can you tell me about it?<br><em>Probe: Why did you choose that goal?</em></li>
+          <li id="guide-q2">What, if anything, have you done toward that goal since you filled out the screener?<br><em>Probe: How, if at all, has that changed over time? If they've done nothing: Why not?</em></li>
+          <li id="guide-q3">You said [Q3 answer] made it hard to follow through. Can you tell me about a time that happened?<br><em>Probe: Why do you think that happens?</em></li>
+          <li id="guide-q4">You mentioned [Q4 answer]. How did you use it?<br><em>Follow-ups: Are you still using it? Why or why not? If they used no tool: How do you keep track of the goal, if at all?</em></li>
+          <li id="guide-q5">How, if at all, would you want a tool like this to work for you?<br><em>Follow-up: Here are a few ways it could work.</em>
             <ul class="options">
               <li><strong>A:</strong> You set the steps and schedule; the tool only reminds you.</li>
               <li><strong>B:</strong> The tool suggests steps and a schedule; you approve or change them.</li>
@@ -379,8 +383,8 @@
               <li><strong>D:</strong> None of these.</li>
             </ul>
             <em>Which, if any, is closest to what you would want? Why?</em></li>
-          <li>Do you think you would use a tool like this? Why or why not?<br><em>Follow-up, if yes: Do you think you would continue to use it? Why or why not?</em></li>
-          <li>Is there anything about working toward this goal that I didn't ask about and you think matters?</li>
+          <li id="guide-q6">Do you think you would use a tool like this? Why or why not?<br><em>Follow-up, if yes: Do you think you would continue to use it? Why or why not?</em></li>
+          <li id="guide-q7">Is there anything about working toward this goal that I didn't ask about and you think matters?</li>
         </ol>
         <p class="measure">Q5 and Q6 ask about a tool that doesn't exist yet. So I count those answers as weaker evidence than Q2 to Q4, which are about what people actually did.</p>
 
@@ -389,56 +393,56 @@
 
         <h3 id="p1">P1</h3>
         <p class="resp-cap">Oct 12, 2026 · in person · 30 min · consented to notes</p>
-        <div class="qa"><p class="q">Q1 · In the screener, you described a goal: learning a skill. Can you tell me about it?</p><p class="a">"I've been trying to learn shader programming for WebGL. It's kind of a mix of math and front-end stuff, and I wanted to get it for my portfolio."</p></div>
-        <div class="qa"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"Honestly it's hard to stand out if you only do normal UI. Real-time graphics on websites seemed like the next big thing, so I wanted to learn it."</p></div>
-        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"I did two tutorials on fragment shaders and took some notes in Obsidian."</p></div>
-        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"The beginning was fine, I made basic shapes. But <mark>once the vector math got into 3D lighting, I got really slow</mark>."</p></div>
-        <div class="qa"><p class="q">Q3 · You said a lack of expert guidance to follow, and willpower, made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Tuesday I had a bug and the canvas just stayed blank. When you're teaching yourself, <mark>you can't tell if it's the code or if your math is wrong</mark>. I stared at it for like two hours, and the next day I didn't even want to open it."</p></div>
-        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"Because there's nobody to tell you 'you're close, check line 12.' <mark>When I get stuck and nobody helps, I just start avoiding it.</mark>"</p></div>
-        <div class="qa"><p class="q">Q4 · You mentioned using ChatGPT to plan in detail how to execute on a day-to-day basis. How did you use it?</p><p class="a">"I asked it to make a 4-week plan from beginner GLSL to lighting, with one exercise every day."</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"Kind of. Now I mostly use it when I have a concept question."</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"The plan was too strict. Stuff comes up, and <mark>once I was two days behind, the schedule didn't make sense anymore</mark>."</p></div>
-        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I'd want it to be like a senior who knows the stuff. <mark>It tells me the next small problem to work on and helps when I'm stuck</mark>, but I'm still the one doing it."</p></div>
-        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I want it to plan the path since it knows more than me, but <mark>I want to decide the schedule, because some days I just don't have the energy</mark>."</p></div>
-        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yeah, if the suggestions actually make sense, and if it <mark>changes the plan when I fall behind instead of making me feel guilty</mark>."</p></div>
-        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it remembers where I was. <mark>If every day feels like starting over and it doesn't know where I got stuck, I'd stop using it.</mark>"</p></div>
-        <div class="qa"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"How fast you go matters more than reminders. <mark>If it keeps sending notifications while I'm focused, it ruins it.</mark>"</p></div>
+        <div class="qa" id="p1-q1"><p class="q">Q1 · In the screener, you described a goal: learning a skill. Can you tell me about it?</p><p class="a">"I've been trying to learn shader programming for WebGL. It's kind of a mix of math and front-end stuff, and I wanted to get it for my portfolio."</p></div>
+        <div class="qa" id="p1-q1p"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"Honestly it's hard to stand out if you only do normal UI. Real-time graphics on websites seemed like the next big thing, so I wanted to learn it."</p></div>
+        <div class="qa" id="p1-q2"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"I did two tutorials on fragment shaders and took some notes in Obsidian."</p></div>
+        <div class="qa" id="p1-q2p"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"The beginning was fine, I made basic shapes. But <mark>once the vector math got into 3D lighting, I got really slow</mark>."</p></div>
+        <div class="qa" id="p1-q3"><p class="q">Q3 · You said a lack of expert guidance to follow, and willpower, made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Tuesday I had a bug and the canvas just stayed blank. When you're teaching yourself, <mark>you can't tell if it's the code or if your math is wrong</mark>. I stared at it for like two hours, and the next day I didn't even want to open it."</p></div>
+        <div class="qa" id="p1-q3p"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"Because there's nobody to tell you 'you're close, check line 12.' <mark>When I get stuck and nobody helps, I just start avoiding it.</mark>"</p></div>
+        <div class="qa" id="p1-q4"><p class="q">Q4 · You mentioned using ChatGPT to plan in detail how to execute on a day-to-day basis. How did you use it?</p><p class="a">"I asked it to make a 4-week plan from beginner GLSL to lighting, with one exercise every day."</p></div>
+        <div class="qa" id="p1-q4f1"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"Kind of. Now I mostly use it when I have a concept question."</p></div>
+        <div class="qa" id="p1-q4f2"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"The plan was too strict. Stuff comes up, and <mark>once I was two days behind, the schedule didn't make sense anymore</mark>."</p></div>
+        <div class="qa" id="p1-q5"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I'd want it to be like a senior who knows the stuff. <mark>It tells me the next small problem to work on and helps when I'm stuck</mark>, but I'm still the one doing it."</p></div>
+        <div class="qa" id="p1-q5f"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I want it to plan the path since it knows more than me, but <mark>I want to decide the schedule, because some days I just don't have the energy</mark>."</p></div>
+        <div class="qa" id="p1-q6"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yeah, if the suggestions actually make sense, and if it <mark>changes the plan when I fall behind instead of making me feel guilty</mark>."</p></div>
+        <div class="qa" id="p1-q6f"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it remembers where I was. <mark>If every day feels like starting over and it doesn't know where I got stuck, I'd stop using it.</mark>"</p></div>
+        <div class="qa" id="p1-q7"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"How fast you go matters more than reminders. <mark>If it keeps sending notifications while I'm focused, it ruins it.</mark>"</p></div>
         <p class="measure"><strong>My notes after the interview (my take, not P1's words).</strong> What surprised me: P1 had plenty of drive. Their motivation dropped once they got stuck on the math and had no one to ask. Compared with the screener: This matches what P1 wrote. ChatGPT was good for planning out a syllabus, but it couldn't help when something broke. Follow-up I should have asked: "When ChatGPT generated your daily schedule, what did you do on the very first day you missed a task?"</p>
 
         <h3 id="p2">P2</h3>
         <p class="resp-cap">Oct 16, 2026 · in person · 30 min · consented to notes</p>
-        <div class="qa"><p class="q">Q1 · In the screener, you described a goal: working on various projects. Can you tell me about it?</p><p class="a">"I have a couple studio projects, a slide deck for a team case competition, and my personal website that I want to clean up."</p></div>
-        <div class="qa"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"It's the middle of the semester, so if I don't keep up with all of them, my grades drop and I miss portfolio deadlines."</p></div>
-        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"I finished my studio wireframes and made three slides for the competition."</p></div>
-        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"<mark>I kind of gave up on the website.</mark> Studio and the team project have real deadlines, so my own stuff got pushed back."</p></div>
-        <div class="qa"><p class="q">Q3 · You said being busy with schoolwork made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Thursday I planned two hours for my site. But my team had to redo stuff for a critique and <mark>we worked until 11 PM. I was so tired I just went to bed.</mark>"</p></div>
-        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"School deadlines actually matter because professors grade you. <mark>My own projects only matter to me, so they always lose.</mark>"</p></div>
-        <div class="qa"><p class="q">Q4 · You mentioned you had used an app, planner, or AI tool, and it worked efficiently. Which tool was it, and how did you use it?</p><p class="a">"Todoist with Google Calendar. I just throw tasks into 30-minute blocks really fast."</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"<mark>Yeah, every day.</mark>"</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"Because adding a task takes like two seconds. <mark>If an app takes five minutes to set up, I won't use it.</mark>"</p></div>
-        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"It could <mark>look at my calendar, find the free time between classes</mark>, and say something like 'you have 45 minutes, just do this one Figma frame.'"</p></div>
-        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"A. I know my school work better than an app does. <mark>I don't want AI planning my day.</mark> I just want a reminder of the small thing when I have a free hour."</p></div>
-        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"<mark>Only if it works with the apps I already use.</mark> If it's a new app I have to open and keep up with, probably not."</p></div>
-        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"If it makes things easier to think about, yes. But if it sends notifications when I'm already stressed in class, <mark>I'd mute it in like three days</mark>."</p></div>
-        <div class="qa"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"<mark>Energy matters more than time.</mark> 30 free minutes at 9 PM is not the same as 30 minutes at 11 AM."</p></div>
+        <div class="qa" id="p2-q1"><p class="q">Q1 · In the screener, you described a goal: working on various projects. Can you tell me about it?</p><p class="a">"I have a couple studio projects, a slide deck for a team case competition, and my personal website that I want to clean up."</p></div>
+        <div class="qa" id="p2-q1p"><p class="q">Q1 probe · Why did you choose that goal?</p><p class="a">"It's the middle of the semester, so if I don't keep up with all of them, my grades drop and I miss portfolio deadlines."</p></div>
+        <div class="qa" id="p2-q2"><p class="q">Q2 · What, if anything, have you done toward that goal since you filled out the screener?</p><p class="a">"I finished my studio wireframes and made three slides for the competition."</p></div>
+        <div class="qa" id="p2-q2p"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"<mark>I kind of gave up on the website.</mark> Studio and the team project have real deadlines, so my own stuff got pushed back."</p></div>
+        <div class="qa" id="p2-q3"><p class="q">Q3 · You said being busy with schoolwork made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Thursday I planned two hours for my site. But my team had to redo stuff for a critique and <mark>we worked until 11 PM. I was so tired I just went to bed.</mark>"</p></div>
+        <div class="qa" id="p2-q3p"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"School deadlines actually matter because professors grade you. <mark>My own projects only matter to me, so they always lose.</mark>"</p></div>
+        <div class="qa" id="p2-q4"><p class="q">Q4 · You mentioned you had used an app, planner, or AI tool, and it worked efficiently. Which tool was it, and how did you use it?</p><p class="a">"Todoist with Google Calendar. I just throw tasks into 30-minute blocks really fast."</p></div>
+        <div class="qa" id="p2-q4f1"><p class="q">Q4 follow-up · Are you still using it?</p><p class="a">"<mark>Yeah, every day.</mark>"</p></div>
+        <div class="qa" id="p2-q4f2"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"Because adding a task takes like two seconds. <mark>If an app takes five minutes to set up, I won't use it.</mark>"</p></div>
+        <div class="qa" id="p2-q5"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"It could <mark>look at my calendar, find the free time between classes</mark>, and say something like 'you have 45 minutes, just do this one Figma frame.'"</p></div>
+        <div class="qa" id="p2-q5f"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"A. I know my school work better than an app does. <mark>I don't want AI planning my day.</mark> I just want a reminder of the small thing when I have a free hour."</p></div>
+        <div class="qa" id="p2-q6"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"<mark>Only if it works with the apps I already use.</mark> If it's a new app I have to open and keep up with, probably not."</p></div>
+        <div class="qa" id="p2-q6f"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"If it makes things easier to think about, yes. But if it sends notifications when I'm already stressed in class, <mark>I'd mute it in like three days</mark>."</p></div>
+        <div class="qa" id="p2-q7"><p class="q">Q7 · Is there anything about working toward this goal that I didn't ask about and you think matters?</p><p class="a">"<mark>Energy matters more than time.</mark> 30 free minutes at 9 PM is not the same as 30 minutes at 11 AM."</p></div>
         <p class="measure"><strong>My notes after the interview (my take, not P2's words).</strong> What surprised me: P2 really wants to stay in control. They don't want complicated features or an AI planning their day. Compared with the screener: This matches "busy school works," since school deadlines push out personal projects. The tool they called "efficient" turned out to be simple time blocking. Follow-up I should have asked: "What is the trigger that actually makes you check off a task on a busy day?"</p>
 
         <h3 id="p6">P6</h3>
         <p class="resp-cap">Oct 17, 2026 · in person · 30 min · consented to notes</p>
-        <div class="qa"><p class="q">Q1 · In the screener, you described a few goals: learning new UX tools for your design process, time management, job searching, and using AI tools to keep up with the trend. Can you tell me about them?</p><p class="a">"I'm trying to get into product design, so I feel like I need to learn Figma variables, try the new AI UI tools, fix my resume, and network on LinkedIn, <mark>all at the same time</mark>."</p></div>
-        <div class="qa"><p class="q">Q1 probe · Why did you choose those goals?</p><p class="a">"The job market is really bad right now. Every job post wants someone who can do everything, and I feel behind."</p></div>
-        <div class="qa"><p class="q">Q2 · What, if anything, have you done toward those goals since you filled out the screener?</p><p class="a">"I saved like fifteen tutorials and made a huge Notion board of jobs to apply to."</p></div>
-        <div class="qa"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"I haven't actually applied anywhere or finished a tutorial. <mark>Saving stuff feels like I'm working</mark>, but then I look at the list and I just freeze."</p></div>
-        <div class="qa"><p class="q">Q3 · You said nobody keeping you accountable, motivation, keeping track, and not being sure where to start made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Sunday I sat down at 10 AM to work on a case study. <mark>I organized my Notion for two hours</mark>, then spent an hour deciding if I should learn Framer or Figma first. I got overwhelmed and ended up on social media."</p></div>
-        <div class="qa"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"When you have four big goals and no boss or teacher checking, <mark>you don't know what to do first</mark>. There are too many options so you freeze."</p></div>
-        <div class="qa"><p class="q">Q4 · You mentioned using the Apple Notes app and a physical planner, but you couldn't keep up. How did you use them?</p><p class="a">"Every Monday I'd write a big 10-item to-do list in my notebook, or just dump links into Notes."</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Are you still using them?</p><p class="a">"Not really. <mark>I stop looking at the page after two days.</mark>"</p></div>
-        <div class="qa"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"When it's Wednesday and seven things aren't crossed off, <mark>it feels like I failed, so I just stop looking at the planner</mark>."</p></div>
-        <div class="qa"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I want it to tell me, 'Don't worry about the other ten things today, <mark>just open Figma and do this one 15-minute component</mark>.' And then check on me at 4 PM to see if I did it."</p></div>
-        <div class="qa"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I need something to make the first move and cut it down for me, but <mark>I still want to be able to say 'I can't do that today.'</mark>"</p></div>
-        <div class="qa"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yes, definitely. <mark>I have the motivation, I just freeze up.</mark>"</p></div>
-        <div class="qa"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it's chill when I miss things. <mark>If it makes me feel guilty or the missed tasks pile up into a huge list, I'll quit it</mark> like I did with my planner."</p></div>
-        <div class="qa"><p class="q">Q7 · Is there anything about working toward these goals that I didn't ask about and you think matters?</p><p class="a">"Starting is the hard part, emotionally. When you're job hunting every task feels heavy, so making it easier to start is huge."</p></div>
+        <div class="qa" id="p6-q1"><p class="q">Q1 · In the screener, you described a few goals: learning new UX tools for your design process, time management, job searching, and using AI tools to keep up with the trend. Can you tell me about them?</p><p class="a">"I'm trying to get into product design, so I feel like I need to learn Figma variables, try the new AI UI tools, fix my resume, and network on LinkedIn, <mark>all at the same time</mark>."</p></div>
+        <div class="qa" id="p6-q1p"><p class="q">Q1 probe · Why did you choose those goals?</p><p class="a">"The job market is really bad right now. Every job post wants someone who can do everything, and I feel behind."</p></div>
+        <div class="qa" id="p6-q2"><p class="q">Q2 · What, if anything, have you done toward those goals since you filled out the screener?</p><p class="a">"I saved like fifteen tutorials and made a huge Notion board of jobs to apply to."</p></div>
+        <div class="qa" id="p6-q2p"><p class="q">Q2 probe · How, if at all, has that changed over time?</p><p class="a">"I haven't actually applied anywhere or finished a tutorial. <mark>Saving stuff feels like I'm working</mark>, but then I look at the list and I just freeze."</p></div>
+        <div class="qa" id="p6-q3"><p class="q">Q3 · You said nobody keeping you accountable, motivation, keeping track, and not being sure where to start made it hard to follow through. Can you tell me about a time that happened?</p><p class="a">"Last Sunday I sat down at 10 AM to work on a case study. <mark>I organized my Notion for two hours</mark>, then spent an hour deciding if I should learn Framer or Figma first. I got overwhelmed and ended up on social media."</p></div>
+        <div class="qa" id="p6-q3p"><p class="q">Q3 probe · Why do you think that happens?</p><p class="a">"When you have four big goals and no boss or teacher checking, <mark>you don't know what to do first</mark>. There are too many options so you freeze."</p></div>
+        <div class="qa" id="p6-q4"><p class="q">Q4 · You mentioned using the Apple Notes app and a physical planner, but you couldn't keep up. How did you use them?</p><p class="a">"Every Monday I'd write a big 10-item to-do list in my notebook, or just dump links into Notes."</p></div>
+        <div class="qa" id="p6-q4f1"><p class="q">Q4 follow-up · Are you still using them?</p><p class="a">"Not really. <mark>I stop looking at the page after two days.</mark>"</p></div>
+        <div class="qa" id="p6-q4f2"><p class="q">Q4 follow-up · Why or why not?</p><p class="a">"When it's Wednesday and seven things aren't crossed off, <mark>it feels like I failed, so I just stop looking at the planner</mark>."</p></div>
+        <div class="qa" id="p6-q5"><p class="q">Q5 · How, if at all, would you want a tool like this to work for you?</p><p class="a">"I want it to tell me, 'Don't worry about the other ten things today, <mark>just open Figma and do this one 15-minute component</mark>.' And then check on me at 4 PM to see if I did it."</p></div>
+        <div class="qa" id="p6-q5f"><p class="q">Q5 follow-up · Which of A, B, C, or D, if any, is closest to what you would want? Why?</p><p class="a">"B. I need something to make the first move and cut it down for me, but <mark>I still want to be able to say 'I can't do that today.'</mark>"</p></div>
+        <div class="qa" id="p6-q6"><p class="q">Q6 · Do you think you would use a tool like this? Why or why not?</p><p class="a">"Yes, definitely. <mark>I have the motivation, I just freeze up.</mark>"</p></div>
+        <div class="qa" id="p6-q6f"><p class="q">Q6 follow-up · Do you think you would continue to use it? Why or why not?</p><p class="a">"Only if it's chill when I miss things. <mark>If it makes me feel guilty or the missed tasks pile up into a huge list, I'll quit it</mark> like I did with my planner."</p></div>
+        <div class="qa" id="p6-q7"><p class="q">Q7 · Is there anything about working toward these goals that I didn't ask about and you think matters?</p><p class="a">"Starting is the hard part, emotionally. When you're job hunting every task feels heavy, so making it easier to start is huge."</p></div>
         <p class="measure"><strong>My notes after the interview (my take, not P6's words).</strong> What surprised me: Organizing was basically a way for P6 to put off the real work, because actually making something felt harder. Compared with the screener: This matches "not strategic enough" and the accountability problem. The planner stopped working because the lists kept getting too big. Follow-up I should have asked: "Would an AI check-in feel like real accountability to you, or does accountability have to come from another human?"</p>
 
         <h3 id="guide-changes">What changed from the first guide</h3>
@@ -448,12 +452,12 @@
               <tr><th>First guide</th><th>Revised</th><th>Why</th></tr>
             </thead>
             <tbody>
-              <tr><td>"Walk me through the last time you tried to work toward that goal. What did a normal day/week actually look like?"</td><td>Q1, Q2</td><td>A goal and a "normal day" may not be connected. The revised questions ask about the goal and what the person has done, without assuming a routine.</td></tr>
-              <tr><td>"When did you first notice yourself losing momentum? What was happening around then?"</td><td>Q2 probe</td><td>Assumed the person lost momentum, and that they understand "momentum" the way I do. The probe asks whether their effort changed, in either direction.</td></tr>
-              <tr><td>"You said you [used / didn't use] a tool for this. Walk me through what that actually looked like."</td><td>Q4</td><td>Adds "Why or why not?" so the interview gets at why a tool was kept or dropped, which the screener mostly didn't answer.</td></tr>
+              <tr><td>"Walk me through the last time you tried to work toward that goal. What did a normal day/week actually look like?"</td><td><a class="ref" href="#guide-q1">Q1</a>, <a class="ref" href="#guide-q2">Q2</a></td><td>A goal and a "normal day" may not be connected. The revised questions ask about the goal and what the person has done, without assuming a routine.</td></tr>
+              <tr><td>"When did you first notice yourself losing momentum? What was happening around then?"</td><td><a class="ref" href="#guide-q2">Q2 probe</a></td><td>Assumed the person lost momentum, and that they understand "momentum" the way I do. The probe asks whether their effort changed, in either direction.</td></tr>
+              <tr><td>"You said you [used / didn't use] a tool for this. Walk me through what that actually looked like."</td><td><a class="ref" href="#guide-q4">Q4</a></td><td>Adds "Why or why not?" so the interview gets at why a tool was kept or dropped, which the screener mostly didn't answer.</td></tr>
               <tr><td>"What would have to be true for you to trust a tool with something this personal?"</td><td>Removed</td><td>Assumed the goal is personal and that trust is the issue. Trust can still come up in the "why" answers to Q5 and Q6 without my raising it.</td></tr>
-              <tr><td>"In the ideal version of this, who's in control day to day: you, or the tool?"</td><td>Q5</td><td>"Control" wasn't defined and the question offered only two extremes. Q5 first asks openly how they'd want it to work, then describes three specific levels plus "none of these."</td></tr>
-              <tr><td>"What would make you stop using something like this after a week?"</td><td>Q6</td><td>Assumed the person would stop, and the one-week time frame had no basis. Q6 asks whether they would use it at all, then whether they would continue, and why.</td></tr>
+              <tr><td>"In the ideal version of this, who's in control day to day: you, or the tool?"</td><td><a class="ref" href="#guide-q5">Q5</a></td><td>"Control" wasn't defined and the question offered only two extremes. Q5 first asks openly how they'd want it to work, then describes three specific levels plus "none of these."</td></tr>
+              <tr><td>"What would make you stop using something like this after a week?"</td><td><a class="ref" href="#guide-q6">Q6</a></td><td>Assumed the person would stop, and the one-week time frame had no basis. Q6 asks whether they would use it at all, then whether they would continue, and why.</td></tr>
             </tbody>
           </table>
         </div>
@@ -486,15 +490,15 @@
               <tr><th>Cluster</th><th>Answers in it</th></tr>
             </thead>
             <tbody>
-              <tr><td>Getting stuck is what stops the work</td><td>P1, Q3: "you can't tell if it's the code or if your math is wrong… the next day I didn't even want to open it."<br>P1, Q3 probe: "When I get stuck and nobody helps, I just start avoiding it."<br>P6, Q3 probe: "There are too many options so you freeze."<br>P6, Q6: "I have the motivation, I just freeze up."<br>Screener Q3: P1 "Lack of expert guidance," P6 "not sure where to start."</td></tr>
-              <tr><td>Fixed deadlines push self-set goals out</td><td>P2, Q2 probe: "I kind of gave up on the website… my own stuff got pushed back."<br>P2, Q3: redoing work for a team critique, "we worked until 11 PM. I was so tired I just went to bed."<br>P2, Q3 probe: "My own projects only matter to me, so they always lose."<br>Screener Q3: P2 "Busy school works."</td></tr>
-              <tr><td>Falling behind makes people stop looking at the plan</td><td>P1, Q4 follow-up: "once I was two days behind, the schedule didn't make sense anymore."<br>P6, Q4 follow-up: "When it's Wednesday and seven things aren't crossed off, it feels like I failed, so I just stop looking at the planner."<br>P6, Q4 follow-up: "I stop looking at the page after two days."</td></tr>
-              <tr><td>Organizing can feel like doing the work</td><td>P6, Q2: "I saved like fifteen tutorials and made a huge Notion board."<br>P6, Q2 probe: "Saving stuff feels like I'm working."<br>P6, Q3: "I organized my Notion for two hours, then spent an hour deciding if I should learn Framer or Figma first."</td></tr>
-              <tr><td>People want to keep the final say on their schedule</td><td>P1, Q5 (B): "I want to decide the schedule, because some days I just don't have the energy."<br>P6, Q5 (B): "I still want to be able to say 'I can't do that today.'"<br>P2, Q5 (A): "I know my school work better than an app does."<br>Screener Q5: P5 "I like to plan my own things out."</td></tr>
-              <tr><td>One small step, sized to the time and energy available</td><td>P2, Q5: "you have 45 minutes, just do this one Figma frame."<br>P6, Q5: "just open Figma and do this one 15-minute component."<br>P1, Q5: "It tells me the next small problem to work on."<br>P2, Q7: "Energy matters more than time."</td></tr>
-              <tr><td>Missed steps should be handled without guilt</td><td>P1, Q6: "changes the plan when I fall behind instead of making me feel guilty."<br>P6, Q6 follow-up: "If it makes me feel guilty or the missed tasks pile up into a huge list, I'll quit it."</td></tr>
-              <tr><td>Too many check-ins are a reason to quit</td><td>P1, Q7: "If it keeps sending notifications while I'm focused, it ruins it."<br>P2, Q6 follow-up: "if it sends notifications when I'm already stressed in class, I'd mute it in like three days."<br>On the other hand, P6, Q5 wants it to "check on me at 4 PM to see if I did it."</td></tr>
-              <tr><td>It has to fit what people already use and remember where they left off</td><td>P2, Q6: "Only if it works with the apps I already use."<br>P2, Q4 follow-up: "If an app takes five minutes to set up, I won't use it."<br>P1, Q6 follow-up: "If every day feels like starting over and it doesn't know where I got stuck, I'd stop using it."</td></tr>
+              <tr><td>Getting stuck is what stops the work</td><td><a class="ref" href="#p1-q3">P1, Q3</a>: "you can't tell if it's the code or if your math is wrong… the next day I didn't even want to open it."<br><a class="ref" href="#p1-q3p">P1, Q3 probe</a>: "When I get stuck and nobody helps, I just start avoiding it."<br><a class="ref" href="#p6-q3p">P6, Q3 probe</a>: "There are too many options so you freeze."<br><a class="ref" href="#p6-q6">P6, Q6</a>: "I have the motivation, I just freeze up."<br><a class="ref" href="#screener-q3">Screener Q3</a>: P1 "Lack of expert guidance," P6 "not sure where to start."</td></tr>
+              <tr><td>Fixed deadlines push self-set goals out</td><td><a class="ref" href="#p2-q2p">P2, Q2 probe</a>: "I kind of gave up on the website… my own stuff got pushed back."<br><a class="ref" href="#p2-q3">P2, Q3</a>: redoing work for a team critique, "we worked until 11 PM. I was so tired I just went to bed."<br><a class="ref" href="#p2-q3p">P2, Q3 probe</a>: "My own projects only matter to me, so they always lose."<br><a class="ref" href="#screener-q3">Screener Q3</a>: P2 "Busy school works."</td></tr>
+              <tr><td>Falling behind makes people stop looking at the plan</td><td><a class="ref" href="#p1-q4f2">P1, Q4 follow-up</a>: "once I was two days behind, the schedule didn't make sense anymore."<br><a class="ref" href="#p6-q4f2">P6, Q4 follow-up</a>: "When it's Wednesday and seven things aren't crossed off, it feels like I failed, so I just stop looking at the planner."<br><a class="ref" href="#p6-q4f1">P6, Q4 follow-up</a>: "I stop looking at the page after two days."</td></tr>
+              <tr><td>Organizing can feel like doing the work</td><td><a class="ref" href="#p6-q2">P6, Q2</a>: "I saved like fifteen tutorials and made a huge Notion board."<br><a class="ref" href="#p6-q2p">P6, Q2 probe</a>: "Saving stuff feels like I'm working."<br><a class="ref" href="#p6-q3">P6, Q3</a>: "I organized my Notion for two hours, then spent an hour deciding if I should learn Framer or Figma first."</td></tr>
+              <tr><td>People want to keep the final say on their schedule</td><td><a class="ref" href="#p1-q5f">P1, Q5 (B)</a>: "I want to decide the schedule, because some days I just don't have the energy."<br><a class="ref" href="#p6-q5f">P6, Q5 (B)</a>: "I still want to be able to say 'I can't do that today.'"<br><a class="ref" href="#p2-q5f">P2, Q5 (A)</a>: "I know my school work better than an app does."<br><a class="ref" href="#screener-q5">Screener Q5</a>: P5 "I like to plan my own things out."</td></tr>
+              <tr><td>One small step, sized to the time and energy available</td><td><a class="ref" href="#p2-q5">P2, Q5</a>: "you have 45 minutes, just do this one Figma frame."<br><a class="ref" href="#p6-q5">P6, Q5</a>: "just open Figma and do this one 15-minute component."<br><a class="ref" href="#p1-q5">P1, Q5</a>: "It tells me the next small problem to work on."<br><a class="ref" href="#p2-q7">P2, Q7</a>: "Energy matters more than time."</td></tr>
+              <tr><td>Missed steps should be handled without guilt</td><td><a class="ref" href="#p1-q6">P1, Q6</a>: "changes the plan when I fall behind instead of making me feel guilty."<br><a class="ref" href="#p6-q6f">P6, Q6 follow-up</a>: "If it makes me feel guilty or the missed tasks pile up into a huge list, I'll quit it."</td></tr>
+              <tr><td>Too many check-ins are a reason to quit</td><td><a class="ref" href="#p1-q7">P1, Q7</a>: "If it keeps sending notifications while I'm focused, it ruins it."<br><a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>: "if it sends notifications when I'm already stressed in class, I'd mute it in like three days."<br>On the other hand, <a class="ref" href="#p6-q5">P6, Q5</a> wants it to "check on me at 4 PM to see if I did it."</td></tr>
+              <tr><td>It has to fit what people already use and remember where they left off</td><td><a class="ref" href="#p2-q6">P2, Q6</a>: "Only if it works with the apps I already use."<br><a class="ref" href="#p2-q4f2">P2, Q4 follow-up</a>: "If an app takes five minutes to set up, I won't use it."<br><a class="ref" href="#p1-q6f">P1, Q6 follow-up</a>: "If every day feels like starting over and it doesn't know where I got stuck, I'd stop using it."</td></tr>
             </tbody>
           </table>
         </div>
@@ -512,12 +516,12 @@
               <tr><th>Stage</th><th>What happened</th><th>Where a tool could help</th></tr>
             </thead>
             <tbody>
-              <tr><td>Set the goal</td><td>Goals were broad or several at once.<br>P6: four things "all at the same time" (Q1)<br>P2: three projects at once (Q1)</td><td>Help pick what comes first (P6, Q3 probe: "you don't know what to do first").</td></tr>
-              <tr><td>Make a plan</td><td>P1: ChatGPT made a 4-week plan, one exercise per day (Q4)<br>P6: a 10-item list every Monday (Q4)<br>P2: time blocks in Todoist and Google Calendar (Q4)</td><td>Suggest steps the person can change (P1 and P6 chose B in Q5).</td></tr>
-              <tr><td>Start</td><td>P1: the start "was fine" (Q2 probe)<br>P6: organized instead of starting (Q3)</td><td>Point to one small first step (P6, Q5; P2, Q5).</td></tr>
-              <tr><td>Hit a problem</td><td>P1: stuck on a blank canvas for two hours (Q3)<br>P2: evening taken by redoing work for a team critique (Q3)</td><td>P1: help with the specific problem (Q5: "helps when I'm stuck")<br>P2: move the step to the next free slot (Q5)</td></tr>
-              <tr><td>Fall behind</td><td>P1: the schedule "didn't make sense anymore" (Q4)<br>P6: seven things not crossed off by Wednesday (Q4)</td><td>Re-plan after a miss instead of stacking up overdue tasks (P1, Q6; P6, Q6 follow-up).</td></tr>
-              <tr><td>Drop it</td><td>P1: uses ChatGPT only "kind of" now (Q4)<br>P6: stops looking at the planner (Q4)<br>P2: "kind of gave up on the website" (Q2 probe)</td><td>Make coming back easy, with the tool remembering where they stopped (P1, Q6 follow-up).</td></tr>
+              <tr><td>Set the goal</td><td>Goals were broad or several at once.<br>P6: four things "all at the same time" (<a class="ref" href="#p6-q1">Q1</a>)<br>P2: three projects at once (<a class="ref" href="#p2-q1">Q1</a>)</td><td>Help pick what comes first (<a class="ref" href="#p6-q3p">P6, Q3 probe</a>: "you don't know what to do first").</td></tr>
+              <tr><td>Make a plan</td><td>P1: ChatGPT made a 4-week plan, one exercise per day (<a class="ref" href="#p1-q4">Q4</a>)<br>P6: a 10-item list every Monday (<a class="ref" href="#p6-q4">Q4</a>)<br>P2: time blocks in Todoist and Google Calendar (<a class="ref" href="#p2-q4">Q4</a>)</td><td>Suggest steps the person can change (P1 and P6 chose B in Q5).</td></tr>
+              <tr><td>Start</td><td>P1: the start "was fine" (<a class="ref" href="#p1-q2p">Q2 probe</a>)<br>P6: organized instead of starting (<a class="ref" href="#p6-q3">Q3</a>)</td><td>Point to one small first step (<a class="ref" href="#p6-q5">P6, Q5</a>; <a class="ref" href="#p2-q5">P2, Q5</a>).</td></tr>
+              <tr><td>Hit a problem</td><td>P1: stuck on a blank canvas for two hours (<a class="ref" href="#p1-q3">Q3</a>)<br>P2: evening taken by redoing work for a team critique (<a class="ref" href="#p2-q3">Q3</a>)</td><td>P1: help with the specific problem (<a class="ref" href="#p1-q5">Q5</a>: "helps when I'm stuck")<br>P2: move the step to the next free slot (<a class="ref" href="#p2-q5">Q5</a>)</td></tr>
+              <tr><td>Fall behind</td><td>P1: the schedule "didn't make sense anymore" (<a class="ref" href="#p1-q4f2">Q4 follow-up</a>)<br>P6: seven things not crossed off by Wednesday (<a class="ref" href="#p6-q4f2">Q4 follow-up</a>)</td><td>Re-plan after a miss instead of stacking up overdue tasks (<a class="ref" href="#p1-q6">P1, Q6</a>; <a class="ref" href="#p6-q6f">P6, Q6 follow-up</a>).</td></tr>
+              <tr><td>Drop it</td><td>P1: uses ChatGPT only "kind of" now (<a class="ref" href="#p1-q4f1">Q4 follow-up</a>)<br>P6: stops looking at the planner (<a class="ref" href="#p6-q4f2">Q4 follow-up</a>)<br>P2: "kind of gave up on the website" (<a class="ref" href="#p2-q2p">Q2 probe</a>)</td><td>Make coming back easy, with the tool remembering where they stopped (<a class="ref" href="#p1-q6f">P1, Q6 follow-up</a>).</td></tr>
             </tbody>
           </table>
         </div>
@@ -554,11 +558,11 @@
         <h3>What this means for D5</h3>
         <ol class="measure">
           <li>The tool suggests steps, and the person can approve, change, or skip them. The tool never sets the plan by itself (no one picked C in Q5).</li>
-          <li>The tool shows one next step at a time, sized to the time available (P2 and P6, Q5).</li>
-          <li>After a missed day, the tool re-plans instead of piling up overdue tasks, and it doesn't make the person feel guilty (P1, Q6; P6, Q4 and Q6 follow-up).</li>
-          <li>The tool remembers where the person got stuck and picks up from there (P1, Q6 follow-up).</li>
-          <li>The tool only checks in a few times, at a time the person picks (P1, Q7; P2, Q6 follow-up; P6, Q5).</li>
-          <li>The tool connects to a calendar people already use, so they don't have to manage a new app (P2, Q6 and Q4 follow-up).</li>
+          <li>The tool shows one next step at a time, sized to the time available (P2 and <a class="ref" href="#p6-q5">P6, Q5</a>).</li>
+          <li>After a missed day, the tool re-plans instead of piling up overdue tasks, and it doesn't make the person feel guilty (<a class="ref" href="#p1-q6">P1, Q6</a>; <a class="ref" href="#p6-q4">P6, Q4</a> and Q6 follow-up).</li>
+          <li>The tool remembers where the person got stuck and picks up from there (<a class="ref" href="#p1-q6f">P1, Q6 follow-up</a>).</li>
+          <li>The tool only checks in a few times, at a time the person picks (<a class="ref" href="#p1-q7">P1, Q7</a>; <a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>; <a class="ref" href="#p6-q5">P6, Q5</a>).</li>
+          <li>The tool connects to a calendar people already use, so they don't have to manage a new app (<a class="ref" href="#p2-q6">P2, Q6</a> and Q4 follow-up).</li>
         </ol>
         <p class="measure"><strong>Open questions for D5</strong></p>
         <ul class="measure">
