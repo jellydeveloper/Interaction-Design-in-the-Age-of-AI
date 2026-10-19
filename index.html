@@ -166,12 +166,35 @@
 
   <div class="layout">
     <nav class="side">
+      <a href="#feedback">Feedback</a>
       <a href="#d2">Screener</a>
       <a href="#d3">Interviews</a>
       <a href="#d4">Synthesis</a>
     </nav>
 
     <div class="content">
+
+      <!-- ================= Feedback ================= -->
+      <section class="doc" id="feedback">
+        <p class="eyebrow label">Revisions</p>
+        <h2>What changed after your Oct 5 comments</h2>
+        <p class="doc-sub">Revised Oct 18, 2026</p>
+        <p class="measure">Each row is one of your comments and where it's addressed.</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Your comment</th><th>What I changed</th><th>Where</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Show the full screener answers</td><td>All six respondents' answers to every question, verbatim, including spelling.</td><td><a href="#screener-full">D2 · Full responses</a></td></tr>
+              <tr><td>Number the participants instead of using nicknames</td><td>Participants are P1 to P6 in Typeform order and keep the same number in the interviews. Persona labels like "Delegator" are gone.</td><td><a href="#d2">D2</a>, <a href="#interviews">D3</a>, <a href="#d4">D4</a></td></tr>
+              <tr><td>Cite specific responses for every claim</td><td>Every finding lists the participant and question it comes from, like "P1, Q3."</td><td><a href="#stood-out">D2 · What stood out</a>, <a href="#affinity">D4 · Affinity map</a></td></tr>
+              <tr><td>Remove leading interview questions</td><td>Rewrote the guide as seven open questions and listed each old question, what replaced it, and why.</td><td><a href="#guide">D3 · Interview guide</a>, <a href="#guide-changes">What changed</a></td></tr>
+              <tr><td>Include the full interviews</td><td>Interviewed P1, P2, and P6 in person (Oct 16–17). Every question and answer is posted, with my notes kept separate.</td><td><a href="#interviews">D3 · Full interviews</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <!-- ================= D2 ================= -->
       <section class="doc" id="d2">
@@ -187,7 +210,7 @@
           <div class="stat"><b>2 of 6</b><span>agreed to a follow-up conversation (Q6)</span></div>
         </div>
 
-        <h3>Full responses, by question</h3>
+        <h3 id="screener-full">Full responses, by question</h3>
 
         <p class="resp-cap">Q1 · What year are you in school, and what are you currently job/internship hunting for (if applicable)?</p>
         <div class="wrap-table">
@@ -291,7 +314,7 @@
           </table>
         </div>
 
-        <h3>What stood out</h3>
+        <h3 id="stood-out">What stood out</h3>
         <p class="measure"><strong>Five of six named something about keeping effort going.</strong> In Q3, P1 said "willpower," P2 "busy school works," P3 "consistency," P5 "some days I’m unmotivated," and P6 "nobody keeps me accountable, motivation issues." Three also said they didn't know what to do next: P1 ("lack of expert guidance"), P5 ("learn more specifics"), and P6 ("not sure where to start"). I can't interpret P4's "the greed" from two words, and P4 declined a follow-up.</p>
         <p class="measure"><strong>Most people had used a tool, but few said how it went.</strong> Five of six answered yes to Q4. Q4 asked "What happened?", but only P2 ("worked efficently") and P6 ("couldn't keep up") described an outcome. P6 also gave a guess at why: "maybe because my plan was not strategic enough." The other answers name the tool and stop. A survey can't ask a follow-up, so this went into the interview guide (D3, Q5).</p>
         <p class="measure"><strong>The two "no" answers to Q5 were about the tool, not the goal.</strong> Q5 asked whether a tool that breaks a goal into small steps and checks in would help. P1, P2, P4, and P6 said yes. P3 said no because they don't use apps and one didn't help before. P5 said no because "I like to plan my own things out," but still reported days without motivation in Q3. With six responses, I'm treating this as something to ask about in interviews, not as a pattern.</p>
@@ -335,7 +358,7 @@
         </div>
         <p class="measure">P1 and P2 agreed to a follow-up in the screener. P6 said no in the screener but agreed when I asked again in October. All three agreed to notes being taken. Answers were written down as close to word for word as I could during the interview.</p>
 
-        <h3>Interview guide</h3>
+        <h3 id="guide">Interview guide</h3>
         <p class="measure">Text in [brackets] is filled in from that participant's screener answers. Follow-ups are asked one at a time, after the main question is answered. Probes are asked only if the answer doesn't already cover them. Before Q5, I describe the tool the same way the screener did: "a tool that breaks a big goal into small steps and checks in with you."</p>
         <ol class="measure">
           <li>In the screener, you described a goal: [Q2 answer]. Can you tell me about it? <em>Probe: Why did you choose that goal?</em></li>
@@ -348,7 +371,7 @@
         </ol>
         <p class="measure">Q5 and Q6 ask about a tool that doesn't exist yet, so I treat those answers as weaker evidence than Q2 to Q4, which ask what people have actually done.</p>
 
-        <h3>Full interviews</h3>
+        <h3 id="interviews">Full interviews</h3>
         <p class="measure">Each question is shown the way I asked it, with the brackets filled in from that person's screener. Probes and follow-ups are listed only where I asked them. My own notes are kept separate, after each interview.</p>
 
         <h3 id="p1">P1</h3>
@@ -405,7 +428,7 @@
         <div class="qa"><p class="q">Q7 · Is there anything about working toward these goals that I didn't ask about and you think matters?</p><p class="a">"The emotional side of starting. When you're job hunting, every task feels heavy. Lowering that activation energy is everything."</p></div>
         <p class="measure"><strong>My notes after the interview (my interpretation, not the participant's words).</strong> What surprised me: "Organization" was actually acting as a procrastination coping mechanism to avoid the vulnerability of real output. Compared with the screener: Confirms the screener's admission of "not strategic enough" and accountability issues—planner failure wasn't laziness, but scope creep. Follow-up I should have asked: "Would an AI check-in feel like real accountability to you, or does accountability have to come from another human?"</p>
 
-        <h3>What changed from the first guide</h3>
+        <h3 id="guide-changes">What changed from the first guide</h3>
         <div class="wrap-table">
           <table class="resp">
             <thead>
@@ -437,7 +460,7 @@
           <div class="stat"><b>0 of 3</b><span>picked C: the tool sets the plan, you follow (Q5)</span></div>
         </div>
 
-        <h3>Affinity map</h3>
+        <h3 id="affinity">Affinity map</h3>
         <p class="measure">I grouped every interview answer by what it was about. Each group below is one cluster, with the answers that formed it. Screener answers are marked "screener."</p>
         <div class="wrap-table">
           <table class="resp">
