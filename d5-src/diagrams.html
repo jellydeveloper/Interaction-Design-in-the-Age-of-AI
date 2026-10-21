@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D5 diagrams</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{ --ink:#32404F; --soft:#5A6571; --line:#C9D0D8; --fill:#EEF1F4; --paper:#FAFCFD; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--paper); font-family:'Public Sans',sans-serif; color:var(--ink); }
+  section{ display:none; padding:40px; width:1400px; }
+  section:target{ display:block; }
+  .k{ font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; color:var(--soft); }
+  .n{ border:1.5px solid var(--ink); border-radius:10px; background:#fff; padding:12px 14px; font-size:15px; line-height:1.35; }
+  .n .k{ display:block; margin-bottom:4px; }
+  .n.dark{ background:var(--ink); color:#fff; } .n.dark .k{ color:#C9D0D8; }
+  .n.soft{ border-color:var(--line); background:var(--fill); }
+  .n small{ display:block; color:var(--soft); font-size:13px; margin-top:4px; }
+  .n.dark small{ color:#C9D0D8; }
+  /* IA */
+  .root{ width:260px; margin:0 auto 34px; text-align:center; }
+  .cols{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; position:relative; padding-top:26px; border-top:1.5px solid var(--ink); }
+  .col{ display:flex; flex-direction:column; gap:10px; position:relative; }
+  .col::before{ content:""; position:absolute; top:-26px; left:50%; height:26px; border-left:1.5px solid var(--ink); }
+  .col .n:not(:first-child){ margin-left:18px; }
+  /* flows */
+  .flow{ margin-bottom:44px; }
+  .flow h3{ font-size:20px; font-weight:600; margin:0 0 4px; }
+  .flow p{ margin:0 0 16px; color:var(--soft); font-size:14px; }
+  .chain{ display:flex; align-items:stretch; gap:0; }
+  .chain .n{ flex:1; }
+  .arr{ flex:0 0 34px; display:flex; align-items:center; justify-content:center; font-size:20px; color:var(--ink); }
+  .branches{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:16px; }
+  .branch{ border-left:1.5px dashed var(--ink); padding-left:14px; }
+  .branch .chain{ flex-direction:column; gap:0; }
+  .branch .arr{ flex:0 0 26px; }
+</style>
+</head>
+<body>
+
+<section id="ia">
+  <div class="n dark root"><span class="k">App</span>One focus goal at a time</div>
+  <div class="cols">
+    <div class="col">
+      <div class="n dark"><span class="k">First time only</span>Set up</div>
+      <div class="n">1 · Add a goal<small>goal, where you are, usual time</small></div>
+      <div class="n">2 · Review steps<small>keep / edit / skip each suggestion</small></div>
+      <div class="n">3 · Check-in and calendar<small>once a day or never, pick the time</small></div>
+    </div>
+    <div class="col">
+      <div class="n dark"><span class="k">Home tab</span>Today</div>
+      <div class="n">4 · Time and energy<small>15 / 30 / 60 min · low / okay / good</small></div>
+      <div class="n">4 · One next step<small>Done · I'm stuck · Not today</small></div>
+      <div class="n">5 · I'm stuck<small>note + smaller step</small></div>
+      <div class="n">6 · Not today<small>move it, plan shifts</small></div>
+      <div class="n soft">7 · Welcome back<small>shows instead of Today after 2+ days away</small></div>
+    </div>
+    <div class="col">
+      <div class="n dark"><span class="k">Tab</span>Plan</div>
+      <div class="n">8 · Focus goal steps<small>done, next, later · edit, add, reorder</small></div>
+      <div class="n">8 · Paused goals<small>switch focus, add a goal</small></div>
+    </div>
+    <div class="col">
+      <div class="n dark"><span class="k">Tab</span>Settings</div>
+      <div class="n">Check-in<small>time, or off</small></div>
+      <div class="n">Google Calendar<small>connect, add steps, quiet during events</small></div>
+    </div>
+    <div class="col">
+      <div class="n dark"><span class="k">Outside the app</span>Check-in</div>
+      <div class="n">9 · One notification a day<small>Done · Not today, right from the notification</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="flows">
+  <div class="flow">
+    <h3>Flow A · First time</h3>
+    <p>Gets someone from a goal to one first step in about two minutes (P2: "If an app takes five minutes to set up, I won't use it").</p>
+    <div class="chain">
+      <div class="n">Open the app</div><div class="arr">→</div>
+      <div class="n">Type the goal and where they are<small>screen 1</small></div><div class="arr">→</div>
+      <div class="n">AI suggests 4 to 6 steps<small>screen 2</small></div><div class="arr">→</div>
+      <div class="n">Keep, edit, or skip each one<small>screen 2</small></div><div class="arr">→</div>
+      <div class="n">Pick a check-in time or skip<small>screen 3</small></div><div class="arr">→</div>
+      <div class="n dark">Today shows the first step<small>screen 4</small></div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <h3>Flow B · A normal day</h3>
+    <p>The main loop. Opened from the app or from the one check-in.</p>
+    <div class="chain">
+      <div class="n">Open the app or tap the check-in<small>screen 9</small></div><div class="arr">→</div>
+      <div class="n">Pick time and energy<small>screen 4</small></div><div class="arr">→</div>
+      <div class="n dark">See one step that fits<small>screen 4</small></div>
+      <div style="flex:2.2"></div>
+    </div>
+    <div class="branches">
+      <div class="branch"><div class="chain">
+        <div class="n">Done</div><div class="arr">↓</div>
+        <div class="n">Next step shows, or "that's it for today"</div>
+      </div></div>
+      <div class="branch"><div class="chain">
+        <div class="n">I'm stuck<small>screen 5</small></div><div class="arr">↓</div>
+        <div class="n">Write where they got stuck (saved)</div><div class="arr">↓</div>
+        <div class="n">AI offers a smaller step</div><div class="arr">↓</div>
+        <div class="n">Try it, ask a different way, or stop for today</div>
+      </div></div>
+      <div class="branch"><div class="chain">
+        <div class="n">Not today<small>screen 6</small></div><div class="arr">↓</div>
+        <div class="n">Pick tomorrow, next free time, or a day</div><div class="arr">↓</div>
+        <div class="n">The rest of the plan moves. Nothing is marked late.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <h3>Flow C · Coming back after a gap</h3>
+    <p>Where every participant's plan broke (D4 journey: "Fall behind").</p>
+    <div class="chain">
+      <div class="n">Away 2+ days</div><div class="arr">→</div>
+      <div class="n">Open the app</div><div class="arr">→</div>
+      <div class="n">Welcome back: last step and their own note<small>screen 7</small></div><div class="arr">→</div>
+      <div class="n">AI offers an easy way back in<small>screen 7</small></div><div class="arr">→</div>
+      <div class="n dark">Start it, or re-plan the week<small>screen 7 → 4 or 8</small></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

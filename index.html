@@ -166,8 +166,8 @@
     <dl class="facts">
       <div><dt class="label">Student</dt><dd>Andrew Choi</dd></div>
       <div><dt class="label">Supervisor</dt><dd>Prof. Patricia Search</dd></div>
-      <div><dt class="label">Status</dt><dd>Interviews done (D3), synthesis done (D4)</dd></div>
-      <div><dt class="label">Next</dt><dd>D5: IA, wireframes, MVP scope, Oct 21</dd></div>
+      <div><dt class="label">Status</dt><dd>Research done (D2–D4), design done (D5)</dd></div>
+      <div><dt class="label">Next</dt><dd>D6: working prototype v1, Nov 4</dd></div>
     </dl>
   </header>
 
@@ -180,6 +180,7 @@
       <a class="sub" href="#p2">P2</a>
       <a class="sub" href="#p6">P6</a>
       <a href="#d4">Synthesis</a>
+      <a href="#d5">Design (D5)</a>
     </nav>
 
     <div class="content">
@@ -570,6 +571,97 @@
           <li>What do people do on the first day they miss a step? (from my P1 notes)</li>
           <li>Can the tool help with a problem in a specific subject, like P1's math, or only with scheduling?</li>
         </ul>
+      </section>
+
+      <!-- ================= D5 ================= -->
+      <section class="doc" id="d5">
+        <p class="eyebrow label">D5 · Concept, IA, wireframes, MVP</p>
+        <h2>What I'm going to build</h2>
+        <p class="doc-sub">Oct 21, 2026 · built from the D4 findings above</p>
+
+        <p class="lede measure" style="color:var(--ink);">The app gives you one small next step for one goal, sized to the time and energy you have right now. If you get stuck or skip a day, it makes the step smaller or moves it, and nothing piles up.</p>
+
+        <p class="measure">Basically every plan in the interviews broke at the same point, after a miss or a stuck point (<a class="ref" href="#p1-q4f2">P1, Q4 follow-up</a>; <a class="ref" href="#p6-q4f2">P6, Q4 follow-up</a>; <a class="ref" href="#p2-q2p">P2, Q2 probe</a>). So the app is mostly about that moment, not about making a nice plan at the start. It's a mobile-size web app because P2 wants to use free time "between classes" (<a class="ref" href="#p2-q5">P2, Q5</a>) and the check-in has to reach your phone.</p>
+
+        <h3 id="d5-decisions">Decisions and where they came from</h3>
+        <p class="measure">Each row is a design decision, the answers behind it, and the wireframe screen where it shows up.</p>
+        <div class="wrap-table">
+          <table class="resp">
+            <thead>
+              <tr><th>Decision</th><th>Why</th><th>Screen</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>The AI suggests steps, and you keep, edit, or skip each one</td><td>Two of three picked B and no one picked C (<a class="ref" href="#p1-q5f">P1</a>, <a class="ref" href="#p6-q5f">P6</a>, <a class="ref" href="#p2-q5f">P2, Q5</a>). P6 still wants to say "I can't do that today." Every AI step is labeled "suggestion."</td><td>2, 5, 7</td></tr>
+              <tr><td>Today shows only one step</td><td>P6 freezes with "too many options" (<a class="ref" href="#p6-q3p">Q3 probe</a>). P1 wants "the next small problem to work on" (<a class="ref" href="#p1-q5">Q5</a>).</td><td>4</td></tr>
+              <tr><td>You pick time and energy, and the step fits both</td><td>"you have 45 minutes, just do this one Figma frame" (<a class="ref" href="#p2-q5">P2, Q5</a>), "Energy matters more than time" (<a class="ref" href="#p2-q7">P2, Q7</a>), "one 15-minute component" (<a class="ref" href="#p6-q5">P6, Q5</a>).</td><td>4</td></tr>
+              <tr><td>"I'm stuck" asks where, saves it, and offers a smaller step</td><td>Getting stuck is what made P1 avoid the work (<a class="ref" href="#p1-q3p">P1, Q3 probe</a>). P1 also doesn't want every day to feel "like starting over" (<a class="ref" href="#p1-q6f">Q6 follow-up</a>).</td><td>5</td></tr>
+              <tr><td>"Not today" moves the step and the rest of the plan. Nothing is marked late, and there's no overdue list</td><td>"changes the plan when I fall behind instead of making me feel guilty" (<a class="ref" href="#p1-q6">P1, Q6</a>). Missed tasks piling up is why P6 would quit (<a class="ref" href="#p6-q6f">Q6 follow-up</a>).</td><td>6, 8</td></tr>
+              <tr><td>After 2+ days away, you see where you left off and your own note, not what you missed</td><td>Falling behind is where everyone dropped their plan (D4 journey). P1 needs it to know "where I got stuck" (<a class="ref" href="#p1-q6f">Q6 follow-up</a>).</td><td>7</td></tr>
+              <tr><td>At most one check-in a day, at a time you pick, or none</td><td>P6 wants a 4 PM check (<a class="ref" href="#p6-q5">Q5</a>), but P1 and P2 would quit over constant notifications (<a class="ref" href="#p1-q7">P1, Q7</a>; <a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>). One check-in at a picked time is my guess for both, and I need to test it.</td><td>3, 9</td></tr>
+              <tr><td>Steps go into Google Calendar, and there are no check-ins during events</td><td>"Only if it works with the apps I already use" (<a class="ref" href="#p2-q6">P2, Q6</a>). P2 doesn't want notifications "when I'm already stressed in class" (<a class="ref" href="#p2-q6f">Q6 follow-up</a>).</td><td>3, 6</td></tr>
+              <tr><td>One focus goal at a time, and other goals get paused</td><td>P6 had four goals "all at the same time" and P2 had three projects (<a class="ref" href="#p6-q1">P6, Q1</a>; <a class="ref" href="#p2-q1">P2, Q1</a>).</td><td>1, 8</td></tr>
+              <tr><td>Setup is three short screens and can be skipped</td><td>"If an app takes five minutes to set up, I won't use it" (<a class="ref" href="#p2-q4f2">P2, Q4 follow-up</a>).</td><td>1–3</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="d5-ia">Information architecture</h3>
+        <p class="measure">There are three tabs (Today, Plan, Settings), a short setup the first time, and one check-in that happens outside the app. "Welcome back" isn't a separate page. It shows up in place of Today when you've been away for 2+ days.</p>
+        <figure class="shot">
+          <img src="ia.png?v=d5a" width="2800" height="1400" alt="Site map: the app splits into Set up (add a goal, review steps, check-in and calendar), Today (time and energy, one next step, I'm stuck, Not today, Welcome back), Plan (focus goal steps, paused goals), Settings (check-in, Google Calendar), and the daily check-in outside the app. Numbers match the wireframe screens.">
+        </figure>
+
+        <h3 id="d5-flows">User flows</h3>
+        <p class="measure">Flow B is the main loop and Flow C is the one I care most about, since that's where plans broke for everyone in D4.</p>
+        <figure class="shot">
+          <img src="flows.png?v=d5a" width="2800" height="1880" alt="Three flows. A, first time: open, type goal, AI suggests steps, keep/edit/skip, pick check-in, Today. B, a normal day: open or tap check-in, pick time and energy, see one step, then Done, I'm stuck (write where, smaller step), or Not today (pick when, plan shifts). C, coming back after a gap: away 2+ days, open, welcome back with last step and note, easy way back in, start or re-plan.">
+        </figure>
+
+        <h3 id="d5-wireframes">Mid-fi wireframes</h3>
+        <p class="measure">There are nine phone screens, and the numbers match the decisions table, the site map, and the flows. The example goal (a portfolio website) is made up, but I based it on the kind of goals P2 and P6 described. The step text is just example copy. In the real app the AI writes it.</p>
+        <figure class="shot">
+          <img src="wireframes.png?v=d5a" width="2760" height="5040" alt="Nine mid-fidelity phone wireframes: 1 add a goal, 2 review suggested steps with keep/edit/skip, 3 check-in and calendar settings, 4 Today with time and energy chips and one next step with Done, I'm stuck, Not today, 5 I'm stuck with a note and a smaller suggested step, 6 Not today with tomorrow, next free calendar time, or pick a day, 7 welcome back showing the last step and the person's note, 8 plan with the focus goal's steps and paused goals, 9 a lock-screen check-in with Done and Not today.">
+        </figure>
+
+        <h3 id="d5-mvp">MVP feature set (prototype v1, Nov 4)</h3>
+        <p class="measure"><strong>In the MVP</strong></p>
+        <ul class="measure">
+          <li>Add one goal and get 4–6 AI-suggested steps that you can keep, edit, skip, or add to</li>
+          <li>Today: pick time and energy, see one step that fits</li>
+          <li>Done / I'm stuck / Not today on every step</li>
+          <li>I'm stuck: save a note, and the AI offers a smaller version</li>
+          <li>Not today: move the step, and the plan shifts without anything marked late</li>
+          <li>Welcome back after 2+ days, using the saved note</li>
+          <li>Plan tab: see and edit the steps, pause a goal, switch focus</li>
+          <li>Google Calendar: add steps as events, and read busy times so the app can suggest the next free slot</li>
+          <li>One daily check-in at a picked time, or none</li>
+        </ul>
+        <p class="measure"><strong>Not in the MVP, and why</strong></p>
+        <ul class="measure">
+          <li><strong>Streaks, points, or a "missed" count.</strong> These are the guilt P1 and P6 said would make them quit (Q6).</li>
+          <li><strong>More than one reminder a day.</strong> Same reason (<a class="ref" href="#p1-q7">P1, Q7</a>; <a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>).</li>
+          <li><strong>Accountability from another person, like a friend or mentor.</strong> This is an open question from D4 that I can't answer yet, so I'm asking about it in testing first.</li>
+          <li><strong>Real subject help, like P1's math.</strong> In the MVP, "I'm stuck" only makes the step smaller or asks a question. It doesn't teach the subject. I'd rather not have the AI pretend to be a tutor until I've tested whether a smaller step is enough.</li>
+          <li><strong>Login and syncing across devices.</strong> Data stays in the browser for testing.</li>
+          <li><strong>Buttons inside the check-in notification (screen 9).</strong> In v1 the check-in is a calendar reminder that opens Today. Real push notifications with buttons come later if testing says the check-in is worth it.</li>
+        </ul>
+        <p class="measure"><strong>How I'll build it.</strong> I'll make a small web app with Claude Code that works on a phone screen. The AI steps come from the Claude API through one small server function, so the key isn't in the page. Google Calendar connects through Google sign-in in testing mode, which is enough for 3–5 test users. I'll host it on GitHub Pages or Vercel. I'm keeping the stack small on purpose so the two build weeks go into Flow B and Flow C and not into setup.</p>
+
+        <h3>What D5 does with the D4 open questions</h3>
+        <ul class="measure">
+          <li><strong>Can an AI check-in feel like accountability?</strong> I'm not solving this yet. The MVP has one check-in, and I'll ask P6 directly in testing whether it felt like someone was checking.</li>
+          <li><strong>What happens on the first missed day?</strong> That's "Not today" (screen 6) and "Welcome back" (screen 7). Testing will show if they actually feel guilt-free.</li>
+          <li><strong>Subject-specific help?</strong> It's out of the MVP (see above). I'll watch if "a smaller step" is enough for someone stuck on something like math.</li>
+          <li><strong>P2's A vs. B mismatch.</strong> Since every step is labeled "suggestion" and can be skipped, I can watch whether P2 actually uses the suggestions or ignores them.</li>
+        </ul>
+
+        <h3 id="memo2">AI method memo #2</h3>
+        <p class="measure"><strong>Tool.</strong> Claude Code (Claude Opus 5.5).</p>
+        <p class="measure"><strong>What I asked for.</strong> I asked it to turn the six "What this means for D5" points into a concept, site map, user flows, mid-fi wireframes, and an MVP list. I also asked it to tie every decision to the D4 answers. It built the wireframes and diagrams as HTML and saved them as images.</p>
+        <p class="measure"><strong>What it gave back.</strong> It made nine screens, a site map, three flows, the decisions table, and a first MVP list, all in one sitting. That would have taken me a few days by hand. It also picked a side on things the research didn't settle, like having one check-in a day and putting calendar reading in the MVP, and it made both look like normal decisions.</p>
+        <!-- TODO Andrew: add what you kept, changed, or threw out after reviewing -->
+        <p class="measure"><strong>What I checked.</strong> I clicked through every citation in the decisions table to make sure the quote actually says that. I also checked that nothing in the MVP goes against a participant (for example, no streaks). Wherever the AI's choice was really a guess, like the one check-in a day, I marked it as something to test instead of a finding.</p>
+        <p class="measure"><strong>What I'd warn another designer about.</strong> AI wireframes come out looking finished really fast. That makes it easy to skip sketching and comparing options, and to treat the first layout as the answer. The example text on the screens also sounds real, but nobody tested it. And when the research disagreed, the AI didn't stop and ask. It just picked an answer, so I had to go back and find those spots myself.</p>
       </section>
 
     </div>

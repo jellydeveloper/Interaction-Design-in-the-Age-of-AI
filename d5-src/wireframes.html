@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>D5 wireframes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{ --ink:#32404F; --soft:#5A6571; --line:#D5DAE0; --fill:#EEF1F4; --paper:#FAFCFD; --dark:#32404F; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; padding:40px; background:var(--paper); font-family:'Public Sans',sans-serif; color:var(--ink); width:1380px; }
+  .grid{ display:grid; grid-template-columns:repeat(3, 400px); gap:48px 50px; }
+  .cell .tag{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--soft); margin-bottom:10px; text-transform:uppercase; }
+  .phone{ width:400px; height:760px; border:2px solid var(--ink); border-radius:34px; background:#fff; padding:22px 24px; position:relative; overflow:hidden; display:flex; flex-direction:column; }
+  .status{ display:flex; justify-content:space-between; font-size:12px; color:var(--soft); margin-bottom:18px; }
+  .top{ display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--soft); margin-bottom:22px; }
+  h2{ font-size:24px; font-weight:600; line-height:1.25; margin:0 0 8px; }
+  .sub{ font-size:14px; color:var(--soft); margin:0 0 20px; line-height:1.45; }
+  .lbl{ font-size:12px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; color:var(--soft); margin:18px 0 8px; }
+  .field{ border:1.5px solid var(--line); border-radius:10px; padding:13px 14px; font-size:15px; }
+  .chips{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{ border:1.5px solid var(--line); border-radius:999px; padding:8px 14px; font-size:14px; }
+  .chip.on{ background:var(--dark); border-color:var(--dark); color:#fff; }
+  .btn{ border-radius:12px; padding:14px; font-size:15px; font-weight:600; text-align:center; border:1.5px solid var(--ink); }
+  .btn.primary{ background:var(--dark); color:#fff; }
+  .btn.quiet{ border-color:var(--line); font-weight:500; }
+  .stack{ display:flex; flex-direction:column; gap:10px; }
+  .row{ display:flex; gap:10px; } .row > *{ flex:1; }
+  .spacer{ flex:1; }
+  .card{ border:1.5px solid var(--line); border-radius:14px; padding:16px; }
+  .card.big{ border:2px solid var(--ink); padding:20px; }
+  .card .t{ font-size:15px; font-weight:600; margin-bottom:4px; }
+  .card .m{ font-size:13px; color:var(--soft); }
+  .step{ border:1.5px solid var(--line); border-radius:12px; padding:12px 14px; margin-bottom:9px; }
+  .step .t{ font-size:14px; font-weight:500; margin-bottom:8px; }
+  .step .acts{ display:flex; gap:6px; }
+  .step .acts span{ font-size:12px; border:1.2px solid var(--line); border-radius:6px; padding:3px 9px; color:var(--soft); }
+  .step .acts span.on{ border-color:var(--ink); color:var(--ink); font-weight:600; }
+  .pill{ display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; background:var(--fill); padding:3px 8px; border-radius:5px; color:var(--soft); }
+  .note{ background:var(--fill); border-radius:12px; padding:14px; font-size:14px; line-height:1.45; }
+  .note b{ display:block; font-size:12px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; color:var(--soft); font-weight:400; margin-bottom:4px; }
+  .tabs{ display:flex; justify-content:space-around; border-top:1.5px solid var(--line); margin:14px -24px -22px; padding:12px 0 18px; font-size:13px; color:var(--soft); }
+  .tabs .on{ color:var(--ink); font-weight:600; }
+  .toggle{ display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1.5px solid var(--line); font-size:15px; }
+  .sw{ width:44px; height:26px; border-radius:13px; background:var(--dark); position:relative; }
+  .sw::after{ content:""; position:absolute; width:20px; height:20px; border-radius:50%; background:#fff; top:3px; right:3px; }
+  .sw.off{ background:var(--line); } .sw.off::after{ right:auto; left:3px; }
+  .list .li{ display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1.5px solid var(--line); font-size:14px; }
+  .box{ width:18px; height:18px; border:1.5px solid var(--ink); border-radius:5px; flex:0 0 18px; margin-top:1px; }
+  .box.done{ background:var(--dark); }
+  .li.next{ font-weight:600; }
+  .li .when{ margin-left:auto; font-size:12px; color:var(--soft); white-space:nowrap; font-weight:400; }
+  .lock{ background:var(--ink); color:#fff; }
+  .lock .status{ color:#C9D0D8; }
+  .clock{ text-align:center; font-size:64px; font-weight:400; margin:40px 0 4px; }
+  .date{ text-align:center; color:#C9D0D8; font-size:15px; margin-bottom:40px; }
+  .notif{ background:#fff; color:var(--ink); border-radius:16px; padding:16px; }
+  .notif .app{ font-size:12px; color:var(--soft); margin-bottom:6px; display:flex; justify-content:space-between; }
+  .notif .t{ font-size:15px; font-weight:600; margin-bottom:12px; line-height:1.35; }
+</style>
+</head>
+<body>
+<div class="grid">
+
+  <!-- 1 -->
+  <div class="cell">
+    <div class="tag">1 · Add a goal</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>Set up · 1 of 3</span></div>
+      <h2>What are you working toward?</h2>
+      <p class="sub">One goal is enough to start. You can add more later.</p>
+      <div class="lbl">Goal</div>
+      <div class="field">Finish my portfolio website</div>
+      <div class="lbl">Where are you with it?</div>
+      <div class="field" style="height:84px; color:var(--soft);">Saved a lot of tutorials, have a Notion board, haven't started the actual site</div>
+      <div class="lbl">On a normal day I have about</div>
+      <div class="chips"><span class="chip">15 min</span><span class="chip on">30 min</span><span class="chip">1 hr</span><span class="chip">It changes</span></div>
+      <div class="spacer"></div>
+      <div class="btn primary">Suggest first steps</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="cell">
+    <div class="tag">2 · Review suggested steps</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>Set up · 2 of 3</span></div>
+      <h2>Here's a start. You decide.</h2>
+      <p class="sub">These are suggestions. Keep, change, or skip each one.</p>
+      <div class="step"><div class="t">Pick Figma and stick with it for now</div><div class="acts"><span class="on">Keep</span><span>Edit</span><span>Skip</span></div></div>
+      <div class="step"><div class="t">Write 3 sentences about yourself for the home page</div><div class="acts"><span class="on">Keep</span><span>Edit</span><span>Skip</span></div></div>
+      <div class="step"><div class="t">Make one frame: home page, no polish</div><div class="acts"><span>Keep</span><span class="on">Edit</span><span>Skip</span></div></div>
+      <div class="step"><div class="t">Choose 2 projects to show</div><div class="acts"><span>Keep</span><span>Edit</span><span class="on">Skip</span></div></div>
+      <div class="btn quiet" style="margin-top:4px;">+ Add my own step</div>
+      <div class="spacer"></div>
+      <div class="btn primary">Use these steps</div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="cell">
+    <div class="tag">3 · Check-in and calendar</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span>Set up · 3 of 3</span></div>
+      <h2>How should it check in?</h2>
+      <p class="sub">At most once a day. You can change this anytime.</p>
+      <div class="lbl">Check-in</div>
+      <div class="chips"><span class="chip on">Once a day</span><span class="chip">Only when I open it</span></div>
+      <div class="lbl">Time</div>
+      <div class="field">4:00 PM</div>
+      <div class="lbl">Calendar</div>
+      <div class="toggle"><span>Add my steps to Google Calendar</span><span class="sw"></span></div>
+      <div class="toggle"><span>Never notify during calendar events</span><span class="sw"></span></div>
+      <div class="spacer"></div>
+      <div class="btn primary">Done</div>
+      <div style="text-align:center; font-size:13px; color:var(--soft); margin-top:12px;">Skip for now</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="cell">
+    <div class="tag">4 · Today</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span></span></div>
+      <div class="top"><span>Portfolio website</span><span>Plan →</span></div>
+      <div class="lbl" style="margin-top:0;">How much time right now?</div>
+      <div class="chips"><span class="chip on">15 min</span><span class="chip">30 min</span><span class="chip">1 hr</span></div>
+      <div class="lbl">Energy</div>
+      <div class="chips"><span class="chip on">Low</span><span class="chip">Okay</span><span class="chip">Good</span></div>
+      <div class="lbl" style="margin-top:26px;">Your next step</div>
+      <div class="card big">
+        <div class="t" style="font-size:18px; line-height:1.35;">Write 3 sentences about yourself for the home page</div>
+        <div class="m" style="margin-top:6px;">About 15 min · no design yet, just words</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="stack">
+        <div class="btn primary">Done</div>
+        <div class="row"><div class="btn quiet">I'm stuck</div><div class="btn quiet">Not today</div></div>
+      </div>
+      <div class="tabs"><span class="on">Today</span><span>Plan</span><span>Settings</span></div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="cell">
+    <div class="tag">5 · I'm stuck</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span></span></div>
+      <div class="top"><span>← Back</span><span></span></div>
+      <h2>Where did you get stuck?</h2>
+      <p class="sub">A few words is fine. It'll remember this for next time.</p>
+      <div class="field" style="height:70px;">I don't know what to say about myself that isn't boring</div>
+      <div class="lbl" style="margin-top:24px;">Smaller version <span class="pill">suggestion</span></div>
+      <div class="card">
+        <div class="t">Answer one question: what's a project you'd actually want to talk about?</div>
+        <div class="m">About 5 min · one sentence counts</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="stack">
+        <div class="btn primary">Try this instead</div>
+        <div class="btn quiet">Ask a different way</div>
+        <div class="btn quiet">Save my note and stop for today</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="cell">
+    <div class="tag">6 · Not today</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span></span></div>
+      <div class="top"><span>← Back</span><span></span></div>
+      <h2>Okay. When should it move to?</h2>
+      <p class="sub">The rest of your plan moves with it. Nothing gets marked late.</p>
+      <div class="stack" style="margin-top:6px;">
+        <div class="card"><div class="t">Tomorrow</div><div class="m">Thu · same time</div></div>
+        <div class="card" style="border-color:var(--ink);"><div class="t">Next free time on my calendar</div><div class="m">Thu 2:10 PM · 40 min free between classes</div></div>
+        <div class="card"><div class="t">I'll pick a day</div><div class="m">Opens a date picker</div></div>
+      </div>
+      <div class="lbl" style="margin-top:24px;">Want to say why? (optional)</div>
+      <div class="chips"><span class="chip">No time</span><span class="chip">No energy</span><span class="chip">Other work came up</span></div>
+      <div class="spacer"></div>
+      <div class="btn primary">Move it</div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="cell">
+    <div class="tag">7 · Coming back after a few days</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span></span></div>
+      <div class="top"><span>Portfolio website</span><span>Plan →</span></div>
+      <h2>Welcome back.</h2>
+      <p class="sub">Here's where you left off on Monday.</p>
+      <div class="note"><b>You were on</b>Write 3 sentences about yourself for the home page</div>
+      <div class="note" style="margin-top:10px;"><b>Your note</b>"I don't know what to say about myself that isn't boring"</div>
+      <div class="lbl" style="margin-top:24px;">Easy way back in <span class="pill">suggestion</span></div>
+      <div class="card big">
+        <div class="t">Write one sentence about the project you'd most want to talk about</div>
+        <div class="m" style="margin-top:4px;">About 5 min</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="stack">
+        <div class="btn primary">Start this</div>
+        <div class="btn quiet">Re-plan my week</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="cell">
+    <div class="tag">8 · Plan</div>
+    <div class="phone">
+      <div class="status"><span>9:41</span><span></span></div>
+      <div class="top"><span>← Today</span><span>Edit</span></div>
+      <h2>Portfolio website</h2>
+      <p class="sub">Your focus goal. Steps move when you skip a day.</p>
+      <div class="list">
+        <div class="li"><span class="box done"></span><span style="color:var(--soft);">Pick Figma and stick with it</span></div>
+        <div class="li next"><span class="box"></span><span>Write 3 sentences about yourself</span><span class="when">Next</span></div>
+        <div class="li"><span class="box"></span><span>Make one frame: home page, rough</span><span class="when">Thu</span></div>
+        <div class="li"><span class="box"></span><span>Add one project to the frame</span><span class="when">Sat</span></div>
+      </div>
+      <div class="btn quiet" style="margin-top:14px;">+ Add a step</div>
+      <div class="lbl" style="margin-top:22px;">Paused goals</div>
+      <div class="card" style="padding:12px 14px;"><div class="t" style="margin:0;">Learn Framer</div><div class="m">Paused · switch focus anytime</div></div>
+      <div class="spacer"></div>
+      <div class="tabs"><span>Today</span><span class="on">Plan</span><span>Settings</span></div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="cell">
+    <div class="tag">9 · The one check-in</div>
+    <div class="phone lock">
+      <div class="status"><span></span><span>Wed</span></div>
+      <div class="clock">4:00</div>
+      <div class="date">Wednesday, October 21</div>
+      <div class="notif">
+        <div class="app"><span>CHECK-IN</span><span>now</span></div>
+        <div class="t">Did you get to "Write 3 sentences about yourself"?</div>
+        <div class="row"><div class="btn primary" style="padding:10px; font-size:14px;">Done</div><div class="btn quiet" style="padding:10px; font-size:14px;">Not today</div></div>
+      </div>
+      <div class="spacer"></div>
+      <div style="text-align:center; font-size:13px; color:#C9D0D8;">Only one a day, at the time you picked</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
