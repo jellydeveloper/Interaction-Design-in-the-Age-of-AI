@@ -606,13 +606,13 @@
         <h3 id="d5-ia">2. Information architecture</h3>
         <p class="measure">The app has three tabs: Today, Plan, and Settings. There's also a short setup the first time, and one check-in that comes from outside the app. "Welcome back" isn't its own page. It shows up instead of Today when you've been gone for 2+ days. The numbers match the screens in part 4.</p>
         <figure class="shot">
-          <img src="ia.png?v=d5c" width="2800" height="1400" alt="Site map: the app splits into Set up (screens 1 to 3), Today (screens 4 to 7), Plan (screen 8), Settings (same options as screen 3), and the daily check-in outside the app (screen 9).">
+          <img src="ia.png?v=d5d" width="2800" height="1400" alt="Site map: the app splits into Set up (screens 1 to 3), Today (screens 4 to 7), Plan (screen 8), Settings (same options as screen 3), and the daily check-in outside the app (screen 9).">
         </figure>
 
         <h3 id="d5-flows">3. User flows</h3>
         <p class="measure">Flow B is what someone does on a normal day. Flow C is the one I care about most, because that's where everyone's plan broke in D4.</p>
         <figure class="shot">
-          <img src="flows.png?v=d5c" width="2800" height="1880" alt="Three flows. A, first time: open, type goal, AI suggests steps, keep/edit/skip, pick check-in, Today. B, a normal day: open or tap check-in, pick time and energy, see one step, then Done, I'm stuck (write where, smaller step), or Not today (pick when, plan shifts). C, coming back after a gap: away 2+ days, open, welcome back with last step and note, easy way back in, start or re-plan.">
+          <img src="flows.png?v=d5d" width="2800" height="1880" alt="Three flows. A, first time: open, type goal, AI suggests steps, keep/edit/skip, pick check-in, Today. B, a normal day: open or tap check-in, pick time and energy, see one step, then Done, I'm stuck (write where, smaller step), or Not today (pick when, plan shifts). C, coming back after a gap: away 2+ days, open, welcome back with last step and note, easy way back in, start or re-plan.">
         </figure>
 
         <h3 id="d5-screens">4. Wireframes, screen by screen</h3>
@@ -631,34 +631,34 @@
               <p class="measure"><strong>What it does.</strong> The AI suggests a few first steps. You can keep, edit, or skip each one, or add your own.</p>
               <p class="measure"><strong>Why.</strong> P1 and P6 wanted the tool to suggest steps while they approve or change them. Nobody wanted the tool to set the plan by itself, so nothing is final until you say so.</p>
               <p class="src">From <a class="ref" href="#p1-q5f">P1, Q5</a> · <a class="ref" href="#p6-q5f">P6, Q5</a></p></div></div>
-          <div class="scr"><img src="screens/s3.png" width="780" height="1688" alt="Screen 3, Check-in and calendar: once a day or only when I open it, time, Google Calendar toggles." loading="lazy">
-            <div><h4>Screen 3 · Check-in and calendar</h4>
-              <p class="measure"><strong>What it does.</strong> You pick one check-in a day or none, and connect Google Calendar. You can skip this screen.</p>
-              <p class="measure"><strong>Why.</strong> P6 wants a check-in at 4 PM. However, P1 and P2 said too many notifications would make them quit. One check-in at a time you choose is my guess for both, and I still need to test it. The calendar is there because P2 only wants a tool that works with the apps they already use.</p>
+          <div class="scr"><img src="screens/s3.png?v=2" width="780" height="1688" alt="Screen 3, Check-in: once a day or only when I open it, and a time." loading="lazy">
+            <div><h4>Screen 3 · Check-in</h4>
+              <p class="measure"><strong>What it does.</strong> You pick one check-in a day or none, and the time for it. You can skip this screen.</p>
+              <p class="measure"><strong>Why.</strong> P6 wants a check-in at 4 PM. However, P1 and P2 said too many notifications would make them quit. One check-in at a time you choose is my guess for both, and I still need to test it.</p>
               <p class="src">From <a class="ref" href="#p6-q5">P6, Q5</a> · <a class="ref" href="#p1-q7">P1, Q7</a></p></div></div>
         </div>
 
         <p class="label scr-group">Flow B · A normal day</p>
         <div class="screens">
-          <div class="scr"><img src="screens/s4.png" width="780" height="1688" alt="Screen 4, Today: time and energy chips, one next step card, Done, I'm stuck, Not today." loading="lazy">
+          <div class="scr"><img src="screens/s4.png?v=2" width="780" height="1688" alt="Screen 4, Today: time and energy chips, one next step card, an Add to Google Calendar link, Done, I'm stuck, Not today." loading="lazy">
             <div><h4>Screen 4 · Today</h4>
-              <p class="measure"><strong>What it does.</strong> You pick your time and energy, and it shows only one step that fits. Then you tap Done, I'm stuck, or Not today.</p>
-              <p class="measure"><strong>Why.</strong> P6 freezes when there are "too many options." P2 said "Energy matters more than time."</p>
-              <p class="src">From <a class="ref" href="#p6-q3p">P6, Q3 probe</a> · <a class="ref" href="#p2-q7">P2, Q7</a></p></div></div>
+              <p class="measure"><strong>What it does.</strong> You pick your time and energy, and it shows only one step that fits. Then you tap Done, I'm stuck, or Not today. You can also add the step to Google Calendar with one tap.</p>
+              <p class="measure"><strong>Why.</strong> P6 freezes when there are "too many options." P2 said "Energy matters more than time." The calendar button is there because P2 only wants a tool that works with the apps they already use.</p>
+              <p class="src">From <a class="ref" href="#p6-q3p">P6, Q3 probe</a> · <a class="ref" href="#p2-q7">P2, Q7</a> · <a class="ref" href="#p2-q6">P2, Q6</a></p></div></div>
           <div class="scr"><img src="screens/s5.png" width="780" height="1688" alt="Screen 5, I'm stuck: note field, smaller suggested step, Try this instead, Ask a different way, Save my note and stop." loading="lazy">
             <div><h4>Screen 5 · I'm stuck</h4>
               <p class="measure"><strong>What it does.</strong> You write a few words about where you got stuck. It saves the note and suggests a smaller step. You can also just stop for today.</p>
               <p class="measure"><strong>Why.</strong> Getting stuck is what made P1 start avoiding the work. P1 also doesn't want every day to feel "like starting over," so the note gets used again on screen 7.</p>
               <p class="src">From <a class="ref" href="#p1-q3p">P1, Q3 probe</a> · <a class="ref" href="#p1-q6f">P1, Q6 follow-up</a></p></div></div>
-          <div class="scr"><img src="screens/s6.png" width="780" height="1688" alt="Screen 6, Not today: tomorrow, next free time on my calendar, or pick a day; optional reason chips; Move it." loading="lazy">
+          <div class="scr"><img src="screens/s6.png?v=2" width="780" height="1688" alt="Screen 6, Not today: tomorrow or pick a day; optional reason chips; Move it." loading="lazy">
             <div><h4>Screen 6 · Not today</h4>
-              <p class="measure"><strong>What it does.</strong> You move the step to tomorrow, the next free time on your calendar, or a day you pick. The rest of the plan moves with it, and nothing gets marked late.</p>
+              <p class="measure"><strong>What it does.</strong> You move the step to tomorrow or to a day you pick. The rest of the plan moves with it, and nothing gets marked late.</p>
               <p class="measure"><strong>Why.</strong> P1 wants a tool that "changes the plan when I fall behind instead of making me feel guilty." P6 said missed tasks piling up would make them quit.</p>
               <p class="src">From <a class="ref" href="#p1-q6">P1, Q6</a> · <a class="ref" href="#p6-q6f">P6, Q6 follow-up</a></p></div></div>
           <div class="scr"><img src="screens/s9.png" width="780" height="1688" alt="Screen 9, the one check-in: lock screen notification at 4:00 asking about the step, with Done and Not today." loading="lazy">
             <div><h4>Screen 9 · The one check-in</h4>
               <p class="measure"><strong>What it does.</strong> You get one notification a day at the time you picked, with Done and Not today. Tapping it opens Today.</p>
-              <p class="measure"><strong>Why.</strong> It's the same reason as screen 3. It's one check-in, not many. In the first prototype this will basically be a calendar reminder that opens Today. The buttons come later if testing shows the check-in helps.</p></div></div>
+              <p class="measure"><strong>Why.</strong> It's the same reason as screen 3. It's one check-in, not many. In the first prototype, the check-in is basically the reminder from the Google Calendar event you added on screen 4. The buttons come later if testing shows the check-in helps.</p></div></div>
         </div>
 
         <p class="label scr-group">Flow C · Coming back, and the Plan tab</p>
@@ -687,13 +687,13 @@
               <tr><td>I'm stuck, with a saved note and a smaller step (screen 5)</td><td><strong>A friend or mentor checking on you.</strong> This was an open question in D4, so I'll ask about it in testing first.</td></tr>
               <tr><td>Not today, where the plan moves and nothing is marked late (screen 6)</td><td><strong>Real help with a subject, like P1's math.</strong> "I'm stuck" only makes the step smaller. I don't want the AI to act like a tutor before I test if that's enough.</td></tr>
               <tr><td>Welcome back after 2+ days, using the saved note (screen 7)</td><td><strong>Login and syncing across devices.</strong> For testing, the data just stays in the browser.</td></tr>
-              <tr><td>Plan tab: edit steps, pause or switch goals (screen 8)</td><td><strong>Buttons inside the notification (screen 9).</strong> In v1, the check-in is a calendar reminder that opens Today.</td></tr>
-              <tr><td>Google Calendar: add steps as events and find free time (screens 3, 6)</td><td></td></tr>
+              <tr><td>Plan tab: edit steps, pause or switch goals (screen 8)</td><td><strong>Buttons inside the notification (screen 9).</strong> In v1, the check-in is the reminder from the calendar event.</td></tr>
+              <tr><td>An "Add to Google Calendar" button on each step (screen 4)</td><td><strong>The app reading your calendar.</strong> Finding free time between classes and not checking in during events both need Google sign-in, which would take a big part of the build time. I'll ask P2 in testing if the simple button is enough.</td></tr>
               <tr><td>One check-in a day at a time you pick, or none (screens 3, 9)</td><td></td></tr>
             </tbody>
           </table>
         </div>
-        <p class="measure"><strong>How I'll build it.</strong> I'm building a small web app with Claude Code that works on a phone screen. The AI steps come from the Claude API through one small server function, so the API key isn't in the page. Google Calendar connects through Google sign-in in testing mode, which works for 3–5 test users. I'll host it on Vercel, since GitHub Pages can't run the server function. I'm keeping the setup simple on purpose, so I can spend the two build weeks on Flow B and Flow C instead.</p>
+        <p class="measure"><strong>How I'll build it.</strong> I'm going to build it as a website that works on a phone, using Claude Code. The AI part uses Claude, and the private key for it stays hidden on a small server so nobody can see it. The calendar button is just a link, so there's no Google sign-in. I'm keeping it simple on purpose, so I can spend the build weeks on the main flows (B and C).</p>
 
         <h3 id="d5-test">6. What I'll check in testing</h3>
         <p class="measure">These are the open questions from D4 and how the prototype will help answer them.</p>
@@ -702,6 +702,7 @@
           <li><strong>What happens on the first day someone misses a step?</strong> I'll watch if "Not today" and "Welcome back" (screens 6 and 7) really feel guilt-free.</li>
           <li><strong>Is a smaller step enough when someone is stuck on a subject?</strong> I'll check this with someone stuck on something like math.</li>
           <li><strong>P2 picked A but described B.</strong> Every step is labeled as a suggestion, so I can see if P2 actually uses the suggestions or ignores them.</li>
+          <li><strong>Is the calendar button enough?</strong> I'll ask P2 if adding steps by hand is fine, or if the app needs to find free time on its own.</li>
         </ul>
       </section>
 
