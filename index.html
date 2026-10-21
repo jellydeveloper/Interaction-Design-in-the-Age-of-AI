@@ -128,6 +128,7 @@
   .screens{ display:flex; flex-direction:column; }
   .scr{ display:grid; grid-template-columns:200px 1fr; gap:28px; align-items:start; padding:24px 0; border-bottom:1px solid var(--line); scroll-margin-top:24px; }
   .scr img{ display:block; width:100%; height:auto; }
+  .scr .src{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin:0; }
   .scr h4{ font-family:'Public Sans',sans-serif; font-weight:600; font-size:1rem; margin:4px 0 12px; }
   footer{ margin-top:70px; padding-top:22px; border-top:1px solid var(--line); color:var(--ink-faint); font-family:'IBM Plex Mono',monospace; font-size:12.5px; }
 
@@ -594,13 +595,13 @@
         <p class="measure">This section goes in this order: the idea, how the app is organized, the main flows, each screen with the answers behind it, and what's in the first prototype.</p>
 
         <h3 id="d5-idea">1. The idea in short</h3>
-        <p class="measure">In the interviews, every plan broke down at the same point. It was after someone missed a day or got stuck (<a class="ref" href="#p1-q4f2">P1, Q4 follow-up</a>; <a class="ref" href="#p6-q4f2">P6, Q4 follow-up</a>; <a class="ref" href="#p2-q2p">P2, Q2 probe</a>). So the app is mostly about that moment, not about making a nice plan at the start. It does three things:</p>
+        <p class="measure">In the interviews, every plan broke down at the same point. It was after someone missed a day or got stuck. So the app is mostly about that moment, not about making a nice plan at the start. It does three things:</p>
         <ul class="measure">
-          <li><strong>One step at a time.</strong> It only shows the next step, sized to the time and energy you have (<a class="ref" href="#p6-q3p">P6, Q3 probe</a>; <a class="ref" href="#p2-q5">P2, Q5</a>).</li>
-          <li><strong>Missing a day changes the plan, not how you feel about it.</strong> Steps move, and nothing gets marked late (<a class="ref" href="#p1-q6">P1, Q6</a>; <a class="ref" href="#p6-q6f">P6, Q6 follow-up</a>).</li>
-          <li><strong>The AI suggests, and you decide.</strong> P1 and P6 picked B in Q5, P2 picked A, and nobody picked C (<a class="ref" href="#p1-q5f">P1</a>; <a class="ref" href="#p6-q5f">P6</a>; <a class="ref" href="#p2-q5f">P2</a>).</li>
+          <li><strong>One step at a time.</strong> It only shows the next step, sized to the time and energy you have.</li>
+          <li><strong>Missing a day changes the plan, not how you feel about it.</strong> Steps move, and nothing gets marked late.</li>
+          <li><strong>The AI suggests, and you decide.</strong> Nobody in the interviews wanted the tool to set the plan by itself.</li>
         </ul>
-        <p class="measure">It's a web app sized for a phone, because P2 wants to use the free time "between classes" (<a class="ref" href="#p2-q5">P2, Q5</a>) and the check-in has to reach your phone. You work on one goal at a time, since P6 had four goals "all at the same time" and P2 had three projects (<a class="ref" href="#p6-q1">P6, Q1</a>; <a class="ref" href="#p2-q1">P2, Q1</a>).</p>
+        <p class="measure">It's a web app sized for a phone, because people would use it in short free moments, like between classes. You work on one goal at a time, because juggling several goals at once was part of the problem. The answers behind each of these are listed under each screen in part 4.</p>
 
         <h3 id="d5-ia">2. Information architecture</h3>
         <p class="measure">The app has three tabs: Today, Plan, and Settings. There's also a short setup the first time, and one check-in that comes from outside the app. "Welcome back" isn't its own page. It shows up instead of Today when you've been gone for 2+ days. The numbers match the screens in part 4.</p>
@@ -615,7 +616,7 @@
         </figure>
 
         <h3 id="d5-screens">4. Wireframes, screen by screen</h3>
-        <p class="measure">The screens are grouped by the flow they belong to. Each one says what it does and which answers it comes from. I made them in Figma. The example goal (a portfolio website) is made up, but it's based on the kind of goals P2 and P6 talked about. In the real app, the AI writes the step text.</p>
+        <p class="measure">The screens are grouped by the flow they belong to. Each one says what it does, why, and which interview answers it comes from. I made them in Figma. The example goal (a portfolio website) is made up, but it's based on the kind of goals P2 and P6 talked about. In the real app, the AI writes the step text.</p>
         <p class="measure">For color, I used a calm green for the main buttons and a soft yellow tag for anything the AI suggests, so you can always tell what's a suggestion and what's yours. I didn't use any red, because feeling guilty about missed tasks is what P1 and P6 said would make them quit.</p>
 
         <p class="label scr-group">Flow A · First time</p>
@@ -623,15 +624,18 @@
           <div class="scr"><img src="screens/s1.png" width="780" height="1688" alt="Screen 1, Add a goal: goal field, where are you with it, usual time chips, Suggest first steps button." loading="lazy">
             <div><h4>Screen 1 · Add a goal</h4>
               <p class="measure"><strong>What it does.</strong> You type one goal and where you are with it, then pick how much time you usually have.</p>
-              <p class="measure"><strong>Why.</strong> It starts with one goal because P6 and P2 were juggling several at once (<a class="ref" href="#p6-q1">P6, Q1</a>; <a class="ref" href="#p2-q1">P2, Q1</a>). Setup is only three screens, because P2 said "If an app takes five minutes to set up, I won't use it" (<a class="ref" href="#p2-q4f2">Q4 follow-up</a>).</p></div></div>
+              <p class="measure"><strong>Why.</strong> It starts with one goal because P6 and P2 were juggling several at once. Setup is only three screens, because P2 said they won't use an app that takes five minutes to set up.</p>
+              <p class="src">From <a class="ref" href="#p6-q1">P6, Q1</a> · <a class="ref" href="#p2-q4f2">P2, Q4 follow-up</a></p></div></div>
           <div class="scr"><img src="screens/s2.png" width="780" height="1688" alt="Screen 2, Review suggested steps: four AI steps, each with Keep, Edit, Skip, plus Add my own step." loading="lazy">
             <div><h4>Screen 2 · Review suggested steps</h4>
               <p class="measure"><strong>What it does.</strong> The AI suggests a few first steps. You can keep, edit, or skip each one, or add your own.</p>
-              <p class="measure"><strong>Why.</strong> Two of three people wanted the tool to suggest while they approve or change it (<a class="ref" href="#p1-q5f">P1, Q5</a>; <a class="ref" href="#p6-q5f">P6, Q5</a>). P2 said "I know my school work better than an app does" (<a class="ref" href="#p2-q5f">Q5</a>), so nothing is final until you say so.</p></div></div>
+              <p class="measure"><strong>Why.</strong> P1 and P6 wanted the tool to suggest steps while they approve or change them. Nobody wanted the tool to set the plan by itself, so nothing is final until you say so.</p>
+              <p class="src">From <a class="ref" href="#p1-q5f">P1, Q5</a> · <a class="ref" href="#p6-q5f">P6, Q5</a></p></div></div>
           <div class="scr"><img src="screens/s3.png" width="780" height="1688" alt="Screen 3, Check-in and calendar: once a day or only when I open it, time, Google Calendar toggles." loading="lazy">
             <div><h4>Screen 3 · Check-in and calendar</h4>
               <p class="measure"><strong>What it does.</strong> You pick one check-in a day or none, and connect Google Calendar. You can skip this screen.</p>
-              <p class="measure"><strong>Why.</strong> P6 wants a check-in at 4 PM (<a class="ref" href="#p6-q5">Q5</a>). However, P1 and P2 said too many notifications would make them quit (<a class="ref" href="#p1-q7">P1, Q7</a>; <a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>). One check-in at a time you choose is my guess for both, and I still need to test it. The calendar is there because P2 said "Only if it works with the apps I already use" (<a class="ref" href="#p2-q6">Q6</a>).</p></div></div>
+              <p class="measure"><strong>Why.</strong> P6 wants a check-in at 4 PM. However, P1 and P2 said too many notifications would make them quit. One check-in at a time you choose is my guess for both, and I still need to test it. The calendar is there because P2 only wants a tool that works with the apps they already use.</p>
+              <p class="src">From <a class="ref" href="#p6-q5">P6, Q5</a> · <a class="ref" href="#p1-q7">P1, Q7</a></p></div></div>
         </div>
 
         <p class="label scr-group">Flow B · A normal day</p>
@@ -639,15 +643,18 @@
           <div class="scr"><img src="screens/s4.png" width="780" height="1688" alt="Screen 4, Today: time and energy chips, one next step card, Done, I'm stuck, Not today." loading="lazy">
             <div><h4>Screen 4 · Today</h4>
               <p class="measure"><strong>What it does.</strong> You pick your time and energy, and it shows only one step that fits. Then you tap Done, I'm stuck, or Not today.</p>
-              <p class="measure"><strong>Why.</strong> P6 freezes when there are "too many options" (<a class="ref" href="#p6-q3p">Q3 probe</a>). P2 said "you have 45 minutes, just do this one Figma frame" (<a class="ref" href="#p2-q5">Q5</a>) and "Energy matters more than time" (<a class="ref" href="#p2-q7">Q7</a>).</p></div></div>
+              <p class="measure"><strong>Why.</strong> P6 freezes when there are "too many options." P2 said "Energy matters more than time."</p>
+              <p class="src">From <a class="ref" href="#p6-q3p">P6, Q3 probe</a> · <a class="ref" href="#p2-q7">P2, Q7</a></p></div></div>
           <div class="scr"><img src="screens/s5.png" width="780" height="1688" alt="Screen 5, I'm stuck: note field, smaller suggested step, Try this instead, Ask a different way, Save my note and stop." loading="lazy">
             <div><h4>Screen 5 · I'm stuck</h4>
               <p class="measure"><strong>What it does.</strong> You write a few words about where you got stuck. It saves the note and suggests a smaller step. You can also just stop for today.</p>
-              <p class="measure"><strong>Why.</strong> Getting stuck is what made P1 start avoiding the work (<a class="ref" href="#p1-q3p">Q3 probe</a>). P1 also doesn't want every day to feel "like starting over" (<a class="ref" href="#p1-q6f">Q6 follow-up</a>), so the note gets used again on screen 7.</p></div></div>
+              <p class="measure"><strong>Why.</strong> Getting stuck is what made P1 start avoiding the work. P1 also doesn't want every day to feel "like starting over," so the note gets used again on screen 7.</p>
+              <p class="src">From <a class="ref" href="#p1-q3p">P1, Q3 probe</a> · <a class="ref" href="#p1-q6f">P1, Q6 follow-up</a></p></div></div>
           <div class="scr"><img src="screens/s6.png" width="780" height="1688" alt="Screen 6, Not today: tomorrow, next free time on my calendar, or pick a day; optional reason chips; Move it." loading="lazy">
             <div><h4>Screen 6 · Not today</h4>
               <p class="measure"><strong>What it does.</strong> You move the step to tomorrow, the next free time on your calendar, or a day you pick. The rest of the plan moves with it, and nothing gets marked late.</p>
-              <p class="measure"><strong>Why.</strong> P1 wants a tool that "changes the plan when I fall behind instead of making me feel guilty" (<a class="ref" href="#p1-q6">Q6</a>). P6 said missed tasks piling up would make them quit (<a class="ref" href="#p6-q6f">Q6 follow-up</a>). The free-time option comes from P2 looking for time "between classes" (<a class="ref" href="#p2-q5">Q5</a>).</p></div></div>
+              <p class="measure"><strong>Why.</strong> P1 wants a tool that "changes the plan when I fall behind instead of making me feel guilty." P6 said missed tasks piling up would make them quit.</p>
+              <p class="src">From <a class="ref" href="#p1-q6">P1, Q6</a> · <a class="ref" href="#p6-q6f">P6, Q6 follow-up</a></p></div></div>
           <div class="scr"><img src="screens/s9.png" width="780" height="1688" alt="Screen 9, the one check-in: lock screen notification at 4:00 asking about the step, with Done and Not today." loading="lazy">
             <div><h4>Screen 9 · The one check-in</h4>
               <p class="measure"><strong>What it does.</strong> You get one notification a day at the time you picked, with Done and Not today. Tapping it opens Today.</p>
@@ -659,11 +666,13 @@
           <div class="scr"><img src="screens/s7.png" width="780" height="1688" alt="Screen 7, Welcome back: what you were on, your saved note, an easy 5-minute step, Start this, Re-plan my week." loading="lazy">
             <div><h4>Screen 7 · Coming back after a few days</h4>
               <p class="measure"><strong>What it does.</strong> After 2+ days away, it shows where you left off and your own note, not what you missed. Then it gives you an easy 5-minute step to get back in.</p>
-              <p class="measure"><strong>Why.</strong> Falling behind is where everyone dropped their plan (<a class="ref" href="#d4">D4 journey</a>). P1 said they'd stop using it if "it doesn't know where I got stuck" (<a class="ref" href="#p1-q6f">Q6 follow-up</a>).</p></div></div>
+              <p class="measure"><strong>Why.</strong> Falling behind is where everyone dropped their plan in D4. P1 said they'd stop using it if "it doesn't know where I got stuck."</p>
+              <p class="src">From <a class="ref" href="#p1-q6f">P1, Q6 follow-up</a></p></div></div>
           <div class="scr"><img src="screens/s8.png" width="780" height="1688" alt="Screen 8, Plan: focus goal steps with done, next, and later, Add a step, paused goals with Switch, Add another goal." loading="lazy">
             <div><h4>Screen 8 · Plan</h4>
               <p class="measure"><strong>What it does.</strong> It shows all the steps for your focus goal. You can edit them, add a step, or switch to a paused goal.</p>
-              <p class="measure"><strong>Why.</strong> People want to keep the final say on their plan. P6 said "I still want to be able to say 'I can't do that today'" (<a class="ref" href="#p6-q5f">Q5</a>). Other goals stay paused so Today only has one thing to show.</p></div></div>
+              <p class="measure"><strong>Why.</strong> People want to keep the final say on their plan. P6 said "I still want to be able to say 'I can't do that today.'" Other goals stay paused so Today only has one thing to show.</p>
+              <p class="src">From <a class="ref" href="#p6-q5f">P6, Q5</a></p></div></div>
         </div>
 
         <h3 id="d5-mvp">5. MVP for the first prototype (Nov 4)</h3>
@@ -673,8 +682,8 @@
               <tr><th>In the first prototype</th><th>Not yet, and why</th></tr>
             </thead>
             <tbody>
-              <tr><td>Add a goal, and the AI suggests steps you can keep, edit, or skip (screens 1–2)</td><td><strong>Streaks, points, or a count of missed days.</strong> This is the kind of guilt P1 and P6 said would make them quit (Q6).</td></tr>
-              <tr><td>Today with time, energy, and one step (screen 4)</td><td><strong>More than one reminder a day.</strong> Same reason (<a class="ref" href="#p1-q7">P1, Q7</a>; <a class="ref" href="#p2-q6f">P2, Q6 follow-up</a>).</td></tr>
+              <tr><td>Add a goal, and the AI suggests steps you can keep, edit, or skip (screens 1–2)</td><td><strong>Streaks, points, or a count of missed days.</strong> This is the kind of guilt P1 and P6 said would make them quit.</td></tr>
+              <tr><td>Today with time, energy, and one step (screen 4)</td><td><strong>More than one reminder a day.</strong> Same reason. P1 and P2 said too many notifications would make them stop.</td></tr>
               <tr><td>I'm stuck, with a saved note and a smaller step (screen 5)</td><td><strong>A friend or mentor checking on you.</strong> This was an open question in D4, so I'll ask about it in testing first.</td></tr>
               <tr><td>Not today, where the plan moves and nothing is marked late (screen 6)</td><td><strong>Real help with a subject, like P1's math.</strong> "I'm stuck" only makes the step smaller. I don't want the AI to act like a tutor before I test if that's enough.</td></tr>
               <tr><td>Welcome back after 2+ days, using the saved note (screen 7)</td><td><strong>Login and syncing across devices.</strong> For testing, the data just stays in the browser.</td></tr>
