@@ -203,6 +203,7 @@
       <a class="sub" href="#d7-sessions">Results</a>
       <a class="sub" href="#d7-problems">Problems</a>
       <a class="sub" href="#d7-fixes">Fix list</a>
+      <a class="sub" href="#d7-limits">Limits</a>
       <a class="sub" href="#d7-notes">Notes</a>
     </nav>
 
@@ -722,20 +723,21 @@
       <section class="doc" id="d7">
         <p class="eyebrow label">D7 · Usability testing</p>
         <h2>Testing the prototype with four people</h2>
-        <p class="doc-sub">Tests the week of Nov 9, 2026 · posted Nov 14, 2026</p>
+        <p class="doc-sub">Tests Nov 9–13, 2026 · posted Nov 14, 2026</p>
 
-        <p class="lede measure" style="color:var(--ink);">I tested the prototype with four people. Three of them are P1, P2, and P6 from the interviews, because I wanted to see if the app actually fixes what they told me. The fourth is a new person, P7, because nobody in the interviews had a class goal.</p>
+        <p class="lede measure" style="color:var(--ink);">I tested the prototype with four people. Three of them are P1, P2, and P6 from the interviews, because I wanted to see if the app actually fixes what they told me. The fourth is a new person, P7, because nobody in the interviews had a homework or subject goal.</p>
 
         <div class="stats">
-          <div class="stat"><b>20 of 20</b><span>tasks finished without my help</span></div>
+          <div class="stat"><b>20 of 20</b><span>tasks finished with no hints</span></div>
           <div class="stat"><b>4 of 4</b><span>set up a goal in under 2 minutes</span></div>
-          <div class="stat"><b>14</b><span>fixes on the list, 5 of them high priority</span></div>
+          <div class="stat"><b>14</b><span>fixes on the list, 6 of them high priority</span></div>
         </div>
 
         <p class="measure">Most of the problems showed up after a task was done, in what the AI wrote and in what the Plan page showed afterwards.</p>
 
         <h3 id="d7-setup">1. How I ran the tests</h3>
-        <p class="measure">Each test was in person and about 30 minutes. People used the <a class="ref" href="https://next-step-app-brown.vercel.app">live prototype</a> on their own phone and talked out loud while they used it. They set up their own real goal, so the AI steps were about something they actually care about. I gave them five tasks that describe a situation and never say which button to press. If someone got stuck I could point at the screen, but I wasn't allowed to say a button name. After the tasks I asked open questions A to G. The full script is here: <a class="ref" href="D7-test-script.pdf">D7 test script (PDF)</a>. One thing changed since D5: picking a time and energy on Today now has the AI rewrite the step for that time and energy, instead of picking a step that fits.</p>
+        <p class="measure">Each test was in person and about 30 minutes. People used the <a class="ref" href="https://next-step-app-brown.vercel.app">live prototype</a> on their own phone and talked out loud while they used it. They set up their own real goal, so the AI steps were about something they actually care about. I gave them five tasks that describe a situation and never say which button to press. If someone got stuck I could point at the screen, but I wasn't allowed to say a button name. I timed how long setup took. After the tasks I asked open questions A to G. The full script is here: <a class="ref" href="D7-test-script.pdf">D7 test script (PDF)</a>. One thing changed since D5: picking a time and energy on Today now has the AI rewrite the step for that time and energy, instead of picking a step that fits.</p>
+        <p class="measure">Everyone finished every task without a hint. P2 finished task 5, but the button they used ("Re-plan my week") didn't do what they expected, which is in the problems below.</p>
         <ol class="measure">
           <li>Think of a goal you're working on right now, or something you've been meaning to start. Use the app to set it up until you have a plan you'd be okay following.</li>
           <li>Say it's today, you only have about 15 minutes, and you're pretty tired. Use the app to figure out what to do right now.</li>
@@ -746,13 +748,13 @@
         <div class="wrap-table">
           <table class="resp">
             <thead>
-              <tr><th>Who</th><th>Goal they used</th><th>Why I picked them</th></tr>
+              <tr><th>Who</th><th>Date</th><th>Goal they used</th><th>Why I picked them</th></tr>
             </thead>
             <tbody>
-              <tr><td>P1</td><td>Learning WebGL shaders</td><td>Said they avoid the work when they get stuck with nobody to ask (<a class="ref" href="#p1-q3p">P1, Q3 probe</a>)</td></tr>
-              <tr><td>P2</td><td>Cleaning up their personal website</td><td>In the interview they picked A (they write the steps, the app only reminds them), but what they described sounded more like B (the app suggests steps, they approve them) (<a class="ref" href="#p2-q5f">P2, Q5</a>)</td></tr>
-              <tr><td>P6</td><td>Tutorials, resume, and LinkedIn for a UX job search</td><td>Freezes when there are too many options and quits planners when the list piles up (<a class="ref" href="#p6-q3p">P6, Q3 probe</a>, <a class="ref" href="#p6-q4f2">Q4</a>)</td></tr>
-              <tr><td>P7</td><td>Homework on series in calculus, final in December</td><td>New person. D5 said I'd test "stuck on a subject" with someone stuck on something like math</td></tr>
+              <tr><td>P1</td><td>Nov 11</td><td>Learning WebGL shaders</td><td>Said they avoid the work when they get stuck with nobody to ask (<a class="ref" href="#p1-q3p">P1, Q3 probe</a>)</td></tr>
+              <tr><td>P2</td><td>Nov 9</td><td>Cleaning up their personal website</td><td>In the interview they picked A (they write the steps, the app only reminds them), but what they described sounded more like B (the app suggests steps, they approve them) (<a class="ref" href="#p2-q5f">P2, Q5</a>)</td></tr>
+              <tr><td>P6</td><td>Nov 12</td><td>Tutorials, resume, and LinkedIn for a UX job search</td><td>Freezes when there are too many options and quits planners when the list piles up (<a class="ref" href="#p6-q3p">P6, Q3 probe</a>, <a class="ref" href="#p6-q4f2">Q4</a>)</td></tr>
+              <tr><td>P7</td><td>Nov 13</td><td>Homework on series in calculus, final in December</td><td>New person, a student at Parsons School of Design (strategic business and design major). They weren't in the screener or interviews, so I gave them the next number after P1–P6. D5 said I'd test "stuck on a subject" with someone stuck on something like math</td></tr>
             </tbody>
           </table>
         </div>
@@ -765,8 +767,8 @@
               <tr><th>Who</th><th>What I was watching for</th><th>What happened</th></tr>
             </thead>
             <tbody>
-              <tr><td>P1</td><td>Does "I'm stuck" help when you're stuck on the actual material, like a bug or a math problem?</td><td>Yes, for their first problem. It gave them the exact command they needed to fix it ("That's what a senior would tell me"). They can only ask once and can't paste in the error, but that's on purpose, since the app is for planning, not for fixing the bug with them. It also left duplicate steps in their plan.</td></tr>
-              <tr><td>P2</td><td>Do they really want A or B? Is the "Add to Calendar" button enough? Is setup fast?</td><td>B, as long as they can skip steps and change the order: "Honestly, suggest them... Writing all five is the part I never do." Setup was fast enough. The calendar button isn't enough, because it always uses the same time and doesn't look for free time in their schedule.</td></tr>
+              <tr><td>P1</td><td>Does "I'm stuck" help when you're stuck on the actual material, like a bug or a math problem?</td><td>Yes, for their first problem. The next thing to do was a simple fix, and it gave them the exact command for it ("That's what a senior would tell me"). They can't ask a follow-up or paste in the error, but that's on purpose, since the app is for planning, not for fixing the bug with them. It also left duplicate steps in their plan.</td></tr>
+              <tr><td>P2</td><td>Do they really want A or B? Is the "Add to Calendar" button enough? Is setup fast?</td><td>B, as long as they can skip steps and change the order: "Honestly, suggest them... Writing all five is the part I never do." Setup was fast enough. They didn't actually use the calendar button during the test, but when I asked, they said it isn't enough. They want the app to find free time in their schedule instead of using a set time.</td></tr>
               <tr><td>P6</td><td>Does one step at a time help? Do Not today and Welcome back feel guilt-free? Does the check-in feel like someone checking?</td><td>Today and Welcome back worked. The Plan page brought the big list back ("0 of 5"). The check-in felt "more like a sticky note," not like someone checking on them.</td></tr>
               <tr><td>P7</td><td>Is a smaller step enough when you're stuck on a subject?</td><td>Hard to tell from task 3, because the app solved the whole problem instead of giving a smaller step. But the smaller step they got on Welcome back was what they wanted: "This is the kind I wanted the first time." So a smaller step might be enough.</td></tr>
             </tbody>
@@ -775,35 +777,35 @@
         
         <h3 id="d7-worked">3. What worked</h3>
         <ul class="measure">
-          <li>Nobody felt behind on Today, Not today, or Welcome back. P1 said "Nothing told me I was behind," and P6 let out a breath when they read "No catching up needed."</li>
+          <li>Nobody felt behind on Today, Not today, or Welcome back. P1 said "Nothing told me I was behind," and P6 let out a breath when they read "No catching up needed." The one exception was P7, whose homework has a real due date (see below).</li>
           <li>Welcome back quoting their own stuck note worked for P1 and P6. P1: "It remembered. That's the thing I said I needed." This was the thing P1 said would make them stop using it if it was missing (<a class="ref" href="#p1-q6f">P1, Q6 follow-up</a>).</li>
-          <li>Setup took under 2 minutes for everyone. P2, who said they won't use an app that takes five minutes to set up (<a class="ref" href="#p2-q4f2">P2, Q4</a>), said "Okay, that's fast enough."</li>
+          <li>Setup took under 2 minutes for everyone (I timed it). P2, who said they won't use an app that takes five minutes to set up (<a class="ref" href="#p2-q4f2">P2, Q4</a>), said "Okay, that's fast enough."</li>
           <li>When the first stuck suggestion was weak, "Ask a different way" fixed it for P2. P6's stuck answer (flip a coin between the two tutorials) was the favorite step of the whole test for them: "It's giving me permission." This is a good example of what "I'm stuck" should do. It gave them an easy way to decide, and they still made the choice themselves.</li>
-          <li>Not today was fast for everyone. P6 liked that they didn't have to pick a reason.</li>
+          <li>Not today was fast for everyone who moved the step to Tomorrow. P2 tried picking a day instead and said "Too many taps." P6 liked that they didn't have to pick a reason.</li>
         </ul>
 
         <h3 id="d7-problems">4. What didn't work</h3>
         <p class="measure">Under each problem is who ran into it and which fix in the list below goes with it.</p>
 
         <div class="prob"><h4>Steps pile up, and the Plan page turns into the old to-do list</h4>
-          <p class="measure">When someone tapped "Try this instead" (the button that swaps in the easier step after "I'm stuck"), the app added the new step but kept the old one, both on the same day. After Welcome back, P1 had three steps that were basically the same and asked "Which one is the real one?" Also the Plan page shows a count like "0 of 5 steps done." P6 went quiet when they saw it and said "The Plan page is my Monday list again." That's the exact thing that made P6 quit their planner in the interview (<a class="ref" href="#p6-q4f2">P6, Q4</a>).</p>
+          <p class="measure">When someone tapped "Try this instead" (the button that swaps in the easier step after "I'm stuck"), the app added the new step but kept the old one, both on the same day. After Welcome back, P1 had three steps that were basically the same and asked "Which one is the real one?" P7 ended up with duplicate steps too. Also the Plan page shows a count like "0 of 5 steps done." P6 went quiet when they saw it and said "The Plan page is my Monday list again." That's the exact thing that made P6 quit their planner in the interview (<a class="ref" href="#p6-q4f2">P6, Q4</a>).</p>
           <p class="src">Seen with P1, P6, P7 · Fix #1, #5</p></div>
 
         <div class="prob"><h4>Picking time and energy doesn't always change the step the right way</h4>
           <p class="measure">After "Do it now anyway" (the button to keep going after you finish a step), P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" For P1, the 15 min version was "kind of the same step with more words," since the original was already 10 min. And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step was more organizing, which is what they told me they do instead of the real work (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>).</p>
           <p class="src">Seen with P1, P2, P6, P7 · Fix #2, #4</p></div>
 
-        <div class="prob"><h4>"I'm stuck" tried to solve the problem instead of planning the next step</h4>
-          <p class="measure">P7 typed in a real homework problem, and the app solved the whole thing. That's not what the app is for. In D5 I decided "I'm stuck" should only make the step smaller, not teach or solve the subject. P7 still didn't understand it: "On the exam I still won't know why it's limit comparison." For P1 it worked because their problem was a simple setup mistake. But P1 also said that for a real bug they'd still go to ChatGPT. I think that's fine. Solving the problem is what other tools are for. This app should help them figure out what to do next.</p>
-          <p class="src">Seen with P7, P1 · Fix #3</p></div>
+        <div class="prob"><h4>"I'm stuck" solved the problem instead of giving the next step</h4>
+          <p class="measure">P7 typed in a real homework problem, and the app solved the whole thing. That's not what the app is for. In D5 I decided "I'm stuck" should only make the step smaller, not teach or solve the subject. P7 still didn't understand it: "On the exam I still won't know why it's limit comparison." For P1 it worked, because the next thing to do and the fix were the same simple step (start a local server). P7's problem was about understanding the math, so solving it skipped the part they needed to learn. P1 also said that for a real shader bug they'd still go to ChatGPT. I think that's fine. Solving the problem is what other tools are for. This app should help people figure out what to do next.</p>
+          <p class="src">Seen with P7 · Fix #3</p></div>
 
         <div class="prob"><h4>Some first steps make you choose between a lot of things</h4>
           <p class="measure">P6's first step was "pick one saved tutorial to finish first," out of fifteen. Picking is exactly where P6 freezes. During setup P6 also kept every suggested step without changing any: "I don't want to pick wrong."</p>
-          <p class="src">Seen with P6 · Fix #6</p></div>
+          <p class="src">Seen with P6 · Fix #7</p></div>
 
-        <div class="prob"><h4>The calendar and the check-in don't match what people expected</h4>
-          <p class="measure">P2 picked 15 minutes at 8 PM, but the screen said "Goes on your calendar at 4:00 PM." P2: "It's 8. I said I have 15 minutes right now." P6 thought the daily check-in would just show up on its own, and didn't get that each step has to be added to the calendar first. When I showed P6 the check-in, they said "It doesn't ask me anything, so I could just swipe it."</p>
-          <p class="src">Seen with P2, P6 · Fix #7, #8</p></div>
+        <div class="prob"><h4>The calendar time from D5 doesn't work when someone wants to start now</h4>
+          <p class="measure">In D5 I decided a step goes on the calendar at the check-in time. P2 left the check-in at 4:00 PM, so when they picked 15 minutes at 8 PM, the screen said "Goes on your calendar at 4:00 PM." P2: "It's 8. I said I have 15 minutes right now." So the app did what D5 said, but the D5 rule doesn't fit someone who wants to do the step right now. P6 had a different problem. They thought the daily check-in would just show up on its own, and didn't get that each step has to be added to the calendar first. When I showed P6 the check-in, they said "It doesn't ask me anything, so I could just swipe it."</p>
+          <p class="src">Seen with P2, P6 · Fix #6, #8</p></div>
 
         <div class="prob"><h4>"Re-plan my week" doesn't re-plan anything</h4>
           <p class="measure">P2 tapped it on Welcome back and only landed on the Plan page. "That didn't re-plan anything."</p>
@@ -814,7 +816,7 @@
           <p class="src">Seen with P1 · Fix #10</p></div>
 
         <div class="prob"><h4>Class work has deadlines</h4>
-          <p class="measure">P7's homework was due Friday, and the app never asked. After Not today, half of the homework sat on Wednesday. "It says nothing is late, but my homework can be late." So "nothing is ever late" is fine for something like a portfolio, but for homework it kind of isn't true.</p>
+          <p class="measure">P7's homework was due that Friday, the day of the test, and the app never asked. The plan only had a step for the first half of the homework, and after Not today it moved to the next Wednesday, after the due date. The second half had no step at all. "It says nothing is late, but my homework can be late." So "nothing is ever late" is fine for something like a portfolio, but for homework it kind of isn't true.</p>
           <p class="src">Seen with P7 · Fix #11</p></div>
 
         <div class="prob"><h4>Smaller things</h4>
@@ -831,12 +833,12 @@
             <tbody>
               <tr><td>1</td><td>High</td><td>"Try this instead" and "Start this" replace the step, instead of adding a new one next to it.</td><td>P1, P6, P7</td></tr>
               <tr><td>2</td><td>High</td><td>Keep the step matched to the time and energy picked, also after "Do it now anyway," "Try this instead," or "Start this."</td><td>P1, P7</td></tr>
-              <tr><td>3</td><td>High</td><td>"I'm stuck" never solves the problem. It gives a smaller next action, like what to reread, which example to look at, or who to ask.</td><td>P7</td></tr>
+              <tr><td>3</td><td>High</td><td>"I'm stuck" gives the next thing to do. If that's a simple action, like P1's server command, it can say exactly what to do. If the problem is about understanding something, like P7's math, it points to what to reread, which example to look at, or who to ask, instead of solving it.</td><td>P7</td></tr>
               <tr><td>4</td><td>High</td><td>Low energy should make the same task smaller, without swapping in a different task or adding organizing or prep steps.</td><td>P2, P6</td></tr>
               <tr><td>5</td><td>High</td><td>Take the "0 of N steps done" count off the Plan page.</td><td>P6</td></tr>
-              <tr><td>6</td><td>Medium</td><td>The first step should never be a choice between many things. If a choice is needed, the AI makes it and the person can change it.</td><td>P6</td></tr>
-              <tr><td>7</td><td>Medium</td><td>If someone picks a time right now, the calendar event goes at "now," not 4:00 PM.</td><td>P2</td></tr>
-              <tr><td>8</td><td>Medium</td><td>Say clearly that the check-in comes from the calendar event, so it only happens if you add the step.</td><td>P6, P2</td></tr>
+              <tr><td>6</td><td>High</td><td>Say clearly that the check-in comes from the calendar event, so it only happens if you add the step.</td><td>P6, P2</td></tr>
+              <tr><td>7</td><td>Medium</td><td>The first step should never be a choice between many things. If a choice is needed, the AI makes it and the person can change it.</td><td>P6</td></tr>
+              <tr><td>8</td><td>Medium</td><td>When someone wants to do the step now, the calendar event goes at "now" instead of the check-in time.</td><td>P2</td></tr>
               <tr><td>9</td><td>Medium</td><td>Rename "Re-plan my week" so it says what it does.</td><td>P2</td></tr>
               <tr><td>10</td><td>Medium</td><td>The AI only uses details the person actually gave.</td><td>P1</td></tr>
               <tr><td>11</td><td>Medium</td><td>Let people add a due date (optional), and say so if the plan runs past it.</td><td>P7</td></tr>
@@ -849,7 +851,16 @@
         <p class="measure"><strong>Not in v2.</strong> People also asked for things that are bigger than a fix. P1 wants a log of old stuck notes "so I can see I got past it." P2 wants the app to read their calendar and put the step in the next free slot, or show up in Todoist. P6 wants two buttons on the check-in, "do it now" and "not today," and asked if Plan could be hidden. Reading the calendar and buttons on notifications were already "not yet" in D5 because they need Google sign-in and a phone app instead of a website. I'm not planning these for v2, since the two iteration weeks are for the fix list. For P6's hidden Plan, I want to see first if taking the count off (#5) is enough.</p>
         <p class="measure"><strong>Left out on purpose.</strong> P1 wanted to paste in the error and keep asking, and P7 asked to pick between a hint and the full answer. I'm leaving these out because they're about solving the problem, and the app is for planning what to do next.</p>
 
-        <h3 id="d7-notes">6. My notes from each test</h3>
+        <h3 id="d7-limits">6. Limits</h3>
+        <ul class="measure">
+          <li>Four people is a small test. P7 is the only one with a homework goal, so everything about class work comes from one person.</li>
+          <li>P1, P2, and P6 know me and already talked to me about this idea in the interviews, so they might have been nicer about the app than a stranger would be.</li>
+          <li>I built the app and ran the tests myself. I tried not to explain anything, but I might have reacted in ways that helped.</li>
+          <li>Each test was one sitting of about 30 minutes. Welcome back was tested with a button that pretends 3 days went by, not with real days away.</li>
+          <li>D5 said I'd ask in testing about a friend or mentor checking in. I left that out of the script, so it's still an open question.</li>
+        </ul>
+
+        <h3 id="d7-notes">7. My notes from each test</h3>
         <p class="measure">These are the notes I took during each test, lightly cleaned up. Quotes are close to what people said but not word for word. Lines starting with "My note" are my own take. Letters A to G are the after-task questions in the script.</p>
 
         <details class="notes" id="t-p1">
@@ -857,7 +868,7 @@
           <div class="qa"><p class="q">Task 1 · Set up a goal · finished on their own</p><p class="a">Typed their goal and "followed one tutorial, then stared at a blank canvas for 2 hours. Haven't opened it since." Paused at the time chips: "Depends on the day honestly." Then found "It changes." The AI gave 4 steps: open the tutorial project and get it running (10) / change one color value (10) / copy the tutorial into a new folder (20) / make the red canvas fade across the screen (30). Skipped "copy into new folder": "That's file stuff, I'll do it when I need it." Kept the other 3. Stopped on "red canvas": "How does it know it's red? I never said red." Kept it anyway. Check-in: "Only when I open it," no hesitation. "I don't want it pinging me when I'm finally in the zone." Noticed there's no deadline anywhere: "ChatGPT gave me four weeks and I was behind by day three."</p></div>
           <div class="qa"><p class="q">Task 2 · 15 min, tired · finished on their own</p><p class="a">Tapped 15 min, Low. The card changed to "Open the old tutorial folder and load it in your browser," tagged "Adjusted for 15 min · low energy." "It's kind of the same step with more words?" The original was already 10 min. Liked the last line: "If you finish early, you can stop there."</p></div>
           <div class="qa"><p class="q">Task 3 · Stuck · finished on their own</p><p class="a">Went straight to "I'm stuck." Wrote: the canvas is black, the console says CORS, and they don't remember how it ran before. Got "Run a local server in the project folder and open it" with the actual command (python -m http.server 8000). "Oh. That's actually the thing. That's what a senior would tell me." Liked "Done when it loads from localhost, even if the canvas is still black." Tapped "Try this instead." Then: "But what if the next thing breaks too? Can I keep asking?" The "On:" line showed the planned step name, not the adjusted one on screen. They didn't notice.</p></div>
-          <div class="qa"><p class="q">Task 4 · Can't do it today · finished on their own</p><p class="a">Not today → Tomorrow (already selected) → "No energy" → Move it. Fast. "Okay, it didn't make it weird." Opened Plan to check. Saw "Run a local server" and "Open the tutorial project" both on Sunday. "Wait, so tomorrow I have two?"</p></div>
+          <div class="qa"><p class="q">Task 4 · Can't do it today · finished on their own</p><p class="a">Not today → Tomorrow (already selected) → "No energy" → Move it. Fast. "Okay, it didn't make it weird." Opened Plan to check. Saw "Run a local server" and "Open the tutorial project" both on the same day. "Wait, so tomorrow I have two?"</p></div>
           <div class="qa"><p class="q">Task 5 · Back after 3 days · finished on their own</p><p class="a">Read their own note quoted back. "It remembered. That's the thing I said I needed." Easy way back in: "Start a simple local server in your project folder," 5 min. Tapped Start this. Went to Plan after. Three steps that are basically the same (start a simple local server / run a local server / open the tutorial project). "Which one is the real one?"</p></div>
           <div class="qa"><p class="q">A · In your own words, what is this app for?</p><p class="a">"It tells you the next small thing to do, and if you get stuck it gives you a smaller thing."</p></div>
           <div class="qa"><p class="q">B · What did you think of the steps the AI wrote?</p><p class="a">Good size, would do them. "Red canvas" felt made up. The stuck step was the best one because it had a real command in it.</p></div>
@@ -906,7 +917,7 @@
           <div class="qa"><p class="q">Task 2 · 15 min, tired · finished on their own</p><p class="a">15 min, Low. The step became "Copy the convergence test names from your notes onto one sheet... without rewording anything." "I can do that half asleep. Good." Tapped Done to show me. Got "Nice. Nothing else for today" and "Done. That counts." Smiled at that. I had them tap "Do it now anyway." The next step showed "Planned · about 40 min" with 15 min and Low still selected. "I said 15 minutes?"</p></div>
           <div class="qa"><p class="q">Task 3 · Stuck · finished on their own</p><p class="a">Wrote a real one: the sum of n/(n²+1), tried comparing to 1/n, the inequality goes the wrong way, not sure if it should be limit comparison. Got "Use limit comparison with 1/n" with the whole thing worked out, down to "so this series diverges too." "Oh. It just told me the answer. I mean, thanks?" Then: "On the exam I still won't know why it's limit comparison." Ask a different way → the integral test, also fully worked. "Now I have two answers and I still don't know how to choose." Tapped Try this instead anyway. My note: for a subject, the "smaller step" turned into the solution. It unblocks them but doesn't teach.</p></div>
           <div class="qa"><p class="q">Task 4 · Can't do it today · finished on their own</p><p class="a">Not today → No time → Move it. No trouble. Checked Plan. Solving HW 9 now sits on Wednesday, first half only. "It says nothing is late, but my homework can be late."</p></div>
-          <div class="qa"><p class="q">Task 5 · Back after 3 days · finished on their own</p><p class="a">Read their note, then "Check that n/(n²+1) and 1/n have a limit ratio of 1," 5 min. Start this. The detail says to simplify and "see what it goes to," and doesn't give the result. "This is the kind I wanted the first time."</p></div>
+          <div class="qa"><p class="q">Task 5 · Back after 3 days · finished on their own</p><p class="a">Read their note, then "Check that n/(n²+1) and 1/n have a limit ratio of 1," 5 min. Start this. The step told them what to check, and they did the math themselves. "This is the kind I wanted the first time."</p></div>
           <div class="qa"><p class="q">A · In your own words, what is this app for?</p><p class="a">"A planner that makes studying smaller, and kind of a tutor when you're stuck."</p></div>
           <div class="qa"><p class="q">B · What did you think of the steps the AI wrote?</p><p class="a">The test sheet idea is good, would do it. Wouldn't do "sort the problems by test." "If I could do that I wouldn't be stuck."</p></div>
           <div class="qa"><p class="q">C · How did you feel using it, especially when you couldn't do a step?</p><p class="a">Relieved at first when stuck, then a bit cheated. Not today felt fine, but the deadline is still in their head.</p></div>
