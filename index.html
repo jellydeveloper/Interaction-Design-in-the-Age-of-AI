@@ -724,7 +724,7 @@
         <h2>Testing the prototype with four people</h2>
         <p class="doc-sub">Tests the week of Nov 9, 2026 · posted Nov 14, 2026</p>
 
-        <p class="lede measure" style="color:var(--ink);">I tested the prototype with four people. Three of them are P1, P2, and P6 from the interviews, because I wanted to see if the app actually fixes what they told me. The fourth is a new person, P7, who had a class goal, since nobody in the interviews had a class goal.</p>
+        <p class="lede measure" style="color:var(--ink);">I tested the prototype with four people. Three of them are P1, P2, and P6 from the interviews, because I wanted to see if the app actually fixes what they told me. The fourth is a new person, P7, because nobody in the interviews had a class goal.</p>
 
         <div class="stats">
           <div class="stat"><b>20 of 20</b><span>tasks finished without my help</span></div>
@@ -732,10 +732,10 @@
           <div class="stat"><b>14</b><span>fixes on the list, 5 of them high priority</span></div>
         </div>
 
-        <p class="measure">Everyone got through every task, so people weren't getting lost. Most of the problems showed up after a task was done, in what the AI wrote and in what the Plan page showed afterwards.</p>
+        <p class="measure">Most of the problems showed up after a task was done, in what the AI wrote and in what the Plan page showed afterwards.</p>
 
         <h3 id="d7-setup">1. How I ran the tests</h3>
-        <p class="measure">Each test was in person and about 30 minutes. People used the <a class="ref" href="https://next-step-app-brown.vercel.app">live prototype</a> on their own phone and talked out loud while they used it. They set up their own real goal, so the AI steps were about something they actually care about. I gave them five tasks that describe a situation and never say which button to press. If someone got stuck I could point at the screen, but I wasn't allowed to say a button name. After the tasks I asked open questions A to G. The full script is here: <a class="ref" href="D7-test-script.pdf">D7 test script (PDF)</a>.</p>
+        <p class="measure">Each test was in person and about 30 minutes. People used the <a class="ref" href="https://next-step-app-brown.vercel.app">live prototype</a> on their own phone and talked out loud while they used it. They set up their own real goal, so the AI steps were about something they actually care about. I gave them five tasks that describe a situation and never say which button to press. If someone got stuck I could point at the screen, but I wasn't allowed to say a button name. After the tasks I asked open questions A to G. The full script is here: <a class="ref" href="D7-test-script.pdf">D7 test script (PDF)</a>. One thing changed since D5: picking a time and energy on Today now has the AI rewrite the step for that time and energy, instead of picking a step that fits.</p>
         <ol class="measure">
           <li>Think of a goal you're working on right now, or something you've been meaning to start. Use the app to set it up until you have a plan you'd be okay following.</li>
           <li>Say it's today, you only have about 15 minutes, and you're pretty tired. Use the app to figure out what to do right now.</li>
@@ -772,8 +772,7 @@
             </tbody>
           </table>
         </div>
-        <p class="measure">So the question from D4, whether P2 really wants A or B, is mostly answered. They were fine with the app suggesting steps, as long as they can skip or move them. What bugged them was the time the step goes on their calendar.</p>
-
+        
         <h3 id="d7-worked">3. What worked</h3>
         <ul class="measure">
           <li>Nobody felt behind on Today, Not today, or Welcome back. P1 said "Nothing told me I was behind," and P6 let out a breath when they read "No catching up needed."</li>
@@ -791,7 +790,7 @@
           <p class="src">Seen with P1, P6, P7 · Fix #1, #5</p></div>
 
         <div class="prob"><h4>Picking time and energy doesn't always change the step the right way</h4>
-          <p class="measure">After "Do it now anyway" (the button to keep going after you finish a step), P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step was more organizing, which is what they told me they do instead of the real work (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>).</p>
+          <p class="measure">After "Do it now anyway" (the button to keep going after you finish a step), P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" For P1, the 15 min version was "kind of the same step with more words," since the original was already 10 min. And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step was more organizing, which is what they told me they do instead of the real work (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>).</p>
           <p class="src">Seen with P1, P2, P6, P7 · Fix #2, #4</p></div>
 
         <div class="prob"><h4>"I'm stuck" tried to solve the problem instead of planning the next step</h4>
@@ -823,7 +822,7 @@
           <p class="src">Fix #12, #13, #14</p></div>
 
         <h3 id="d7-fixes">5. Fix list, in order</h3>
-        <p class="measure">I marked something High if it goes against what D5 promised, like nothing piling up or making people feel guilty, or if more than one person ran into it. These go into iteration 1 (week of Nov 16).</p>
+        <p class="measure">I marked something High if it goes against what D5 promised, like nothing piling up or making people feel guilty, or if more than one person ran into it. The High ones go into iteration 1 (week of Nov 16).</p>
         <div class="wrap-table">
           <table class="resp">
             <thead>
@@ -850,15 +849,7 @@
         <p class="measure"><strong>Not in v2.</strong> People also asked for things that are bigger than a fix. P1 wants a log of old stuck notes "so I can see I got past it." P2 wants the app to read their calendar and put the step in the next free slot, or show up in Todoist. P6 wants two buttons on the check-in, "do it now" and "not today," and asked if Plan could be hidden. Reading the calendar and buttons on notifications were already "not yet" in D5 because they need Google sign-in and a phone app instead of a website. I'm not planning these for v2, since the two iteration weeks are for the fix list. For P6's hidden Plan, I want to see first if taking the count off (#5) is enough.</p>
         <p class="measure"><strong>Left out on purpose.</strong> P1 wanted to paste in the error and keep asking, and P7 asked to pick between a hint and the full answer. I'm leaving these out because they're about solving the problem, and the app is for planning what to do next.</p>
 
-        <h3 id="d7-d5">6. What this changes from D5</h3>
-        <ul class="measure">
-          <li>In D6 I changed how time and energy work. In D5, Today picked a step that fit. Now tapping a time or energy has the AI rewrite today's step for that time and energy. Fixes #2 and #4 are about making that rewrite reliable.</li>
-          <li>D5 said "I'm stuck" only makes the step smaller. With P7 the AI solved the problem instead, so fix #3 keeps it to planning the next step.</li>
-          <li>D5 said nothing is ever late. That still holds for personal goals, but class work needs an optional due date (#11).</li>
-          <li>The open question from D4 about whether an AI check-in can feel like accountability: for P6, not really. It reads like a reminder. I'm not changing this in v2. It might be worth testing more later.</li>
-        </ul>
-
-        <h3 id="d7-notes">7. My notes from each test</h3>
+        <h3 id="d7-notes">6. My notes from each test</h3>
         <p class="measure">These are the notes I took during each test, lightly cleaned up. Quotes are close to what people said but not word for word. Lines starting with "My note" are my own take. Letters A to G are the after-task questions in the script.</p>
 
         <details class="notes" id="t-p1">
