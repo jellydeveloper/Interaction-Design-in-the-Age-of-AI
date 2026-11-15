@@ -131,6 +131,8 @@
   .scr .src{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin:0; }
 
   /* ---- D7 raw notes (collapsed) ---- */
+  .prob h4{ font-family:'Public Sans',sans-serif; font-weight:600; font-size:1rem; margin:28px 0 8px; }
+  .prob .src{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); margin:6px 0 0; }
   details.notes{ border-top:1px solid var(--line); padding:14px 0; }
   details.notes summary{ cursor:pointer; font-family:'Public Sans',sans-serif; font-weight:600; color:var(--ink); }
   details.notes .qa .a{ font-family:inherit; font-size:15px; color:var(--ink-faint); }
@@ -770,7 +772,7 @@
             </tbody>
           </table>
         </div>
-        <p class="measure">So for P2, the question from D4 is mostly answered. They don't care who writes the steps. The control they care about is when the steps happen.</p>
+        <p class="measure">So for P2, the question from D4 is mostly answered. They were fine with the app suggesting steps, as long as they can skip or move them. What bugged them was the time the step goes on their calendar.</p>
 
         <h3 id="d7-worked">3. What worked</h3>
         <ul class="measure">
@@ -782,28 +784,46 @@
         </ul>
 
         <h3 id="d7-problems">4. What didn't work</h3>
-        <p class="measure">Each problem lists who ran into it. The number in brackets matches the fix list below.</p>
+        <p class="measure">Under each problem is who ran into it and which fix in the list below goes with it.</p>
 
-        <p class="measure"><strong>Steps pile up, and the Plan page turns into the old to-do list.</strong> When someone tapped "Try this instead" on a stuck step, the app added the new step but kept the old one, both on the same day. After Welcome back, P1 had three steps that were basically the same and asked "Which one is the real one?" Also the Plan page shows a count like "0 of 5 steps done." P6 went quiet when they saw it and said "The Plan page is my Monday list again." That's the exact thing that made P6 quit their planner in the interview (<a class="ref" href="#p6-q4f2">P6, Q4</a>). <em>Seen with P1, P6, P7. [1, 5]</em></p>
+        <div class="prob"><h4>Steps pile up, and the Plan page turns into the old to-do list</h4>
+          <p class="measure">When someone tapped "Try this instead" on a stuck step, the app added the new step but kept the old one, both on the same day. After Welcome back, P1 had three steps that were basically the same and asked "Which one is the real one?" Also the Plan page shows a count like "0 of 5 steps done." P6 went quiet when they saw it and said "The Plan page is my Monday list again." That's the exact thing that made P6 quit their planner in the interview (<a class="ref" href="#p6-q4f2">P6, Q4</a>).</p>
+          <p class="src">Seen with P1, P6, P7 · Fix #1, #5</p></div>
 
-        <p class="measure"><strong>The time and energy change doesn't always stick, and sometimes it changes the task.</strong> After "Do it now anyway," P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step fed the same avoidance they told me about in the interview (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>). <em>Seen with P1, P2, P6, P7. [2, 4]</em></p>
+        <div class="prob"><h4>The time and energy change doesn't always stick, and sometimes it changes the task</h4>
+          <p class="measure">After "Do it now anyway," P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step fed the same avoidance they told me about in the interview (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>).</p>
+          <p class="src">Seen with P1, P2, P6, P7 · Fix #2, #4</p></div>
 
-        <p class="measure"><strong>Stuck on a subject gives the answer, not the first move.</strong> P7 wrote a real homework problem and got the whole solution, worked out to "so this series diverges too." They said "On the exam I still won't know why it's limit comparison." "Ask a different way" gave a second full solution with a different test, which made it worse: "Now I have two answers and I still don't know how to choose." For P1 the stuck step worked well because it was a setup problem with one clear fix. But P1 also said "For an actual shader bug I'd still end up in ChatGPT," because they can't paste the error or go back and forth. <em>Seen with P7, P1. [3]</em></p>
+        <div class="prob"><h4>Stuck on a subject gives away the whole answer</h4>
+          <p class="measure">P7 wrote a real homework problem and got the whole solution, worked out to "so this series diverges too." They said "On the exam I still won't know why it's limit comparison." "Ask a different way" gave a second full solution with a different test, which made it worse: "Now I have two answers and I still don't know how to choose." For P1 the stuck step worked well because it was a setup problem with one clear fix. But P1 also said "For an actual shader bug I'd still end up in ChatGPT," because they can't paste the error or go back and forth.</p>
+          <p class="src">Seen with P7, P1 · Fix #3</p></div>
 
-        <p class="measure"><strong>Some first steps are a decision.</strong> P6's first step was "pick one saved tutorial to finish first," out of fifteen. Picking is exactly where P6 freezes. During setup P6 also kept every suggested step without changing any: "I don't want to pick wrong." <em>Seen with P6. [6]</em></p>
+        <div class="prob"><h4>Some first steps are a decision</h4>
+          <p class="measure">P6's first step was "pick one saved tutorial to finish first," out of fifteen. Picking is exactly where P6 freezes. During setup P6 also kept every suggested step without changing any: "I don't want to pick wrong."</p>
+          <p class="src">Seen with P6 · Fix #6</p></div>
 
-        <p class="measure"><strong>The calendar and the check-in don't match what people expected.</strong> P2 picked 15 minutes at 8 PM, but the screen said "Goes on your calendar at 4:00 PM." P2: "It's 8. I said I have 15 minutes right now." P6 thought the daily check-in would just show up on its own, and didn't get that each step has to be added to the calendar first. When I showed P6 the check-in, they said "It doesn't ask me anything, so I could just swipe it." <em>Seen with P2, P6. [7, 8]</em></p>
+        <div class="prob"><h4>The calendar and the check-in don't match what people expected</h4>
+          <p class="measure">P2 picked 15 minutes at 8 PM, but the screen said "Goes on your calendar at 4:00 PM." P2: "It's 8. I said I have 15 minutes right now." P6 thought the daily check-in would just show up on its own, and didn't get that each step has to be added to the calendar first. When I showed P6 the check-in, they said "It doesn't ask me anything, so I could just swipe it."</p>
+          <p class="src">Seen with P2, P6 · Fix #7, #8</p></div>
 
-        <p class="measure"><strong>"Re-plan my week" doesn't re-plan anything.</strong> P2 tapped it on Welcome back and only landed on the Plan page. "That didn't re-plan anything." <em>Seen with P2. [9]</em></p>
+        <div class="prob"><h4>"Re-plan my week" doesn't re-plan anything</h4>
+          <p class="measure">P2 tapped it on Welcome back and only landed on the Plan page. "That didn't re-plan anything."</p>
+          <p class="src">Seen with P2 · Fix #9</p></div>
 
-        <p class="measure"><strong>The AI makes up details.</strong> One of P1's steps was "make the red canvas fade across the screen." P1: "How does it know it's red? I never said red." <em>Seen with P1. [10]</em></p>
+        <div class="prob"><h4>The AI makes up details</h4>
+          <p class="measure">One of P1's steps was "make the red canvas fade across the screen." P1: "How does it know it's red? I never said red."</p>
+          <p class="src">Seen with P1 · Fix #10</p></div>
 
-        <p class="measure"><strong>Class work has deadlines.</strong> P7's homework was due Friday, and the app never asked. After Not today, half of the homework sat on Wednesday. "It says nothing is late, but my homework can be late." The "nothing is ever late" idea works for personal goals but not for graded work. <em>Seen with P7. [11]</em></p>
+        <div class="prob"><h4>Class work has deadlines</h4>
+          <p class="measure">P7's homework was due Friday, and the app never asked. After Not today, half of the homework sat on Wednesday. "It says nothing is late, but my homework can be late." So "nothing is ever late" is fine for something like a portfolio, but for homework it kind of isn't true.</p>
+          <p class="src">Seen with P7 · Fix #11</p></div>
 
-        <p class="measure"><strong>Smaller things.</strong> Steps you add yourself have no time and can't be moved around (P2). "I'll pick a day" needs a date before Move it works, so P2 gave up and went back to Tomorrow. The stuck screen shows the old step name instead of the one on screen (P1, who didn't notice). <em>[12, 13, 14]</em></p>
+        <div class="prob"><h4>Smaller things</h4>
+          <p class="measure">Steps you add yourself have no time and can't be moved around (P2). "I'll pick a day" needs a date before Move it works, so P2 gave up and went back to Tomorrow. The stuck screen shows the old step name instead of the one on screen (P1, who didn't notice).</p>
+          <p class="src">Fix #12, #13, #14</p></div>
 
         <h3 id="d7-fixes">5. Fix list, in order</h3>
-        <p class="measure">High is anything that breaks one of the main ideas from D5 (one step at a time, nothing piles up, no guilt) or that more than one person ran into. These go into iteration 1 (week of Nov 16).</p>
+        <p class="measure">I marked something High if it goes against what D5 promised, like nothing piling up or making people feel guilty, or if more than one person ran into it. These go into iteration 1 (week of Nov 16).</p>
         <div class="wrap-table">
           <table class="resp">
             <thead>
@@ -827,14 +847,14 @@
             </tbody>
           </table>
         </div>
-        <p class="measure"><strong>Not in v2.</strong> People also asked for things that are bigger than a fix. P1 wants to go back and forth when stuck and paste in the error, and wants a log of old stuck notes "so I can see I got past it." P2 wants the app to read their calendar and put the step in the next free slot, or show up in Todoist. P6 wants two buttons on the check-in, "do it now" and "not today," and asked if Plan could be hidden. Reading the calendar and buttons on notifications were already "not yet" in D5 because they need Google sign-in and a real app. I'm keeping them out of v2 so the two iteration weeks go to the fix list. For P6's hidden Plan, I want to see first if taking the count off (#5) is enough.</p>
+        <p class="measure"><strong>Not in v2.</strong> People also asked for things that are bigger than a fix. P1 wants to go back and forth when stuck and paste in the error, and wants a log of old stuck notes "so I can see I got past it." P2 wants the app to read their calendar and put the step in the next free slot, or show up in Todoist. P6 wants two buttons on the check-in, "do it now" and "not today," and asked if Plan could be hidden. Reading the calendar and buttons on notifications were already "not yet" in D5 because they need Google sign-in and a real app. I'm not planning these for v2, since the two iteration weeks are for the fix list. For P6's hidden Plan, I want to see first if taking the count off (#5) is enough.</p>
 
         <h3 id="d7-d5">6. What this changes from D5</h3>
         <ul class="measure">
           <li>In D6 I changed how time and energy work. In D5, Today picked a step that fit. Now tapping a time or energy has the AI rewrite today's step for that time and energy. Fixes #2 and #4 are about making that rewrite reliable.</li>
           <li>D5 said "I'm stuck" only makes the step smaller and doesn't act like a tutor. P7 showed it already acts like a tutor that just gives answers. Fix #3 keeps it as help with the first move.</li>
           <li>D5 said nothing is ever late. That still holds for personal goals, but class work needs an optional due date (#11).</li>
-          <li>The open question from D4 about whether an AI check-in can feel like accountability: for P6, not really. It reads like a reminder. I'm not changing this in v2, but I'll bring it up in the case study.</li>
+          <li>The open question from D4 about whether an AI check-in can feel like accountability: for P6, not really. It reads like a reminder. I'm not changing this in v2. It might be worth testing more later.</li>
         </ul>
 
         <h3 id="d7-notes">7. My notes from each test</h3>
