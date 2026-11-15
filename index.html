@@ -794,8 +794,8 @@
           <p class="measure">After "Do it now anyway" (the button to keep going after you finish a step), P7 got a step that said "about 40 min" while 15 min and Low were still selected. They said "I said 15 minutes?" And for low energy, the AI sometimes swapped in a different task instead of a smaller version of the same one. For P2 it was copying phrases from "old bios" they don't have. For P6 it was sorting their saved tutorials by length. P6 was honest about it: "I'd do it and feel productive, and that's kind of my problem." So for P6, the low-energy step was more organizing, which is what they told me they do instead of the real work (<a class="ref" href="#p6-q2p">P6, Q2 probe</a>).</p>
           <p class="src">Seen with P1, P2, P6, P7 · Fix #2, #4</p></div>
 
-        <div class="prob"><h4>When you're stuck on homework, the app just solves it for you</h4>
-          <p class="measure">P7 wrote a real homework problem and got the whole solution, worked out to "so this series diverges too." They said "On the exam I still won't know why it's limit comparison." "Ask a different way" gave a second full solution with a different test, which made it worse: "Now I have two answers and I still don't know how to choose." For P1 the stuck step worked well because it was a setup problem with one clear fix. But P1 also said "For an actual shader bug I'd still end up in ChatGPT," because they can't paste the error or go back and forth.</p>
+        <div class="prob"><h4>"I'm stuck" tried to solve the problem instead of planning the next step</h4>
+          <p class="measure">P7 typed in a real homework problem, and the app solved the whole thing. That's not what the app is for. In D5 I decided "I'm stuck" should only make the step smaller, not teach or solve the subject. P7 still didn't understand it: "On the exam I still won't know why it's limit comparison." For P1 it worked because their problem was a simple setup mistake. But P1 also said that for a real bug they'd still go to ChatGPT. I think that's fine. Solving the problem is what other tools are for. This app should help them figure out what to do next.</p>
           <p class="src">Seen with P7, P1 · Fix #3</p></div>
 
         <div class="prob"><h4>Some first steps make you choose between a lot of things</h4>
@@ -832,7 +832,7 @@
             <tbody>
               <tr><td>1</td><td>High</td><td>"Try this instead" and "Start this" replace the step, instead of adding a new one next to it.</td><td>P1, P6, P7</td></tr>
               <tr><td>2</td><td>High</td><td>Keep the step matched to the time and energy picked, also after "Do it now anyway," "Try this instead," or "Start this."</td><td>P1, P7</td></tr>
-              <tr><td>3</td><td>High</td><td>When someone is stuck on homework or something they're learning, give the first step of the problem instead of the full solution. Let them ask for more if they want it (P7: "Let me pick: hint or full answer").</td><td>P7</td></tr>
+              <tr><td>3</td><td>High</td><td>"I'm stuck" never solves the problem. It gives a smaller next action, like what to reread, which example to look at, or who to ask.</td><td>P7</td></tr>
               <tr><td>4</td><td>High</td><td>Low energy should make the same task smaller, without swapping in a different task or adding organizing or prep steps.</td><td>P2, P6</td></tr>
               <tr><td>5</td><td>High</td><td>Take the "0 of N steps done" count off the Plan page.</td><td>P6</td></tr>
               <tr><td>6</td><td>Medium</td><td>The first step should never be a choice between many things. If a choice is needed, the AI makes it and the person can change it.</td><td>P6</td></tr>
@@ -852,7 +852,7 @@
         <h3 id="d7-d5">6. What this changes from D5</h3>
         <ul class="measure">
           <li>In D6 I changed how time and energy work. In D5, Today picked a step that fit. Now tapping a time or energy has the AI rewrite today's step for that time and energy. Fixes #2 and #4 are about making that rewrite reliable.</li>
-          <li>D5 said "I'm stuck" only makes the step smaller and doesn't try to teach the subject. With P7's math homework, it ended up solving the problem for them, which is more than D5 planned and not helpful for learning. Fix #3 changes it to give just the first step.</li>
+          <li>D5 said "I'm stuck" only makes the step smaller. With P7 the AI solved the problem instead, so fix #3 keeps it to planning the next step.</li>
           <li>D5 said nothing is ever late. That still holds for personal goals, but class work needs an optional due date (#11).</li>
           <li>The open question from D4 about whether an AI check-in can feel like accountability: for P6, not really. It reads like a reminder. I'm not changing this in v2. It might be worth testing more later.</li>
         </ul>
